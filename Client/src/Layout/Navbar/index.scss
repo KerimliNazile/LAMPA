@@ -1,0 +1,159 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 30px 60px;
+    background-color: #b3dedf;
+    .LogoNav{
+img{
+    width: 200px;
+}
+    }
+    .MainNav{
+        #NavIn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            font-size: 22px;
+          
+        li a{
+            color:rgb(85, 84, 84);
+        }
+
+        }
+    }
+    .mobile{
+       display: none;
+    }
+}
+.navlist{
+    transition: 0.2s ease-in-out;
+    display:none;
+    height: 200px;
+    width: 200px;
+    background-color: #d2e8e9;
+ ul li a{
+    color: black;
+    font-size: 22px;
+   
+}
+ul li{
+     margin-bottom: 10px;
+}
+}
+@media only screen and (max-width: 854px){
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        padding: 30px 60px;
+        background-color: #b3dedf;
+        .LogoNav{
+    img{
+        width: 200px;
+    }
+        }
+        .MainNav{
+            #NavIn{
+                display: none;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+                font-size: 22px;
+              
+            li a{
+                color:rgb(85, 84, 84);
+            }
+    
+            }
+        }
+        .mobile{
+           display: block;
+           font-size: 28px;
+        }
+    }
+    .navlist{
+        transition: 0.2s ease-in-out;
+        display:block;
+        height: 200px;
+        width: 200px;
+        background-color: #d2e8e9;
+     ul li a{
+        color: black;
+        font-size: 22px;
+       
+    }
+    ul li{
+         margin-bottom: 10px;
+    }
+    }
+}
+.navlist_active{
+    right: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+}
+@media only screen and (max-width: 430px){
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 30px 30px;
+        background-color: #b3dedf;
+        .LogoNav{
+    img{
+        width: 160px;
+    }
+        }
+        .MainNav{
+            #NavIn{
+                display: none;
+                align-items: center;
+                justify-content: center;
+                gap: 40px;
+                font-size: 22px;
+              
+            li a{
+                color:rgb(85, 84, 84);
+            }
+    
+            }
+        }
+        .mobile{
+           display: block;
+           font-size: 28px;
+        }
+    }
+    .navlist{
+        transition: 0.2s ease-in-out;
+        display:block;
+        height: 200px;
+        width: 200px;
+        background-color: #d2e8e9;
+     ul li a{
+        color: black;
+        font-size: 22px;
+       
+    }
+    ul li{
+         margin-bottom: 10px;
+    }
+    }
+}
+// .navlist_close{
+//     right: 0;
+//     visibility: hidden;
+//     overflow: hidden;
+
+// }
+.navlist_active{
+    right: 0;
+    visibility: hidden;
+    overflow: hidden;
+
+}

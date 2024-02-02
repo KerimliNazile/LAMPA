@@ -1,0 +1,122 @@
+#Footer {
+  min-height: 60vh;
+  background-color: #f3f3f3;
+}
+#Footer .FooterArea .FooterAreaBox {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox {
+  margin-top: 100px;
+  width: 300px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .imgFooter {
+  width: 100%;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .imgFooter img {
+  width: 240px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .text {
+  margin-top: 40px;
+  font-size: 18px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .Icon {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .Icon .FaIcon:hover {
+  color: orange;
+  transition: 0.3s;
+  cursor: pointer;
+  transform: scaleX(-1);
+}
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox {
+  margin-top: 100px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .textTwo {
+  border-bottom: 1px solid black;
+}
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .textTwo h1 {
+  font-size: 22px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul {
+  margin-top: 30px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul li:hover {
+  color: orange;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 443px) {
+  #Footer {
+    min-height: 60vh;
+    background-color: #f3f3f3;
+  }
+  #Footer .FooterArea .FooterAreaBox {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox {
+    text-align: center;
+    margin-top: 100px;
+    width: 300px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .imgFooter {
+    width: 100%;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .imgFooter img {
+    width: 140px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .text {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .Icon {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 22px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .Icon .FaIcon:hover {
+    color: orange;
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scaleX(-1);
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox {
+    text-align: center;
+    margin-top: 100px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .textTwo {
+    border-bottom: 1px solid black;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .textTwo h1 {
+    font-size: 22px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul {
+    margin-top: 30px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul li:hover {
+    color: orange;
+    transition: 0.3s;
+  }
+}/*# sourceMappingURL=index.css.map */

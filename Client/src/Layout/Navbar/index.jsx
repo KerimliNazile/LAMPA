@@ -1,0 +1,50 @@
+import React, { useState } from 'react'
+import { FaShoppingCart } from "react-icons/fa";
+import { IoMdHeart } from "react-icons/io";
+import { CiSearch } from "react-icons/ci";
+import { FaBarsStaggered } from "react-icons/fa6";
+import { IoClose } from "react-icons/io5";
+import { IoPerson } from "react-icons/io5";
+import './index.scss'
+import { NavLink } from 'react-router-dom'
+
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
+    function handleClick() {
+        setIsOpen(!isOpen)
+    }
+    return (
+        <>
+            <nav>
+                <div className="LogoNav">
+                    <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1618913868" alt="" />
+                </div>
+                <div className="MainNav">
+                    <ul id='NavIn'>
+                        <li><NavLink to={'/home'}>Home</NavLink></li>
+                        <li><NavLink to={'/shop'}>Shop</NavLink></li>
+                        <li><NavLink to={'/contact'}>Contact</NavLink></li>
+                        <li><NavLink to={'/search'}><CiSearch /></NavLink></li>
+                        <li><NavLink to={'/admin'}><IoPerson /></NavLink></li>
+                        <li><NavLink to={'/basket'}><FaShoppingCart /></NavLink></li>
+                        <li><NavLink to={'/wishlist'}><IoMdHeart /></NavLink></li>
+                    </ul>
+                </div>
+                <div className="mobile" onClick={handleClick}>
+                    {isOpen ? <FaBarsStaggered /> : <IoClose />}
+                </div>
+            </nav>
+            <div className={`${isOpen ? 'navlist_active' : 'navlist_close'} navlist`}>
+                <ul>
+                    <li><NavLink to={'/home'}>Home</NavLink></li>
+                    <li><NavLink to={'/shop'}>Shop</NavLink></li>
+                    <li><NavLink to={'/contact'}>Contact</NavLink></li>
+                    <li><NavLink to={'/faqs'}>FAQS</NavLink></li>
+                    <li><NavLink to={'/wishlist'}><IoMdHeart /></NavLink></li>
+                </ul>
+            </div>
+        </>
+    )
+}
+
+export default Navbar

@@ -1,0 +1,161 @@
+#Footer {
+    min-height: 60vh;
+    background-color: #f3f3f3;
+
+    .FooterArea {
+        .FooterAreaBox {
+flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 70px;
+
+            .FooterOneBox {
+                margin-top: 100px;
+                width: 300px;
+
+                .imgFooter {
+                    width: 100%;
+
+                    img {
+                        width: 240px;
+                    }
+                }
+
+                .text {
+                    margin-top: 40px;
+                    font-size: 18px;
+                }
+
+                .Icon {
+                    margin-top: 40px;
+                    display: flex;
+                    align-items: center;
+
+                    gap: 15px;
+                    font-size: 22px;
+
+                    .FaIcon {
+                        &:hover {
+                            color: orange;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            transform: scaleX(-1);
+                        }
+                    }
+                }
+            }
+
+            .FooterTwoBox {
+                margin-top: 100px;
+
+                .textTwo {
+                    border-bottom: 1px solid black;
+
+                    h1 {
+                        font-size: 22px;
+                    }
+
+                }
+
+                .TextUl {
+                    ul {
+                        margin-top: 30px;
+
+                        li {
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                            &:hover{
+                                color: orange;
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 443px){
+    #Footer {
+        min-height: 60vh;
+        background-color: #f3f3f3;
+    
+        .FooterArea {
+            .FooterAreaBox {
+    flex-wrap: wrap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 70px;
+    
+                .FooterOneBox {
+                    text-align: center;
+                    margin-top: 100px;
+                    width: 300px;
+    
+                    .imgFooter {
+                        width: 100%;
+    
+                        img {
+                            width: 140px;
+                        }
+                    }
+    
+                    .text {
+                        margin-top: 40px;
+                        font-size: 18px;
+                    }
+    
+                    .Icon {
+                        margin-top: 40px;
+                        display: flex;
+                        align-items: center;
+    justify-content: center;
+                        gap: 15px;
+                        font-size: 22px;
+    
+                        .FaIcon {
+                            &:hover {
+                                color: orange;
+                                transition: 0.3s;
+                                cursor: pointer;
+                                transform: scaleX(-1);
+                            }
+                        }
+                    }
+                }
+    
+                .FooterTwoBox {
+                    text-align: center;
+                    margin-top: 100px;
+    
+                    .textTwo {
+                        border-bottom: 1px solid black;
+    
+                        h1 {
+                            font-size: 22px;
+                        }
+    
+                    }
+    
+                    .TextUl {
+                        ul {
+                            margin-top: 30px;
+    
+                            li {
+                                font-size: 18px;
+                                margin-bottom: 10px;
+                                &:hover{
+                                    color: orange;
+                                    transition: 0.3s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

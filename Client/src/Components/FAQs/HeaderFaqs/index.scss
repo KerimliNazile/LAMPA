@@ -1,0 +1,29 @@
+#HeaderFaq {
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+
+    background-image: url("https://lights-demo.myshopify.com/cdn/shop/files/slider-1.jpg?v=1640683142");
+
+    .HeaderFaq {
+
+        .TextFaq {
+            background-color: red;
+            display: inline;
+            margin-top: 100px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        
+    //  position: absolute;
+    //  margin-top: 300px;
+    //  margin-left: 700px;
+    width: 300px;
+    
+            color: white;
+            h1{
+                font-size: 40px;
+            }
+        }
+    }
+}

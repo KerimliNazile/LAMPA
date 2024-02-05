@@ -22,8 +22,22 @@ const Navbar = () => {
                 <div className="MainNav">
                     <ul id='NavIn'>
                         <li><NavLink to={'/home'}>Home</NavLink></li>
+                        <li><NavLink to={'/about'}>About</NavLink></li>
                         <li><NavLink to={'/shop'}>Shop</NavLink></li>
                         <li><NavLink to={'/contact'}>Contact</NavLink></li>
+                        <li className='pages'><NavLink to={'/pages'}>Pages</NavLink>
+                        <div className="subMenu2">
+                            <div className="subMenuArea">
+                                <div className="subMenuBox">
+                                    <ul>
+                                        <li><NavLink to={'/faqs'}>FAQs</NavLink></li>
+                                        <li><NavLink to={'/error'}>404 Page</NavLink></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        </li>
                         <li><NavLink to={'/search'}><CiSearch /></NavLink></li>
                         <li><NavLink to={'/admin'}><IoPerson /></NavLink></li>
                         <li><NavLink to={'/basket'}><FaShoppingCart /></NavLink></li>

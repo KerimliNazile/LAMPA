@@ -1,0 +1,45 @@
+label {
+  position: relative;
+  width: 150px;
+  top: -50px;
+  height: 75px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 75px;
+  background-color: #333;
+  border: 6px solid black;
+  border-radius: 14px;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+label input {
+  appearance: none;
+}
+
+label input:checked ~ span {
+  left: 75px;
+}
+
+label input:checked ~ span .icon {
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+
+.bulb {
+  position: absolute;
+  width: 348px;
+  height: 408px;
+  pointer-events: none;
+  top: 80px;
+  background: url(https://www.bulbs.com/Images/productmed/3/34350_off.jpg);
+}/*# sourceMappingURL=index.css.map */

@@ -25,6 +25,19 @@ img{
             color:rgb(85, 84, 84);
         }
 
+        .pages:hover .subMenu2{
+           
+            display: block;
+            transition: .5s;
+        }
+        .subMenu2:hover{
+           
+            display: block;
+            transition: .5s;
+        }
+        .subMenuArea{
+            z-index: 2;
+        }
         }
     }
     .mobile{
@@ -46,6 +59,8 @@ ul li{
      margin-bottom: 10px;
 }
 }
+
+
 @media only screen and (max-width: 854px){
     nav{
         display: flex;

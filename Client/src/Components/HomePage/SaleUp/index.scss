@@ -1,0 +1,442 @@
+#SaleUp {
+    min-height: 100vh;
+    width: 100%;
+
+    .MainArea {
+       
+        .Boxin {
+
+            text-align: center;
+            width: 420px;
+            height: 220px;
+
+            background-color: #98c397;
+            position: relative;
+            left: 150px;
+
+            .Boxinoo {
+                margin-left: 30px;
+                text-align: center;
+                width: 350px;
+                height: 160px;
+                border: 2px solid white;
+                margin-top: 30px;
+
+                h1 {
+                    margin-top: 10px;
+                    font-size: 28px;
+                }
+
+                h4 {
+                    margin-top: 10px;
+                    font-size: 22px;
+                }
+
+                p {
+                    margin-top: 10px;
+                    font-size: 20px;
+                }
+            }
+
+        }
+
+        .SaleUpArea {
+            text-align: center;
+            width: 90%;
+            min-height: 100vh;
+            margin: auto;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0px;
+
+            .LeftImage {
+                width: 10%;
+
+                img {
+                    width: 500px;
+                }
+            }
+
+            .RightImage {
+                width: 30%;
+
+                img {
+                    width: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    #SaleUp {
+        min-height: 100vh;
+        width: 100%;
+
+        .MainArea {
+            .Boxin {
+
+                text-align: center;
+                width: 420px;
+                height: 220px;
+
+                background-color: #98c397;
+                // position: relative;
+                left: 92px;
+
+                .Boxinoo {
+                    text-align: center;
+                    margin-left: 30px;
+                    text-align: center;
+                    width: 350px;
+                    height: 160px;
+                    border: 2px solid white;
+                    margin-top: 30px;
+
+                    h1 {
+                        margin-top: 10px;
+                        font-size: 28px;
+                    }
+
+                    h4 {
+                        margin-top: 10px;
+                        font-size: 22px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+            }
+
+            .SaleUpArea {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;
+                margin: auto;
+                // position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                .LeftImage {
+                    width: 32%;
+
+                    img {
+                        width: 500px;
+                    }
+                }
+
+                .RightImage {
+                    text-align: center;
+                    // width: 30%;
+
+                    img {
+                        width: 450px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1040px) {
+    #SaleUp {
+        min-height: 100vh;
+        width: 100%;
+
+        .MainArea {
+            .Boxin {
+
+                text-align: center;
+                width: 420px;
+                height: 220px;
+
+                background-color: #98c397;
+                // position: relative;
+                left: 92px;
+
+                .Boxinoo {
+                    text-align: center;
+                    margin-left: 30px;
+                    text-align: center;
+                    width: 350px;
+                    height: 160px;
+                    border: 2px solid white;
+                    margin-top: 30px;
+
+                    h1 {
+                        margin-top: 10px;
+                        font-size: 28px;
+                    }
+
+                    h4 {
+                        margin-top: 10px;
+                        font-size: 22px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+            }
+
+            .SaleUpArea {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;
+                margin: auto;
+                // position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                .LeftImage {
+                    width: 58%;
+
+                    img {
+                        width: 500px;
+                    }
+                }
+
+                .RightImage {
+                    text-align: center;
+                    width: 48%;
+
+                    img {
+                        width: 450px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 641px) {
+    #SaleUp {
+        min-height: 100vh;
+        width: 100%;
+
+        .MainArea {
+            .Boxin {
+
+                text-align: center;
+                width: 420px;
+                height: 220px;
+
+                background-color: #98c397;
+                // position: relative;
+                left: 56px;
+
+                .Boxinoo {
+                    text-align: center;
+                    margin-left: 30px;
+                    text-align: center;
+                    width: 350px;
+                    height: 160px;
+                    border: 2px solid white;
+                    margin-top: 30px;
+
+                    h1 {
+                        margin-top: 10px;
+                        font-size: 28px;
+                    }
+
+                    h4 {
+                        margin-top: 10px;
+                        font-size: 22px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+            }
+
+            .SaleUpArea {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;
+                margin: auto;
+                // position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                .LeftImage {
+                    width: 75%;
+
+                    img {
+                        width: 448px;
+                    }
+                }
+
+                .RightImage {
+                    text-align: center;
+                    width: 64%;
+
+                    img {
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 507px) {
+    #SaleUp {
+        min-height: 100vh;
+        width: 100%;
+
+        .MainArea {
+            .Boxin {
+
+                text-align: center;
+                width: 330px;
+                height: 220px;
+
+                background-color: #98c397;
+                // position: relative;
+                left: 3px;
+
+                .Boxinoo {
+                    text-align: center;
+                    margin-left: 30px;
+                    text-align: center;
+                    width: 271px;
+                    height: 145px;
+                    border: 2px solid white;
+                    margin-top: 30px;
+
+                    h1 {
+                        margin-top: 10px;
+                        font-size: 28px;
+                    }
+
+                    h4 {
+                        margin-top: 10px;
+                        font-size: 22px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+            }
+
+            .SaleUpArea {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;
+                margin: auto;
+                // position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                .LeftImage {
+                    width: 75%;
+
+                    img {
+                        width: 335px;
+                    }
+                }
+
+                .RightImage {
+                    text-align: center;
+                    width: 64%;
+
+                    img {
+                        width: 314px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 380px) {
+    #SaleUp {
+        min-height: 100vh;
+        width: 100%;
+
+        .MainArea {
+            .Boxin {
+
+                text-align: center;
+                width: 230px;
+                height: 220px;
+
+                background-color: #98c397;
+                // position: relative;
+                left: 3px;
+
+                .Boxinoo {
+                    text-align: center;
+                    margin-left: 30px;
+                    text-align: center;
+                    width: 180px;
+                    height: 190px;
+                    border: 2px solid white;
+                    margin-top: 20px;
+
+                    h1 {
+                        margin-top: 10px;
+                        font-size: 28px;
+                    }
+
+                    h4 {
+                        margin-top: 10px;
+                        font-size: 22px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-size: 20px;
+                    }
+                }
+
+            }
+
+            .SaleUpArea {
+                flex-direction: column;
+                text-align: center;
+                width: 90%;
+                margin: auto;
+                // position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                .LeftImage {
+                    width: 75%;
+
+                    img {
+                        width: 235px;
+                    }
+                }
+
+                .RightImage {
+                    text-align: center;
+                    width: 64%;
+
+                    img {
+                        width: 214px;
+                    }
+                }
+            }
+        }
+    }
+}

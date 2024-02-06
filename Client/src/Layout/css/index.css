@@ -1,144 +1,125 @@
-nav {
+#Footer {
+  margin-top: 200px;
+  min-height: 60vh;
+  background-color: #f3f3f3;
+  margin-top: 40px;
+}
+#Footer .FooterArea .FooterAreaBox {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
-  padding: 30px 60px;
-  background-color: #b3dedf;
+  gap: 70px;
 }
-nav .LogoNav img {
-  width: 200px;
+#Footer .FooterArea .FooterAreaBox .FooterOneBox {
+  margin-top: 100px;
+  width: 300px;
 }
-nav .MainNav #NavIn {
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .imgFooter {
+  width: 100%;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .imgFooter img {
+  width: 240px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .text {
+  margin-top: 40px;
+  font-size: 18px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .Icon {
+  margin-top: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
+  gap: 15px;
   font-size: 22px;
 }
-nav .MainNav #NavIn li a {
-  color: rgb(85, 84, 84);
+#Footer .FooterArea .FooterAreaBox .FooterOneBox .Icon .FaIcon:hover {
+  color: orange;
+  transition: 0.3s;
+  cursor: pointer;
+  transform: scaleX(-1);
 }
-nav .MainNav #NavIn .pages:hover .subMenu2 {
-  display: block;
-  transition: 0.5s;
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox {
+  margin-top: 100px;
 }
-nav .MainNav #NavIn .subMenu2:hover {
-  display: block;
-  transition: 0.5s;
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .textTwo {
+  border-bottom: 1px solid black;
 }
-nav .MainNav #NavIn .subMenuArea {
-  z-index: 2;
-}
-nav .mobile {
-  display: none;
-}
-
-.navlist {
-  transition: 0.2s ease-in-out;
-  display: none;
-  height: 200px;
-  width: 200px;
-  background-color: #d2e8e9;
-}
-.navlist ul li a {
-  color: black;
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .textTwo h1 {
   font-size: 22px;
 }
-.navlist ul li {
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul {
+  margin-top: 30px;
+}
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul li {
+  font-size: 18px;
   margin-bottom: 10px;
 }
+#Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul li:hover {
+  color: orange;
+  transition: 0.3s;
+}
 
-@media only screen and (max-width: 854px) {
-  nav {
+@media only screen and (max-width: 443px) {
+  #Footer {
+    min-height: 60vh;
+    background-color: #f3f3f3;
+    margin-top: 200px;
+  }
+  #Footer .FooterArea .FooterAreaBox {
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 100px;
-    padding: 30px 60px;
-    background-color: #b3dedf;
+    gap: 70px;
   }
-  nav .LogoNav img {
-    width: 200px;
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox {
+    text-align: center;
+    margin-top: 100px;
+    width: 300px;
   }
-  nav .MainNav #NavIn {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    font-size: 22px;
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .imgFooter {
+    width: 100%;
   }
-  nav .MainNav #NavIn li a {
-    color: rgb(85, 84, 84);
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .imgFooter img {
+    width: 140px;
   }
-  nav .mobile {
-    display: block;
-    font-size: 28px;
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .text {
+    margin-top: 40px;
+    font-size: 18px;
   }
-  .navlist {
-    transition: 0.2s ease-in-out;
-    display: block;
-    height: 200px;
-    width: 200px;
-    background-color: #d2e8e9;
-  }
-  .navlist ul li a {
-    color: black;
-    font-size: 22px;
-  }
-  .navlist ul li {
-    margin-bottom: 10px;
-  }
-}
-.navlist_active {
-  right: 0;
-  visibility: hidden;
-  overflow: hidden;
-}
-
-@media only screen and (max-width: 430px) {
-  nav {
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .Icon {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    padding: 30px 30px;
-    background-color: #b3dedf;
-  }
-  nav .LogoNav img {
-    width: 160px;
-  }
-  nav .MainNav #NavIn {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
+    gap: 15px;
     font-size: 22px;
   }
-  nav .MainNav #NavIn li a {
-    color: rgb(85, 84, 84);
+  #Footer .FooterArea .FooterAreaBox .FooterOneBox .Icon .FaIcon:hover {
+    color: orange;
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scaleX(-1);
   }
-  nav .mobile {
-    display: block;
-    font-size: 28px;
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox {
+    text-align: center;
+    margin-top: 100px;
   }
-  .navlist {
-    transition: 0.2s ease-in-out;
-    display: block;
-    height: 200px;
-    width: 200px;
-    background-color: #d2e8e9;
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .textTwo {
+    border-bottom: 1px solid black;
   }
-  .navlist ul li a {
-    color: black;
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .textTwo h1 {
     font-size: 22px;
   }
-  .navlist ul li {
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul {
+    margin-top: 30px;
+  }
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul li {
+    font-size: 18px;
     margin-bottom: 10px;
   }
-}
-.navlist_active {
-  right: 0;
-  visibility: hidden;
-  overflow: hidden;
+  #Footer .FooterArea .FooterAreaBox .FooterTwoBox .TextUl ul li:hover {
+    color: orange;
+    transition: 0.3s;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -1,45 +1,225 @@
-label {
-  position: relative;
-  width: 150px;
-  top: -50px;
-  height: 75px;
-  background-color: black;
-  border-radius: 10px;
+#Alamp {
+  min-height: 100vh;
+  background-color: #D4E7C5;
 }
-
-label span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 75px;
-  height: 75px;
-  background-color: #333;
-  border: 6px solid black;
-  border-radius: 14px;
-  transition: 0.5s;
+#Alamp .AlampArea .TextAlamp {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 30px;
 }
-
-label input {
-  appearance: none;
+#Alamp .AlampArea .TextAlamp h1 {
+  margin-top: 30px;
+}
+#Alamp .AlampArea .AlampBox {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Alamp .AlampArea .AlampBox .LeftImg {
+  width: 47%;
+}
+#Alamp .AlampArea .AlampBox .LeftImg img {
+  border-radius: 50%;
+  width: 500px;
+}
+#Alamp .AlampArea .AlampBox .RightText {
+  width: 400px;
+}
+#Alamp .AlampArea .AlampBox .RightText .Textin h1 {
+  font-size: 45px;
+}
+#Alamp .AlampArea .AlampBox .RightText .Textin p {
+  margin-top: 30px;
+  font-size: 20px;
+}
+#Alamp .AlampArea .AlampBox .RightText .Textin button {
+  margin-top: 100px;
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+  background-color: #99BC85;
+  color: white;
+  border: none;
+  text-align: center;
+}
+#Alamp .AlampArea .AlampBox .RightText .Textin button:hover {
+  background-color: black;
+  transition: 0.5s;
+  font-size: 19px;
 }
 
-label input:checked ~ span {
-  left: 75px;
+@media only screen and (max-width: 1074px) {
+  #Alamp {
+    min-height: 100vh;
+    background-color: #D4E7C5;
+  }
+  #Alamp .AlampArea .TextAlamp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  #Alamp .AlampArea .TextAlamp h1 {
+    margin-top: 30px;
+  }
+  #Alamp .AlampArea .AlampBox {
+    text-align: center;
+    flex-direction: column;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #Alamp .AlampArea .AlampBox .LeftImg {
+    width: 47%;
+  }
+  #Alamp .AlampArea .AlampBox .LeftImg img {
+    border-radius: 50%;
+    width: 500px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText {
+    width: 400px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin h1 {
+    font-size: 45px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin p {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin button {
+    margin-top: 40px;
+    width: 150px;
+    height: 45px;
+    font-size: 18px;
+    background-color: #99BC85;
+    color: white;
+    border: none;
+    text-align: center;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin button:hover {
+    background-color: black;
+    transition: 0.5s;
+    font-size: 19px;
+  }
 }
-
-label input:checked ~ span .icon {
-  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+@media only screen and (max-width: 694px) {
+  #Alamp {
+    min-height: 100vh;
+    background-color: #D4E7C5;
+  }
+  #Alamp .AlampArea {
+    text-align: center;
+  }
+  #Alamp .AlampArea .TextAlamp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  #Alamp .AlampArea .TextAlamp h1 {
+    margin-top: 30px;
+  }
+  #Alamp .AlampArea .AlampBox {
+    text-align: center;
+    flex-direction: column;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #Alamp .AlampArea .AlampBox .LeftImg {
+    width: 47%;
+  }
+  #Alamp .AlampArea .AlampBox .LeftImg img {
+    border-radius: 50%;
+    width: 350px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText {
+    text-align: center;
+    width: 400px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin h1 {
+    font-size: 35px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin p {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin button {
+    margin-top: 40px;
+    width: 150px;
+    height: 45px;
+    font-size: 18px;
+    background-color: #99BC85;
+    color: white;
+    border: none;
+    text-align: center;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin button:hover {
+    background-color: black;
+    transition: 0.5s;
+    font-size: 19px;
+  }
 }
-
-.bulb {
-  position: absolute;
-  width: 348px;
-  height: 408px;
-  pointer-events: none;
-  top: 80px;
-  background: url(https://www.bulbs.com/Images/productmed/3/34350_off.jpg);
+@media only screen and (max-width: 488px) {
+  #Alamp {
+    min-height: 100vh;
+    background-color: #D4E7C5;
+  }
+  #Alamp .AlampArea {
+    text-align: center;
+  }
+  #Alamp .AlampArea .TextAlamp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  #Alamp .AlampArea .TextAlamp h1 {
+    margin-top: 30px;
+  }
+  #Alamp .AlampArea .AlampBox {
+    text-align: center;
+    flex-direction: column;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #Alamp .AlampArea .AlampBox .LeftImg {
+    width: 47%;
+  }
+  #Alamp .AlampArea .AlampBox .LeftImg img {
+    border-radius: 50%;
+    width: 200px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText {
+    text-align: center;
+    width: 280px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin h1 {
+    font-size: 28px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin p {
+    margin-top: 30px;
+    font-size: 14px;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin button {
+    margin-top: 40px;
+    width: 150px;
+    height: 45px;
+    font-size: 18px;
+    background-color: #99BC85;
+    color: white;
+    border: none;
+    text-align: center;
+  }
+  #Alamp .AlampArea .AlampBox .RightText .Textin button:hover {
+    background-color: black;
+    transition: 0.5s;
+    font-size: 19px;
+  }
 }/*# sourceMappingURL=index.css.map */

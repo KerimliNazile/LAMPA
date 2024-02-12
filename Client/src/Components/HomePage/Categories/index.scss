@@ -1,0 +1,157 @@
+#TopCategories {
+    .TopCategories {
+        .titleTop {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            color: #944E63;
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        .loremTop {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+
+            p {
+                font-size: 22px;
+            }
+        }
+
+        .TopCategoriesBoxArea {
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+
+            .TopCategoriesBox {
+
+                .ImageTop {
+
+                    width: 100%;
+
+                    img {
+                        max-width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 420px){
+    #TopCategories {
+        .TopCategories {
+            .titleTop {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+                color: #944E63;
+    
+                h1 {
+                    font-size: 40px;
+                }
+            }
+    
+            .loremTop {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+    
+                p {
+                    font-size: 22px;
+                }
+            }
+    
+            .TopCategoriesBoxArea {
+                margin-top: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 40px;
+    
+                .TopCategoriesBox {
+    
+                    .ImageTop {
+    
+                        width: 100%;
+    
+                        img {
+                            object-fit: cover;
+                            max-width: 350px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+@media only screen and (max-width: 365px){
+    #TopCategories {
+        .TopCategories {
+            .titleTop {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+                color: #944E63;
+    
+                h1 {
+                    font-size: 40px;
+                }
+            }
+    
+            .loremTop {
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+    
+                p {
+                    font-size: 22px;
+                }
+            }
+    
+            .TopCategoriesBoxArea {
+                margin-top: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 40px;
+    
+                .TopCategoriesBox {
+    
+                    .ImageTop {
+    
+                        width: 100%;
+    
+                        img {
+                            object-fit: cover;
+                            max-width: 280px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+

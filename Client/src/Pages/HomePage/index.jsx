@@ -4,6 +4,8 @@ import Header from '../../Components/HomePage/Header'
 import Seller from '../../Components/HomePage/BestSeller'
 import SaleUp from '../../Components/HomePage/SaleUp'
 import Alamp from '../../Components/HomePage/Alamp'
+import Categories from '../../Components/HomePage/Categories'
+import Vintage from '../../Components/HomePage/Vintage'
 
 const Home = () => {
   return (
@@ -11,10 +13,14 @@ const Home = () => {
       <Helmet>
         <title>Home</title>
       </Helmet>
-      {/* <Header/> */}
-      {/* <SaleUp/> */}
+      {/* <Header/>
+     
       <Alamp/>
-      {/* <Seller/> */}
+      <Categories/>
+      <Seller/>
+
+ <SaleUp/> */}
+<Vintage/>
     </div>
   )
 }

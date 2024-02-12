@@ -24,7 +24,11 @@ img{
         li a{
             color:rgb(85, 84, 84);
         }
-
+.pages{
+    .subMenu2{
+     
+    }
+}
         .pages:hover .subMenu2{
            
             display: block;
@@ -36,7 +40,17 @@ img{
             transition: .5s;
         }
         .subMenuArea{
+            position: absolute;
             z-index: 2;
+            .subMenuBox{
+            
+                background-color: rgb(63, 140, 175);
+               ul{
+                li a{
+                    position: relative;
+                }
+               }
+            }
         }
         }
     }

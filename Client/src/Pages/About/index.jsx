@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import PathWill from '../../Components/AboutComponnents/PathWill'
 
 const About = () => {
   return (
@@ -7,6 +8,7 @@ const About = () => {
         <Helmet>
             <title>About</title>
         </Helmet>
+        <PathWill/>
     </div>
   )
 }

@@ -1,7 +1,33 @@
-.mySwiper{
-    width: 100%;
-    img{
-        width: 1000px;
+.AllImageSwiper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    .SwiperInAll{
+        width: 70%;
+        .HeaderArea{
+            img{
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+        .textSwiper{
+            
+        }
+    }
+    .AllImage{
+        .OneImage{
+            
+            img{
+                width: 330px;
+                object-fit: cover;
+            }
+        }
+        .TwoImage{
+            margin-top: 20PX;
+            img{
+                width: 330px;
+            }
+        }
     }
 }
-

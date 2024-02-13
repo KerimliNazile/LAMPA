@@ -6,6 +6,7 @@ import SaleUp from '../../Components/HomePage/SaleUp'
 import Alamp from '../../Components/HomePage/Alamp'
 import Categories from '../../Components/HomePage/Categories'
 import Vintage from '../../Components/HomePage/Vintage'
+import Latest from '../../Components/HomePage/LatestCollection'
 
 const Home = () => {
   return (
@@ -13,14 +14,14 @@ const Home = () => {
       <Helmet>
         <title>Home</title>
       </Helmet>
-      {/* <Header/>
-     
-      <Alamp/>
-      <Categories/>
-      <Seller/>
+      <Header />
 
- <SaleUp/> */}
-<Vintage/>
+      <Alamp />
+      <Categories />
+      {/* <Seller /> */}
+<Latest/>
+      <SaleUp />
+      <Vintage />
     </div>
   )
 }

@@ -7,6 +7,7 @@ import { IoClose } from "react-icons/io5";
 import { IoPerson } from "react-icons/io5";
 import './index.scss'
 import { NavLink } from 'react-router-dom'
+import ModeBox from '../../Components/ModeBox/ModeBox';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -16,8 +17,12 @@ const Navbar = () => {
     return (
         <>
             <nav>
+                <ModeBox/>
+           
                 <div className="LogoNav">
                     <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1618913868" alt="" />
+
+                     
                 </div>
                 <div className="MainNav">
                     <ul id='NavIn'>

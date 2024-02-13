@@ -1,0 +1,68 @@
+#Latest {
+    min-height: 80vh;
+
+    .LatestArea {
+        width: 90%;
+        margin: auto;
+        .TitleLatest {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #944E63;
+        }
+
+        .ActiveClassCoolection {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            font-size: 22px;
+         
+            li a{
+              
+                
+                color: black;
+                &:hover{
+                    transition: 0.4s;
+                    background-color: rgb(226, 161, 161);
+                }
+            }
+        }
+    }
+}
+
+
+.LatestBox {
+    .LatestImg {
+        width: 100%;
+
+        img {
+            width: 400px;
+        }
+    }
+
+    .Icons {
+        position: absolute;
+        flex-direction: column;
+       display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 22px;
+
+    }
+
+}
+
+.LatestBox:hover .Icons {
+
+    flex-direction: column;
+    display: block;
+    gap: 20px;
+    left: 80px;
+    transform: translateY(-162px);
+    transition: 0.5s;
+}

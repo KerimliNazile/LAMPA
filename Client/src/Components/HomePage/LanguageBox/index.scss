@@ -1,0 +1,22 @@
+.languageBox{
+    width: 100px;
+    height: 40px;
+    display: flex;  
+    gap: 10px;
+    position: relative;
+.language{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+overflow: hidden;
+cursor: pointer;
+    img{
+        max-width: 160%;
+    }
+}
+
+}

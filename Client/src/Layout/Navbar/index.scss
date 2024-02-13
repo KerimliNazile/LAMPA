@@ -3,11 +3,12 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 100px;
-   
+   width: 100%;
     padding: 30px 60px;
     background-color: #b3dedf;
-    // position: fixed;
-    // z-index: 2;
+    position: fixed;
+    z-index:9999;
+    background: var(--mode-color-1);
     .LogoNav{
 img{
     width: 200px;

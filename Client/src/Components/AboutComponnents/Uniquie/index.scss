@@ -1,0 +1,21 @@
+#Uniquie {
+    min-height: 100vh;
+
+    .UniquieArea {
+        padding: 130px;
+
+        .TitleUniquie {
+            font-size: 26px;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .OneLoremBox {
+            width: 1200px;
+            margin-top: 60px;
+            font-size: 22px;
+        }
+    }
+}

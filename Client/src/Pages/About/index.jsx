@@ -1,6 +1,10 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import PathWill from '../../Components/AboutComponnents/PathWill'
+
+import Offer from '../../Components/AboutComponnents/Offer'
+import Friendly from '../../Components/AboutComponnents/Friendly'
+import Uniquie from '../../Components/AboutComponnents/Uniquie'
+import HeaderAbout from '../../Components/AboutComponnents/HeaderAbout'
 
 const About = () => {
   return (
@@ -8,7 +12,11 @@ const About = () => {
         <Helmet>
             <title>About</title>
         </Helmet>
-        <PathWill/>
+        {/* <PathWill/> */}
+        <HeaderAbout/>
+        <Uniquie/>
+        <Offer/>
+        <Friendly/>
     </div>
   )
 }

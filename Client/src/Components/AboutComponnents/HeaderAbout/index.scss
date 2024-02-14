@@ -1,0 +1,22 @@
+#Header{
+    padding: 100px;
+    min-height: 40vh;
+    background-image: url("https://lights-demo.myshopify.com/cdn/shop/files/breadcrumb2.jpg?v=1640693636");
+    .HeaderArea{
+        .HeaderText{
+            font-size: 25px;
+            margin-top: 150px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+        }
+        .HeaderText2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+    }
+}

@@ -14,11 +14,7 @@ import Faqs from './Pages/FAQS'
 import Page from './Pages/PagePage'
 import Error from './Pages/ErrorPage'
 import About from './Pages/About'
-import Seller from './Components/HomePage/BestSeller'
-import Latest from './Components/HomePage/LatestCollection'
-import BestSeller from './Components/HomePage/BestSellersColl'
-import NewSeller from './Components/HomePage/NewSeller'
-import ModeBox from './Components/ModeBox/ModeBox'
+
 
 function App() {
   

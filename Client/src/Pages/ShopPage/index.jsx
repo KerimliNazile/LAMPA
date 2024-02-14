@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import Products from '../../Components/ShopComponents/Collection'
 
 
 const Shop = () => {
@@ -8,7 +9,7 @@ const Shop = () => {
       <Helmet>
         <title>Shop</title>
       </Helmet>
-      {/* <Columns/> */}
+    <Products/>
     </div>
   )
 }

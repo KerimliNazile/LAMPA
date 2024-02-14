@@ -5,6 +5,7 @@ import Offer from '../../Components/AboutComponnents/Offer'
 import Friendly from '../../Components/AboutComponnents/Friendly'
 import Uniquie from '../../Components/AboutComponnents/Uniquie'
 import HeaderAbout from '../../Components/AboutComponnents/HeaderAbout'
+import PathWill from '../../Components/AboutComponnents/PathWill'
 
 const About = () => {
   return (
@@ -12,11 +13,12 @@ const About = () => {
         <Helmet>
             <title>About</title>
         </Helmet>
-        {/* <PathWill/> */}
+      
         <HeaderAbout/>
         <Uniquie/>
         <Offer/>
-        <Friendly/>
+        <Friendly/> 
+         <PathWill/>
     </div>
   )
 }

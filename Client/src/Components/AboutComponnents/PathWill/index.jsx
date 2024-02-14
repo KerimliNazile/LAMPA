@@ -17,7 +17,7 @@ const PathWill = () => {
                     <div className="PathWillBoxArea">
                         <div className="PathBox">
                             <div className="ImagePath">
-                                <BsLamp />
+                              <img src="https://lights-demo.myshopify.com/cdn/shop/files/icon01.png?v=1640688500" alt="" />
                             </div>
                             <div className="TextPath">
                                 <h2>GOOD ELECTRICITY</h2>
@@ -28,7 +28,7 @@ const PathWill = () => {
                         </div>
                         <div className="PathBox">
                             <div className="ImagePath">
-                            <IoBulbOutline />
+                         <img src="https://lights-demo.myshopify.com/cdn/shop/files/icon02.png?v=1640688515" alt="" />
                             </div>
                             <div className="TextPath">
                                 <h2>GOOD ELECTRICITY</h2>
@@ -39,7 +39,7 @@ const PathWill = () => {
                         </div>
                         <div className="PathBox">
                             <div className="ImagePath">
-                            <LuLampWallUp />
+                          <img src="https://lights-demo.myshopify.com/cdn/shop/files/icon03.png?v=1640688526" alt="" />
                             </div>
                             <div className="TextPath">
                                 <h2>GOOD ELECTRICITY</h2>

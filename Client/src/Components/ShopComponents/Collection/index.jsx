@@ -246,65 +246,7 @@ function Products() {
 
 
 
-                <div>
-                    <h4 className="colortext" onClick={() => setIsColorOpen(!isColorOpen)}>Colour <FontAwesomeIcon icon={faChevronDown} /></h4>
-                    {isColorOpen && (
-                        <>
-                            <div className="colors">
-                                <input
-                                    className="brown"
-                                    type="checkbox"
-                                    value= "Brown"
-                                    checked={selectedColor.includes("Brown")}
-                                    onChange={() => applyColorFilter("Brown")}
-                                />
-
-                                <input
-                                    className="black"
-                                    type="checkbox"
-                                    value="Black"
-                                    checked={selectedColor.includes("Black")}
-                                    onChange={() => applyColorFilter("Black")}
-                                />
-                                <input
-                                    className="yellow"
-                                    type="checkbox"
-                                    value="Yellow"
-                                    checked={selectedColor.includes("Yellow")}
-                                    onChange={() => applyColorFilter("Yellow")}
-                                />
-                                <input
-                                    className="blue"
-                                    type="checkbox"
-                                    value="Blue"
-                                    checked={selectedColor.includes("Blue")}
-                                    onChange={() => applyColorFilter("Blue")}
-                                />
-                                <input
-                                    className="khaki"
-                                    type="checkbox"
-                                    value="Khaki"
-                                    checked={selectedColor.includes("Khaki")}
-                                    onChange={() => applyColorFilter("Khaki")}
-                                />
-                                <input
-                                    className="beige"
-                                    type="checkbox"
-                                    value="Beige"
-                                    checked={selectedColor.includes("Beige")}
-                                    onChange={() => applyColorFilter("Beige")}
-                                />
-                                <input
-                                    className="orange"
-                                    type="checkbox"
-                                    value="Orange"
-                                    checked={selectedColor.includes("Orange")}
-                                    onChange={() => applyColorFilter("Orange")}
-                                />
-                            </div>
-                        </>
-                    )}
-                </div>
+               
 
 
                 <div className="sizes">

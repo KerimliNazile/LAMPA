@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.scss'
+import axios from "axios"
+
 const Categories = () => {
+    const [product, setProduct] = useState([])
+    async function getProductData() {
+        const res = await axios.get("http://localhost:3000/product")
+        setProduct(res.data)
+    }
+    useEffect(() => {
+        getProductData()
+    }, [])
     return (
         <>
             <section id='TopCategories'>
@@ -13,21 +23,29 @@ const Categories = () => {
                     </div>
 
                     <div className="TopCategoriesBoxArea">
-                        <div className="TopCategoriesBox">
+                       {
+                        product && product.map((item)=>(
+                            
+                                <>
+                               {
+                                 item.category === "Top" ?
+                                 <div className="TopCategoriesBox">
                             <div className="ImageTop">
-                                <img src="https://alamp-store-demo.myshopify.com/cdn/shop/files/collection1.1.jpg?v=1613770339" alt="" />
+                                <img src={item.image} alt="" />
                             </div>
+                            <h1>{item.title}</h1>
+                            <h2>{item.by}</h2>
+                            <h3>${item.price}</h3>
+
                         </div>
-                        <div className="TopCategoriesBox">
-                            <div className="ImageTop">
-                                <img src="https://alamp-store-demo.myshopify.com/cdn/shop/files/collection1.2.jpg?v=1613770341" alt="" />
-                            </div>
-                        </div>
-                        <div className="TopCategoriesBox">
-                            <div className="ImageTop">
-                                <img src="https://alamp-store-demo.myshopify.com/cdn/shop/files/collection1.3.jpg?v=1613770344" alt="" />
-                            </div>
-                        </div>
+                                
+                             
+                             :""
+                               }
+                                </>
+                    
+                          ))}
+                            
                     </div>
                 </div>
             </section>

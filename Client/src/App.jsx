@@ -9,11 +9,12 @@ import Home from './Pages/HomePage'
 import Shop from './Pages/ShopPage'
 import Wishlist from './Pages/Wishlist'
 import Search from './Pages/Search'
-import Admin from './Pages/Admin'
+
 import Faqs from './Pages/FAQS'
 import Page from './Pages/PagePage'
 import Error from './Pages/ErrorPage'
 import About from './Pages/About'
+import Admin from './Pages/LoginReg'
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/pages'element={<Page/>}></Route>
         <Route path='/error'element={<Error/>}></Route>
         <Route path='/about'element={<About/>}></Route>
+        
         
       </Route>
      </Routes>

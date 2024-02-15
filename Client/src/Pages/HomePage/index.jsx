@@ -7,6 +7,7 @@ import Alamp from '../../Components/HomePage/Alamp'
 import Categories from '../../Components/HomePage/Categories'
 import Vintage from '../../Components/HomePage/Vintage'
 import Latest from '../../Components/HomePage/LatestCollection'
+import Product from '../../Components/HomePage/ProductSeller'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Categories />
       {/* <Seller /> */}
 <Latest/>
+<Product/>
       <SaleUp />
       <Vintage />
     </div>

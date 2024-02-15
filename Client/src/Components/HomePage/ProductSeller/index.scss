@@ -1,0 +1,25 @@
+#ProductSeller{
+    min-height: 80vh;
+    .SellerArea{
+        .SellerTitle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+
+        }
+        .ContainerArea{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .SellerBox{
+                .ImageSeller{
+                    width: 100%;
+                    img{
+width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}

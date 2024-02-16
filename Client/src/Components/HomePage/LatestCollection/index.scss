@@ -50,9 +50,7 @@
        display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        font-size: 22px;
-
+   
     }
 
 }
@@ -60,9 +58,22 @@
 .LatestBox:hover .Icons {
 
     flex-direction: column;
-    display: block;
-    gap: 20px;
-    left: 80px;
+    display: flex;
+    gap: 10px;
+    left: 30px;
+    bottom: 40px;
+    font-size: 25px;
     transform: translateY(-162px);
     transition: 0.5s;
+}
+.faheart{
+    // background-color: #944E63;
+       
+    // width: 30px;
+    // height: 30px;
+    color: #6D2932;
+    &:hover{
+color: orange;
+transition: 0.3s;
+    }
 }

@@ -19,7 +19,28 @@
 width: 300px;
                     }
                 }
+
+                .Icons {
+    position: absolute;
+    flex-direction: column;
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 22px;
+
+}
             }
         }
     }
+}
+
+.SellerBox:hover .Icons {
+
+    flex-direction: column;
+    display: block;
+    gap: 20px;
+    left: 80px;
+    transform: translateY(-162px);
+    transition: 0.5s;
 }

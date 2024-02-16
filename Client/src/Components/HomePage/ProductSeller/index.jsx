@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { FaHeart } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
+import { PiShoppingCartFill } from "react-icons/pi";
 import axios from 'axios'
 import './index.scss'
 
@@ -28,9 +31,15 @@ const Product = () => {
                                             <div className="ImageSeller">
                                                 <img src={item.image} alt="" />
                                             </div>
+                                          
                                             <h1>{item.title}</h1>
                                             <h2>{item.by}</h2>
                                             <p>{item.price}</p>
+                                              <div className="Icons">
+                                                    <FaHeart />
+                                                    <FaEye />
+                                                    <PiShoppingCartFill />
+                                                </div>
                                         </div>
 
                                         : ""

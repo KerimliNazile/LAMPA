@@ -8,7 +8,7 @@ import { FaHeart } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { Navigation } from 'swiper/modules';
 import { PiShoppingCartFill } from "react-icons/pi";
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 
@@ -43,16 +43,17 @@ export default function Latest() {
                                     item.category === "Latest" ?
                                         <SwiperSlide>
                                             <div className="LatestBox">
-                                                <div className="LatestImg">
+                                                <div className="LatestImg" key={item._id}>
                                                     <img src={item.image} alt="" />
                                                 </div>
+                                              
                                                 <h1>{item.title}</h1>
                                                 <h2>{item.by}</h2>
                                                 <p>{item.price}</p>
                                                 <div className="Icons">
-                                                    <FaHeart />
-                                                    <FaEye />
-                                                    <PiShoppingCartFill />
+                                                    <FaHeart className='faheart'/>
+                                                    <Link to={`/${item._id}`}><FaEye className='faheart' /></Link>
+                                                    <PiShoppingCartFill className='faheart' />
                                                 </div>
                                             </div>
                                         </SwiperSlide>

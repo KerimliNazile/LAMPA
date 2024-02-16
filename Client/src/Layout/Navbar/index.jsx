@@ -30,12 +30,12 @@ const Navbar = () => {
                         <li><NavLink to={'/about'}>About</NavLink></li>
                         <li><NavLink to={'/shop'}>Shop</NavLink></li>
                         <li><NavLink to={'/contact'}>Contact</NavLink></li>
-                        <li className='pages'><NavLink to={'/pages'}>Pages</NavLink>
+                        <li className='pages'><NavLink to={'/faqs'}>Faqs</NavLink>
                         <div className="subMenu2">
                             <div className="subMenuArea">
                                 <div className="subMenuBox">
                                     <ul>
-                                        <li><NavLink to={'/faqs'}>FAQs</NavLink></li>
+                                       
                                         <li><NavLink to={'/error'}>404 Page</NavLink></li>
                                     </ul>
                                 </div>

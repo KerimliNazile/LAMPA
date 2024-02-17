@@ -46,14 +46,16 @@ export default function Latest() {
                                                 <div className="LatestImg" key={item._id}>
                                                     <img src={item.image} alt="" />
                                                 </div>
-                                              
-                                                <h1>{item.title}</h1>
+                                                <div className='titleby'>
+                                                     <h1>{item.title}</h1>
                                                 <h2>{item.by}</h2>
-                                                <p>{item.price}</p>
+                                                <h3>${item.price}</h3>
+                                                </div>
+                                               
                                                 <div className="Icons">
-                                                    <FaHeart className='faheart'/>
-                                                    <Link to={`/${item._id}`}><FaEye className='faheart' /></Link>
-                                                    <PiShoppingCartFill className='faheart' />
+                                                    <span>    <FaHeart className='faheart' /></span>
+                                                    <Link to={`/${item._id}`}><span><FaEye className='faheart' /></span></Link>
+                                                    <span>  <PiShoppingCartFill className='faheart' /></span>
                                                 </div>
                                             </div>
                                         </SwiperSlide>

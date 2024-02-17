@@ -151,54 +151,18 @@ function Products() {
                     <span onClick={clearAllFilters}>Clear All</span>
                 </div>
                 <div className="category">
-                    <h4 onClick={() => setIsCategoryOpen(!isCategoryOpen)}>Category <FontAwesomeIcon icon={faChevronDown} /></h4>
+                    <h2 onClick={() => setIsCategoryOpen(!isCategoryOpen)}>Category <FontAwesomeIcon icon={faChevronDown} /></h2>
                     {isCategoryOpen && (
                         <>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="Women"
-                                        checked={selectedCategories.includes("Women")}
-                                        onChange={() => applyCategoryFilter("Women")}
+                                        value="Top"
+                                        checked={selectedCategories.includes("Top")}
+                                        onChange={() => applyCategoryFilter("Top")}
                                     />
-                                    Women
-                                </div>
-                                <span>1</span>
-                            </label>
-                            <label>
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        value="Dresses"
-                                        checked={selectedCategories.includes("Dresses")}
-                                        onChange={() => applyCategoryFilter("Dresses")}
-                                    />
-                                    Dresses
-                                </div>
-                                <span>2</span>
-                            </label>
-                            <label>
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        value="Jackets"
-                                        checked={selectedCategories.includes("Jackets")}
-                                        onChange={() => applyCategoryFilter("Jackets")}
-                                    />
-                                    Jackets
-                                </div>
-                                <span>1</span>
-                            </label>
-                            <label>
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        value="Jeans"
-                                        checked={selectedCategories.includes("Jeans")}
-                                        onChange={() => applyCategoryFilter("Jeans")}
-                                    />
-                                    Jeans
+                                   Top
                                 </div>
                                 <span>3</span>
                             </label>
@@ -206,40 +170,27 @@ function Products() {
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="Shoes"
-                                        checked={selectedCategories.includes("Shoes")}
-                                        onChange={() => applyCategoryFilter("Shoes")}
+                                        value="Latest"
+                                        checked={selectedCategories.includes("Latest")}
+                                        onChange={() => applyCategoryFilter("Latest")}
                                     />
-                                    Shoes
+                                 Latest
                                 </div>
-                                <span>
-                                    3
-                                </span>
+                                <span>6</span>
                             </label>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="Bags"
-                                        checked={selectedCategories.includes("Bags")}
-                                        onChange={() => applyCategoryFilter("Bags")}
+                                        value="Best"
+                                        checked={selectedCategories.includes("Best")}
+                                        onChange={() => applyCategoryFilter("Best")}
                                     />
-                                    Bags
+                                   Best
                                 </div>
-                                <span>4</span>
+                                <span>5</span>
                             </label>
-                            <label>
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        value="Jumpers"
-                                        checked={selectedCategories.includes("Jumpers")}
-                                        onChange={() => applyCategoryFilter("Jumpers")}
-                                    />
-                                    Jumpers
-                                </div>
-                                <span>1</span>
-                            </label>
+                           
                         </>
                     )}
                 </div>
@@ -250,158 +201,190 @@ function Products() {
 
 
                 <div className="sizes">
-                    <h4 onClick={() => setIsSizeOpen(!isSizeOpen)}>Size <FontAwesomeIcon icon={faChevronDown} /></h4>
+                    <h2 onClick={() => setIsSizeOpen(!isSizeOpen)}>Size <FontAwesomeIcon icon={faChevronDown} /></h2>
                     {isSizeOpen && (
                         <>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="Xs"
-                                        checked={selectedSize.includes("Xs")}
-                                        onChange={() => applySizeFilter("Xs")}
+                                        value="Small"
+                                        checked={selectedSize.includes("Small")}
+                                        onChange={() => applySizeFilter("Small")}
                                     />
-                                    XS
+                                 Small
                                 </div>
                             </label>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="S"
-                                        checked={selectedSize.includes("S")}
-                                        onChange={() => applySizeFilter("S")}
+                                        value="Medium"
+                                        checked={selectedSize.includes("Medium")}
+                                        onChange={() => applySizeFilter("Medium")}
                                     />
-                                    S
+                                    Medium
                                 </div>
                             </label>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="M"
-                                        checked={selectedSize.includes("M")}
-                                        onChange={() => applySizeFilter("M")}
+                                        value="Big"
+                                        checked={selectedSize.includes("Big")}
+                                        onChange={() => applySizeFilter("Big")}
                                     />
-                                    M
+                                  Big
                                 </div>
                             </label>
-                            <label>
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        value="L"
-                                        checked={selectedSize.includes("L")}
-                                        onChange={() => applySizeFilter("L")}
-                                    />
-                                    L
-                                </div>
-                            </label>
-                            <label>
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        value="XL"
-                                        checked={selectedSize.includes("XL")}
-                                        onChange={() => applySizeFilter("XL")}
-                                    />
-                                    XL
-                                </div>
-                            </label>
-                            <label>
-                                <div>
-                                    <input
-                                        type="checkbox"
-                                        value="XXL"
-                                        checked={selectedSize.includes("XXL")}
-                                        onChange={() => applySizeFilter("XXL")}
-                                    />
-                                    XXL
-                                </div>
-                            </label>
+                          
                         </>
                     )}
                 </div>
 
 
                 <div className="brand">
-                    <h4 onClick={() => setIsBrandOpen(!isBrandOpen)}>Brand <FontAwesomeIcon icon={faChevronDown} /></h4>
+                    <h2 onClick={() => setIsBrandOpen(!isBrandOpen)}>Brand <FontAwesomeIcon icon={faChevronDown} /></h2>
                     {isBrandOpen && (
                         <>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="Next"
-                                        checked={selectedBrand.includes("Next")}
-                                        onChange={() => applyBrandFilter("Next")}
+                                        value="Nordic"
+                                        checked={selectedBrand.includes("Nordic")}
+                                        onChange={() => applyBrandFilter("Nordic")}
                                     />
-                                    Next
+                                    Nordic
                                 </div>
                             </label>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="Geox"
-                                        checked={selectedBrand.includes("Geox")}
-                                        onChange={() => applyBrandFilter("Geox")}
+                                        value="Tingua"
+                                        checked={selectedBrand.includes("Tingua")}
+                                        onChange={() => applyBrandFilter("Tingua")}
                                     />
-                                    RiverIsland
+                                    Tingua
                                 </div>
                             </label>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="Newbalance"
-                                        checked={selectedBrand.includes("Newbalance")}
-                                        onChange={() => applyBrandFilter("Newbalance")}
+                                        value="Psampa"
+                                        checked={selectedBrand.includes("Psampa")}
+                                        onChange={() => applyBrandFilter("Psampa")}
                                     />
-                                    Newbalance
+                                    Psampa
                                 </div>
                             </label>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="Ugg"
-                                        checked={selectedBrand.includes("Ugg")}
-                                        onChange={() => applyBrandFilter("Ugg")}
+                                        value="Dimmable"
+                                        checked={selectedBrand.includes("Dimmable")}
+                                        onChange={() => applyBrandFilter("Dimmable")}
                                     />
-                                    UGG
+                                    Dimmable
                                 </div>
                             </label>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="F&F"
-                                        checked={selectedBrand.includes("F&F")}
-                                        onChange={() => applyBrandFilter("F&F")}
+                                        value="Florence"
+                                        checked={selectedBrand.includes("Florence")}
+                                        onChange={() => applyBrandFilter("Florence")}
                                     />
-                                    F&F
+                                    Florence
                                 </div>
                             </label>
                             <label>
                                 <div>
                                     <input
                                         type="checkbox"
-                                        value="RiverIsland"
-                                        checked={selectedBrand.includes("RiverIsland")}
-                                        onChange={() => applyBrandFilter("RiverIsland")}
+                                        value="Loretta"
+                                        checked={selectedBrand.includes("Loretta")}
+                                        onChange={() => applyBrandFilter("Loretta")}
                                     />
-                                   
-                                    Geox
+                                   Loretta
                                 </div>
                             </label>
-
+                            <label>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        value=" Noam"
+                                        checked={selectedBrand.includes(" Noam")}
+                                        onChange={() => applyBrandFilter(" Noam")}
+                                    />
+                                   Noam
+                                </div>
+                            </label>
+                            <label>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        value="Fruugo"
+                                        checked={selectedBrand.includes("Fruugo")}
+                                        onChange={() => applyBrandFilter("Fruugo")}
+                                    />
+                                Fruugo
+                                </div>
+                            </label>
+                            <label>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        value="Yiano"
+                                        checked={selectedBrand.includes(" Yiano")}
+                                        onChange={() => applyBrandFilter(" Yiano")}
+                                    />
+                                  Yiano
+                                </div>
+                            </label>
+                            <label>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        value="Ruffle"
+                                        checked={selectedBrand.includes("Ruffle")}
+                                        onChange={() => applyBrandFilter("Ruffle")}
+                                    />
+                                 Ruffle
+                                </div>
+                            </label>
+                            <label>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        value="Kirsten"
+                                        checked={selectedBrand.includes("Kirsten")}
+                                        onChange={() => applyBrandFilter("Kirsten")}
+                                    />
+                               Kirsten
+                                </div>
+                            </label>
+                            <label>
+                                <div>
+                                    <input
+                                        type="checkbox"
+                                        value="Deluxe"
+                                        checked={selectedBrand.includes("Deluxe")}
+                                        onChange={() => applyBrandFilter("Deluxe")}
+                                    />
+                              Deluxe
+                                </div>
+                            </label>
                         </>
                     )}
                 </div>
 
 
-                <h3 onClick={() => setIsPriceOpen(!isPriceOpen)}>Price <FontAwesomeIcon icon={faChevronDown} /></h3>
+                <h2 onClick={() => setIsPriceOpen(!isPriceOpen)}>Price <FontAwesomeIcon icon={faChevronDown} /></h2>
                 {isPriceOpen && (
                     <>
                         <Slider
@@ -411,7 +394,8 @@ function Products() {
 
                             }}
                             value={priceRange}
-                            max={120}
+                            min={460}
+                            max={971}
                             onChange={handlePriceChange}
                         />
 

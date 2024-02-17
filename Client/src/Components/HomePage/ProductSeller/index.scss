@@ -1,35 +1,75 @@
-#ProductSeller{
+#ProductSeller {
     min-height: 80vh;
-    .SellerArea{
-        .SellerTitle{
+margin-top: 100px;
+    .SellerArea {
+        .SellerTitle {
+            color: #944E63;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 28px;
 
         }
-        .ContainerArea{
+
+        .ContainerArea {
             display: flex;
             align-items: center;
             justify-content: center;
-            .SellerBox{
-                .ImageSeller{
-                    width: 100%;
-                    img{
-width: 300px;
-                    }
-                }
 
-                .Icons {
-    position: absolute;
-    flex-direction: column;
-   display: flex;
+            .SellerBox {
+                .ImageSeller {
+                    width: 100%;
+                    overflow: hidden;
+position: relative;
+                    img {
+                        width: 300px;
+                    } 
+                      .Icons {
+                        color: white;
+                    position: absolute;
+                    left: 0;
+                    flex-direction: column;
+                    display: flex;
+                    align-items: center;
+                    // justify-content: center;
+                    gap: 10px;
+                    font-size: 20px;
+span{
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-size: 22px;
-
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+ background-color:orange ;
 }
+                }
+                }
+
+                .titleby{
+                    text-align: center;
+                    width: 300px;
+                    h1{
+                         &:hover{
+                        color: orange;
+                        transition: 0.3s;
+                    }
+                }
+                    h2{
+                        &:hover{
+                            color: orange;
+                            transition: 0.3s;
+                    }
+                }
+                    h3{
+                        font-size: 22px;
+                        &:hover{
+                            color: orange;
+                            transition: 0.3s;
+                    }
+                    }
+                    }
             }
         }
     }

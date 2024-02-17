@@ -50,10 +50,45 @@
        display: flex;
         align-items: center;
         justify-content: center;
+        span{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+         background-color:orange ;
+        }
    
     }
+    .titleby{
+        text-align: center;
+        width: 300px;
+        h1{
+             &:hover{
+            color: orange;
+            transition: 0.3s;
+        }
+    }
+        h2{
+            &:hover{
+                color: orange;
+                transition: 0.3s;
+        }
+    }
+        h3{
+            font-size: 22px;
+            &:hover{
+                color: orange;
+                transition: 0.3s;
+        }
+        }
+        }
+       
+    }
 
-}
+
 
 .LatestBox:hover .Icons {
 
@@ -62,7 +97,7 @@
     gap: 10px;
     left: 30px;
     bottom: 40px;
-    font-size: 25px;
+    font-size: 20px;
     transform: translateY(-162px);
     transition: 0.5s;
 }
@@ -71,9 +106,9 @@
        
     // width: 30px;
     // height: 30px;
-    color: #6D2932;
+    color:white;
     &:hover{
-color: orange;
+
 transition: 0.3s;
     }
 }

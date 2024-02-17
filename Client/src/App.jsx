@@ -6,15 +6,15 @@ import Basket from './Pages/Basket'
 import Contact from './Pages/Contact'
 import Detail from './Pages/Detail'
 import Home from './Pages/HomePage'
+import Search from './Pages/Search'
 import Shop from './Pages/ShopPage'
 import Wishlist from './Pages/Wishlist'
-import Search from './Pages/Search'
 
-import Faqs from './Pages/FAQS'
-import Page from './Pages/PagePage'
-import Error from './Pages/ErrorPage'
 import About from './Pages/About'
+import Error from './Pages/ErrorPage'
+import Faqs from './Pages/FAQS'
 import Admin from './Pages/LoginReg'
+import AdminPage from './Pages/AdminPage'
 
 
 function App() {
@@ -33,8 +33,8 @@ function App() {
         <Route path='/search'element={<Search/>}></Route>
         <Route path='/admin'element={<Admin/>}></Route>
         <Route path='/faqs'element={<Faqs/>}></Route>
-        {/* <Route path='/pages'element={<Page/>}></Route> */}
-        <Route path='/error'element={<Error/>}></Route>
+        <Route path='/admin'element={<AdminPage/>}></Route>
+        <Route path='/*'element={<Error/>}></Route>
         <Route path='/about'element={<About/>}></Route>
         
         

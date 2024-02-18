@@ -3,45 +3,54 @@ import './index.scss'
 import axios from 'axios'
 import { setCookie } from '../../../helper/cookie'
 import { jwtDecode } from "jwt-decode"
-const Login = () => {
-  const [user, setUser] = useState(null)
+import { useUser } from '../../context/UserContext'
+const LoginPage = () => {
+ 
   const [userName, setUserName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-
+const  {
+    user,
+    setUser,
+    Logout,
+    AddToWishlist,
+    isInWishlist,
+}=useUser()
 
 
 
   
   // LOGIN
-  // const handleLogin = async (values) => {
-  //   try {
-  //     const res = await axios.post('http://localhost:3000/login', values)
-  //     alert('Successfully Logined!')
-  //     // res.status === 200 && setToken(res.data)
-  //     res.status === 200 && setCookie("token", res.data, "600h")
-  //     const decoded = res.status === 200 && jwtDecode(res.data);
-  //     setUser(decoded)
-  //     setIsLoginOpen(!isLoginOpen)
-  //     await fetchBasketData()
-  //     await fetchWishlistData()
-  //   } catch (error) {
-  //     toast.error("Wrong Details")
-  //   }
-  // }
+
+
+ 
+//     try {
+//       const res = await axios.post('http://localhost:3000/login', values)
+//       alert('Successfully Logined!')
+//       // res.status === 200 && setToken(res.data)
+//       res.status === 200 && setCookie("token", res.data, "600h")
+//       const decoded = res.status === 200 && jwtDecode(res.data);
+//       setUser(decoded)
+//       setIsLoginOpen(!isLoginOpen)
+//       await fetchBasketData()
+//       await fetchWishlistData()
+//     } catch (error) {
+//       toast.error("Wrong Details")
+//     }
+//   }
 
 
 
 
 
-  const handleRegister = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     console.log(userName);
     try {
-      const res = await axios.post('http://localhost:3000/register', {
+      const res = await axios.post('http://localhost:3000/login', {
         name: userName,
-        email: email,
+      
         password: password
       });
 
@@ -50,9 +59,18 @@ const Login = () => {
       if (res.status === 200) {
         // You can uncomment the following lines if needed
         // setToken(res.data);
-        // setCookie("token", res.data, { expires: "600h" });
-        // const decoded = jwtDecode(res.data);
-        // setUser(decoded);
+        setCookie("token", res.data, { expires: "600h" });
+        const decoded = jwtDecode(res.data);
+        console.log(decoded);
+        setUser({
+            _id:decoded._id,
+            wishlist:decoded.wishlist,
+            username:decoded.name,
+            role:decoded.role,
+            
+
+        });
+        
         alert('Successfully Registered!');
       } else {
         // Handle other response statuses if needed
@@ -72,6 +90,7 @@ const Login = () => {
 
 
   return (
+
     <>
       <section id='LoginRegister'>
         <div className="LoginRegisterArea">
@@ -80,19 +99,19 @@ const Login = () => {
           </div>
           <div className="RightArea">
             <div className="textH2">
-              <h2>Sign Up</h2>
+              <h2>Login</h2>
             </div>
 
-            <form onSubmit={(e) => handleRegister(e)}>
+            <form onSubmit={(e) => handleLogin(e)}>
               <input onChange={(e) => { setUserName(e.target.value) }} type="text" placeholder="Your Name" />
-              <input onChange={(e) => { setEmail(e.target.value) }} type="email" placeholder="Your Email" />
+             
               <input onChange={(e) => { setPassword(e.target.value) }} type="password" placeholder="Password" />
-              <button type="submit">Sign Up</button>
+              <button type="submit">Login</button>
             </form>
 
             <div className="BtnReg"></div>
             <div class="login-link">
-              <a href="/login">I already have an account.</a>
+              <a href="/register">I already have an account.</a>
             </div>
 
           </div>
@@ -103,6 +122,6 @@ const Login = () => {
 
     </>
   )
-}
+  }
 
-export default Login
+export default LoginPage

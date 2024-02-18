@@ -19,6 +19,7 @@ import Error from './Pages/ErrorPage'
 import Faqs from './Pages/FAQS'
 import Login from './Pages/LoginReg'
 import ScrollToTop from './Components/HomePage/ScrollToTop'
+import LoginPage from './Pages/LoginPage'
 
 function App() {
  
@@ -37,11 +38,12 @@ Aos.init()
         <Route path='/contact'element={<Contact/>}></Route>
         <Route path='/shop'element={<Shop/>}></Route>
         <Route path='/search'element={<Search/>}></Route>
-        <Route path='/login'element={<Login/>}></Route>
+        <Route path='/login'element={<LoginPage/>}></Route>
         <Route path='/faqs'element={<Faqs/>}></Route>
         <Route path='/adminn'element={<AdminPage/>}></Route>
         <Route path='/*'element={<Error/>}></Route>
         <Route path='/about'element={<About/>}></Route>
+        <Route path='/register'element={<Login/>}></Route>
       </Route>
      </Routes>
    

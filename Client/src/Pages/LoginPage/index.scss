@@ -1,0 +1,82 @@
+#LoginRegister {
+    min-height: 100vh;
+  
+    .LoginRegisterArea {
+      padding: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+  
+      .LeftArea {
+  
+        img {
+          border-radius: 25%;
+          width: 400px;
+        }
+      }
+  
+  
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  form {
+  
+    width: 500px;
+    margin: 0 auto;
+  
+    .textH2 {
+      margin-bottom: 40px;
+      text-align: center;
+  
+      h2 {
+        font-size: 35px;
+        color: #6B240C;
+      }
+    }
+  
+  }
+  
+  input {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 18px;
+  }
+  
+  .BtnReg {
+    margin-top: 30px;
+    text-align: center;
+  
+    button {
+      font-size: 20px;
+      width: 40%;
+      padding: 10px;
+      background-color: #6B240C;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+  
+  
+  .login-link {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  a {
+    color: #000;
+  }

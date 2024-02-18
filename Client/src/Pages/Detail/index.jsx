@@ -5,7 +5,7 @@ import axios from 'axios';
 import './index.scss';
 
 const Detail = () => {
-  const [selectedPhoto, setSelectedPhoto] = useState('https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0011_Layer_23_d62b2ddf-017c-4b57-a240-135bb9ee607a_2000x.jpg?v=1535355702');
+  const [selectedPhoto, setSelectedPhoto] = useState("");
   const [detail, setDetail] = useState([]);
   const { id } = useParams();
 
@@ -25,9 +25,10 @@ const Detail = () => {
   useEffect(() => {
     fetchDetail();
   }, [id]);
-
+console.log(detail.detailsImage);
   return (
     <>
+    
       <Helmet>
         <title>Detail</title>
       </Helmet>
@@ -58,17 +59,23 @@ const Detail = () => {
         </div>
 
         <div style={{ display: 'flex' }}>
-          <div style={{ marginRight: '10px' }} onClick={() => handlePhotoClick("https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0010_Layer_24_4640bbcc-b136-49ea-9a32-e98bce0a21d0_medium.jpg?v=1535355702")}>
+
+          {/* { detail ? detail.detailsImage.map(x=>(
+
+         
+            <div style={{ marginRight: '10px' }} onClick={() => handlePhotoClick(x)}>
             <img
-              src="https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0010_Layer_24_4640bbcc-b136-49ea-9a32-e98bce0a21d0_medium.jpg?v=1535355702"
+              src={x}
               alt="Foto 1"
               style={{ width: '100px', cursor: 'pointer' }}
             />
           </div>
 
-          <div style={{ marginRight: '10px' }} onClick={() => handlePhotoClick("https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0009_Layer_25_defeb66e-9857-43a2-8156-d1546c71cd75_medium.jpg?v=1535355702")}>
+          )):null } */}
+
+          {/* <div style={{ marginRight: '10px' }} onClick={() => handlePhotoClick("https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0009_Layer_25_defeb66e-9857-43a2-8156-d1546c71cd75_medium.jpg?v=1535355702")}>
             <img
-              src="https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0009_Layer_25_defeb66e-9857-43a2-8156-d1546c71cd75_medium.jpg?v=1535355702"
+              src={x}
               alt="Foto 2"
               style={{ width: '100px', cursor: 'pointer' }}
             />
@@ -80,7 +87,7 @@ const Detail = () => {
               alt="Foto 3"
               style={{ width: '100px', cursor: 'pointer' }}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { PiShoppingCartFill } from "react-icons/pi";
 import './index.scss'
@@ -7,11 +8,23 @@ import axios from "axios"
 import { Link } from 'react-router-dom';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { useUser } from '../../../context/UserContext';
 const Categories = () => {
-    useEffect(()=>{
-        Aos.init({duration:1000})
-       },[])
+    const {
+        user,
+        setUser,
+        Logout,
+        AddToWishlist,
+        isInWishlist,
+    } = useUser()
+    useEffect(() => {
+        Aos.init({ duration: 1000 })
+    }, [])
     const [product, setProduct] = useState([])
+    function HandleAddtoWish(item) {
+AddToWishlist(item)
+    }
+
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
         setProduct(res.data)
@@ -41,8 +54,8 @@ const Categories = () => {
                                                 <div className="ImageTop" key={item._id}>
                                                     <img src={item.image} alt="" />
                                                     <div className="Icons">
-                                                        <span> <FaHeart /> </span>
-                                                     <Link to={`/${item._id}`}>   <span> <FaEye /></span></Link>
+                                                        <span onClick={() => HandleAddtoWish(item)}> {isInWishlist(item) ?<FaHeart /> : <FaRegHeart />} </span>
+                                                        <Link to={`/${item._id}`}>   <span> <FaEye /></span></Link>
                                                         <span> <PiShoppingCartFill /></span>
                                                     </div>
                                                 </div>

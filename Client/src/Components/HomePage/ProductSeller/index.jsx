@@ -5,8 +5,12 @@ import { PiShoppingCartFill } from "react-icons/pi";
 import axios from 'axios'
 import './index.scss'
 import { Link } from 'react-router-dom';
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const Product = () => {
+    useEffect(()=>{
+        Aos.init({duration:1000})
+       },[])
     const [product, setProduct] = useState([])
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
@@ -20,7 +24,7 @@ const Product = () => {
         <>
             <section id='ProductSeller'>
                 <div className="SellerArea">
-                    <div className="SellerTitle">
+                    <div data-aos="zoom-in-up" className="SellerTitle">
                         <h1>Best Seller</h1>
                     </div>
                     <div className="ContainerArea">
@@ -28,9 +32,12 @@ const Product = () => {
                             <>
                                 {
                                     item.category === "Best" ?
-                                        <div className="SellerBox">
+                                        <div data-aos="zoom-in-up" className="SellerBox">
                                             <div className="ImageSeller" key={item._id}>
-                                                <img src={item.image} alt="" />
+                                               
+                                                    <img src={item.image} alt="" />
+                                               
+                                                
                                                 <div className="Icons">
                                                     <span> <FaHeart /> </span>
                                                  <Link to={`/${item._id}`}> <span> <FaEye /></span></Link>  
@@ -38,8 +45,8 @@ const Product = () => {
                                                 </div>
                                             </div>
                                           <div className='titleby'>
-                                            <h1>{item.title}</h1>
-                                            <h2>{item.by}</h2>
+                                            <h3>{item.title}</h3>
+                                            <h3>{item.by}</h3>
                                             <h3>${item.price}</h3>
                                           </div>
                                             

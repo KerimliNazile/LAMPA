@@ -5,8 +5,12 @@ import { PiShoppingCartFill } from "react-icons/pi";
 import './index.scss'
 import axios from "axios"
 import { Link } from 'react-router-dom';
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const Categories = () => {
+    useEffect(()=>{
+        Aos.init({duration:1000})
+       },[])
     const [product, setProduct] = useState([])
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
@@ -19,10 +23,10 @@ const Categories = () => {
         <>
             <section id='TopCategories'>
                 <div className="TopCategories">
-                    <div className="titleTop">
+                    <div data-aos="zoom-in-up" className="titleTop">
                         <h1>Top Categories</h1>
                     </div>
-                    <div className="loremTop">
+                    <div data-aos="zoom-in-up" className="loremTop">
                         <p>Stock is limited. Order now to avoid disappointment.</p>
                     </div>
 
@@ -33,7 +37,7 @@ const Categories = () => {
                                 <>
                                     {
                                         item.category === "Top" ?
-                                            <div className="TopCategoriesBox">
+                                            <div data-aos="zoom-in-up" className="TopCategoriesBox">
                                                 <div className="ImageTop" key={item._id}>
                                                     <img src={item.image} alt="" />
                                                     <div className="Icons">

@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import './index.scss'
 import { IoIosPlay } from "react-icons/io";
 
+import { MdClose } from "react-icons/md";
+
 const Uniquie = () => {
     const [open, setopen] = useState(false)
     function handleOpen() {
         setopen(!open)
     }
-    
+
     return (
         <>
             <section id='Uniquie'>
@@ -21,15 +23,16 @@ const Uniquie = () => {
                     </div>
                     <div className="TwoVideoBox">
                         <div className="playBtn" onClick={handleOpen}>
-                        <IoIosPlay />
+                            <IoIosPlay />
                         </div>
-                       
+
                     </div>
-                    <div className={`videoBox ${open ? "open":""}`}>
-<div className="closeBtn" onClick={handleOpen}>
-    x
-</div>
-</div>
+                    <div className={`videoBox ${open ? "open" : ""}`}>
+                        <div className="closeBtn" onClick={handleOpen}>
+                        <MdClose />
+                        </div>
+                        <iframe width="930" height="523" src="https://www.youtube.com/embed/oA-uLPzMilU" title="How To Light A Space | Mistakes, Rules + Lighting In Interior Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </section>
         </>

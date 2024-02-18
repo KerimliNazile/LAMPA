@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './index.scss'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const SaleUp = () => {
+    useEffect(()=>{
+        Aos.init({duration:1000})
+       },[])
   return (
     <>
 <section id='SaleUp'>
 
-    <div className="MainArea">
+    <div data-aos="fade-right" className="MainArea">
         
         <div className="SaleUpArea">
     <div className="LeftImage">

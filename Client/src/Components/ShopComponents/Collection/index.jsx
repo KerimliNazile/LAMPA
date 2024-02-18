@@ -19,12 +19,12 @@ function Products() {
     const [selectedBrand, setSelectedBrand] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [isCategoryOpen, setIsCategoryOpen] = useState(false);
-    const [isColorOpen, setIsColorOpen] = useState(false);
+    
     const [isSizeOpen, setIsSizeOpen] = useState(false);
     const [isBrandOpen, setIsBrandOpen] = useState(false);
     const [isPriceOpen, setIsPriceOpen] = useState(false);
-    const itemsPerPage = 4;
-    const [priceRange, setPriceRange] = useState([0, 120]);
+    const itemsPerPage = 10;
+    const [priceRange, setPriceRange] = useState([460, 971]);
 
     const handlePriceChange = (value) => {
         setPriceRange(value);
@@ -110,7 +110,7 @@ function Products() {
         setSelectedSize([]);
         setSelectedBrand([]);
         setPriceRange([]);
-        setPriceRange([0, 120]); 
+        setPriceRange([460, 971]); 
         fetchData(); 
     };
 

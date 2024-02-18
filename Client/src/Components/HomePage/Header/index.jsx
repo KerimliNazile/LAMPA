@@ -2,15 +2,19 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './index.scss'
 
 import { Pagination } from 'swiper/modules';
+import { useEffect } from 'react';
 
 export default function Header() {
-
+useEffect(()=>{
+ Aos.init({duration:1500})
+},[])
     return (
         <>
             <div className="AllImageSwiper">
@@ -26,14 +30,18 @@ export default function Header() {
                                         <figure>
                                             <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/slide1.2.jpg?v=1619145875" alt="" />
                                         </figure>
-
+                                        <div data-aos="fade-right" className="textSwiper">
+                                            <h1>Modern Table Lamp</h1>
+                                            <p>An eye-catching combination of modernist ceramic arts and functional lighting</p>
+                                            <button>SHOP NOW</button>
+                                        </div>
                                     </div>
+
+
                                 </div>
 
-                                {/* <div className="textSwiper">
-                                <h1>Modern Table Lamp</h1>
-                            </div>
-                            <button>SHOP NOW</button> */}
+
+
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className='hover15 column'>
@@ -41,7 +49,11 @@ export default function Header() {
                                         <figure>
                                             <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/slide1.1.jpg?v=1619145523" alt="" />
                                         </figure>
-
+                                        <div data-aos="fade-right" className="textSwiper">
+                                            <h1>Outline Table Lamp</h1>
+                                            <p>An eye-catching combination of modernist ceramic arts and functional lighting</p>
+                                            <button>SHOP NOW</button>
+                                        </div>
                                     </div>
                                 </div>
 

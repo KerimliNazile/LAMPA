@@ -4,7 +4,7 @@
     .UniquieArea {
         padding: 130px;
         position: relative;
-background: gray;
+
         .TitleUniquie {
             font-size: 26px;
             width: 500px;
@@ -18,41 +18,61 @@ background: gray;
             margin-top: 60px;
             font-size: 22px;
         }
+        iframe{
+            margin-top: 30px;
+            margin-left: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .TwoVideoBox{
             margin-top: 50px;
-            background: red;
-            height: 60vh;
+            background-image: url("https://minery-store-demo.myshopify.com/cdn/shop/files/about6.jpg?v=1619077191");
+            height: 70vh;
+            width: 100%;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center ;
             align-items: center;
             font-size: 20px;
             .playBtn{
-                background: green;
-                width: 50px;
-                height: 50px;
+                background:white;
+                width: 60px;
+                height: 60px;
+                margin-right: 130px;
                border-radius: 50%;
                display: flex;
                justify-content: center ;
                align-items: center;
                font-size: 25px;
                cursor: pointer;
+               &:hover{
+                background-color: orange;
+                color: white;
+                transition: 0.3s;
+               }
             }
      
         }
         .videoBox{
-            background: blue;
-            width: 100%;
-            height: 100%;
+           background-color: black;
+            width: 75%;
+            height: 50%;
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 45%;
+            left: 8%;
             display: none;
             .closeBtn{
-                background: aqua;
-                height: 20px;
-                width: 20px;
+                color: white;
+                background: black;
+                height: 40px;
+                width: 40px;
                 position: absolute;
                 top: 10px;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 right: 10px;
             }
         }

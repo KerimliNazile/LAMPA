@@ -34,9 +34,9 @@ const Navbar = () => {
                         <div className="subMenu2">
                             <div className="subMenuArea">
                                 <div className="subMenuBox">
-                                    <ul>
+                                    <ul className='errorpage'>
                                        
-                                        <li><NavLink to={'/error'}>404 Page</NavLink></li>
+                                        <li ><NavLink to={'/*'}>404 Page</NavLink></li>
                                     </ul>
                                 </div>
                             </div>

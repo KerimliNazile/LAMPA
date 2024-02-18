@@ -41,13 +41,14 @@
                     width: 100%;
 
                     img {
+                        // border-radius: 20%;
                         max-width: 400px;
                     }
 
                     .Icons {
                         color: white;
                         position: absolute;
-                        left: 0;
+                        left: 20px;
                         flex-direction: column;
                         display: flex;
                         align-items: center;

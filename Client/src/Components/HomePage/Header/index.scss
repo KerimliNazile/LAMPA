@@ -6,13 +6,45 @@
     .SwiperInAll{
         width: 70%;
         .HeaderArea{
+		position: relative;
             img{
                 object-fit: contain;
                 width: 100%;
+				
             }
         }
         .textSwiper{
-            
+			position: absolute;
+			color: white;
+    top: 35%;
+    left: 10%;
+    width: 50%;
+    height: 30%;
+	h1{
+		font-size: 50px;
+	}
+	p{
+		margin-top: 30px;
+		font-size: 22px;
+	}
+	button{
+		background-color: black;
+		color: white;
+		border: none;
+		width: 120px;
+		height: 40px;
+		margin-top: 80px;
+		&:hover{
+			background-color: orange;
+			color: black;
+			transition: 0.3s;
+		}
+	}
+			// background-color: red;
+		// 	top: 0;
+		// 	left: 0;
+		// 	z-index: 2;
+        //    position:absolute; 
         }
     }
     .AllImage{
@@ -78,4 +110,7 @@
 		height: 100%;
 		opacity: 0;
 	}
+}
+.hover15 .column {
+position: relative;
 }

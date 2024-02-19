@@ -1,51 +1,51 @@
-#Latest {
-  min-height: 80vh;
-  background-image: url("https://minery-store-demo.myshopify.com/cdn/shop/files/bg_prod.jpg?v=1619081942");
-}
-#Latest .LatestArea {
-  width: 90%;
-  margin: auto;
-}
-#Latest .LatestArea .TitleLatest {
-  padding: 70px;
-  margin-top: 40px;
+#TopCategories .TopCategories .titleTop {
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  margin-top: 40px;
   color: #944E63;
 }
-#Latest .LatestArea .ActiveClassCoolection {
-  margin-bottom: 100px;
+#TopCategories .TopCategories .titleTop h1 {
+  font-size: 40px;
+}
+#TopCategories .TopCategories .loremTop {
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  margin-top: 40px;
+}
+#TopCategories .TopCategories .loremTop p {
   font-size: 22px;
 }
-#Latest .LatestArea .ActiveClassCoolection li a {
-  color: black;
+#TopCategories .TopCategories .TopCategoriesBoxArea {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
-#Latest .LatestArea .ActiveClassCoolection li a:hover {
-  transition: 0.4s;
-  background-color: rgb(226, 161, 161);
-}
-
-.LatestBox .LatestImg {
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop {
+  overflow: hidden;
+  position: relative;
   width: 100%;
 }
-.LatestBox .LatestImg img {
-  border-radius: 20%;
-  width: 320px;
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop img {
+  width: 400px;
 }
-.LatestBox .Icons {
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop .Icons {
+  color: white;
   position: absolute;
+  left: 20px;
   flex-direction: column;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
 }
-.LatestBox .Icons span {
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop .Icons span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,41 +55,208 @@
   border-radius: 50%;
   background-color: orange;
 }
-.LatestBox .titleby {
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby {
+  width: 400px;
   text-align: center;
-  width: 300px;
 }
-.LatestBox .titleby h1:hover {
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h1:hover {
   color: orange;
   transition: 0.3s;
 }
-.LatestBox .titleby h2:hover {
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h2:hover {
   color: orange;
   transition: 0.3s;
 }
-.LatestBox .titleby h3 {
-  color: black;
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h3 {
   font-size: 22px;
 }
-.LatestBox .titleby h3:hover {
+#TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h3:hover {
   color: orange;
   transition: 0.3s;
 }
 
-.LatestBox:hover .Icons {
+.TopCategoriesBox:hover .Icons {
   flex-direction: column;
-  display: flex;
-  gap: 10px;
-  left: 30px;
-  bottom: 40px;
-  font-size: 20px;
+  display: block;
+  gap: 20px;
+  left: 80px;
   transform: translateY(-162px);
   transition: 0.5s;
 }
 
-.faheart {
-  color: white;
+@media only screen and (max-width: 860px) {
+  #TopCategories .TopCategories .titleTop {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    color: #944E63;
+  }
+  #TopCategories .TopCategories .titleTop h1 {
+    font-size: 40px;
+  }
+  #TopCategories .TopCategories .loremTop {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  #TopCategories .TopCategories .loremTop p {
+    font-size: 22px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop img {
+    margin-left: 50px;
+    text-align: center;
+    max-width: 300px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop .Icons {
+    color: white;
+    position: absolute;
+    left: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop .Icons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: orange;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby {
+    width: 400px;
+    text-align: center;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h1:hover {
+    color: orange;
+    transition: 0.3s;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h2:hover {
+    color: orange;
+    transition: 0.3s;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h3 {
+    font-size: 22px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h3:hover {
+    color: orange;
+    transition: 0.3s;
+  }
+  .TopCategoriesBox:hover .Icons {
+    flex-direction: column;
+    display: block;
+    gap: 20px;
+    left: 80px;
+    transform: translateY(-162px);
+    transition: 0.5s;
+  }
 }
-.faheart:hover {
-  transition: 0.3s;
+@media only screen and (max-width: 418px) {
+  #TopCategories .TopCategories .titleTop {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    color: #944E63;
+  }
+  #TopCategories .TopCategories .titleTop h1 {
+    font-size: 40px;
+  }
+  #TopCategories .TopCategories .loremTop {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  #TopCategories .TopCategories .loremTop p {
+    font-size: 22px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop img {
+    margin-left: 10px;
+    text-align: center;
+    max-width: 280px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop .Icons {
+    color: white;
+    position: absolute;
+    left: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .ImageTop .Icons span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: orange;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby {
+    width: 300px;
+    text-align: center;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h1:hover {
+    color: orange;
+    transition: 0.3s;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h2:hover {
+    color: orange;
+    transition: 0.3s;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h3 {
+    font-size: 22px;
+  }
+  #TopCategories .TopCategories .TopCategoriesBoxArea .TopCategoriesBox .titleby h3:hover {
+    color: orange;
+    transition: 0.3s;
+  }
+  .TopCategoriesBox:hover .Icons {
+    flex-direction: column;
+    display: block;
+    gap: 20px;
+    left: 80px;
+    transform: translateY(-162px);
+    transition: 0.5s;
+  }
 }/*# sourceMappingURL=index.css.map */

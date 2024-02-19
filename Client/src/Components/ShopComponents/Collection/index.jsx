@@ -12,6 +12,7 @@ import useFetch from "../../../hooks/useFetch";
 
 function Products() {
     const [data, setData, fetchData] = useFetch([]);
+    const [sortOption, setSortOption] = useState('featured'); // Default sorting option
     const [columns, setColumns] = useState(3);
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [selectedColor, setSelectedColor] = useState([]);
@@ -19,7 +20,7 @@ function Products() {
     const [selectedBrand, setSelectedBrand] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [isCategoryOpen, setIsCategoryOpen] = useState(false);
-    
+
     const [isSizeOpen, setIsSizeOpen] = useState(false);
     const [isBrandOpen, setIsBrandOpen] = useState(false);
     const [isPriceOpen, setIsPriceOpen] = useState(false);
@@ -39,7 +40,10 @@ function Products() {
         }
     };
 
-
+    const handleSortChange = (e) => {
+        setSortOption(e.target.value);
+        // Add logic to update and re-render the sorted data based on the selected option
+    };
     useEffect(() => {
         fetchData();
     }, []);
@@ -110,8 +114,8 @@ function Products() {
         setSelectedSize([]);
         setSelectedBrand([]);
         setPriceRange([]);
-        setPriceRange([460, 971]); 
-        fetchData(); 
+        setPriceRange([460, 971]);
+        fetchData();
     };
 
     const filteredData = data.filter(
@@ -162,7 +166,7 @@ function Products() {
                                         checked={selectedCategories.includes("Top")}
                                         onChange={() => applyCategoryFilter("Top")}
                                     />
-                                   Top
+                                    Top
                                 </div>
                                 <span>3</span>
                             </label>
@@ -174,7 +178,7 @@ function Products() {
                                         checked={selectedCategories.includes("Latest")}
                                         onChange={() => applyCategoryFilter("Latest")}
                                     />
-                                 Latest
+                                    Latest
                                 </div>
                                 <span>6</span>
                             </label>
@@ -186,18 +190,18 @@ function Products() {
                                         checked={selectedCategories.includes("Best")}
                                         onChange={() => applyCategoryFilter("Best")}
                                     />
-                                   Best
+                                    Best
                                 </div>
                                 <span>5</span>
                             </label>
-                           
+
                         </>
                     )}
                 </div>
 
 
 
-               
+
 
 
                 <div className="sizes">
@@ -212,7 +216,7 @@ function Products() {
                                         checked={selectedSize.includes("Small")}
                                         onChange={() => applySizeFilter("Small")}
                                     />
-                                 Small
+                                    Small
                                 </div>
                             </label>
                             <label>
@@ -234,10 +238,10 @@ function Products() {
                                         checked={selectedSize.includes("Big")}
                                         onChange={() => applySizeFilter("Big")}
                                     />
-                                  Big
+                                    Big
                                 </div>
                             </label>
-                          
+
                         </>
                     )}
                 </div>
@@ -310,7 +314,7 @@ function Products() {
                                         checked={selectedBrand.includes("Loretta")}
                                         onChange={() => applyBrandFilter("Loretta")}
                                     />
-                                   Loretta
+                                    Loretta
                                 </div>
                             </label>
                             <label>
@@ -321,7 +325,7 @@ function Products() {
                                         checked={selectedBrand.includes(" Noam")}
                                         onChange={() => applyBrandFilter(" Noam")}
                                     />
-                                   Noam
+                                    Noam
                                 </div>
                             </label>
                             <label>
@@ -332,7 +336,7 @@ function Products() {
                                         checked={selectedBrand.includes("Fruugo")}
                                         onChange={() => applyBrandFilter("Fruugo")}
                                     />
-                                Fruugo
+                                    Fruugo
                                 </div>
                             </label>
                             <label>
@@ -343,7 +347,7 @@ function Products() {
                                         checked={selectedBrand.includes(" Yiano")}
                                         onChange={() => applyBrandFilter(" Yiano")}
                                     />
-                                  Yiano
+                                    Yiano
                                 </div>
                             </label>
                             <label>
@@ -354,7 +358,7 @@ function Products() {
                                         checked={selectedBrand.includes("Ruffle")}
                                         onChange={() => applyBrandFilter("Ruffle")}
                                     />
-                                 Ruffle
+                                    Ruffle
                                 </div>
                             </label>
                             <label>
@@ -365,7 +369,7 @@ function Products() {
                                         checked={selectedBrand.includes("Kirsten")}
                                         onChange={() => applyBrandFilter("Kirsten")}
                                     />
-                               Kirsten
+                                    Kirsten
                                 </div>
                             </label>
                             <label>
@@ -376,7 +380,7 @@ function Products() {
                                         checked={selectedBrand.includes("Deluxe")}
                                         onChange={() => applyBrandFilter("Deluxe")}
                                     />
-                              Deluxe
+                                    Deluxe
                                 </div>
                             </label>
                         </>
@@ -412,9 +416,9 @@ function Products() {
                         <p>Sort by:</p>
                         <div className="toolbox_right">
                             <div className="toolbox_sort">
-                             
+
                                 <div className="select-custom">
-                                    <select name="sortby" id="sortby" className='sort_control'>
+                                    <select name="sortby" id="sortby" value={sortOption} onChange={handleSortChange} className='sort_control'>
                                         <option value="featured">Featured</option>
                                         <option value="bestseller">Best selling</option>
                                         <option value="a-z">Alphabetically,A-Z</option>
@@ -424,9 +428,14 @@ function Products() {
                                         <option value="datenew">Date, old to new</option>
                                         <option value="dateold">Date , new to old</option>
                                     </select>
+                                    <ul>
+                                        {data.map((item) => (
+                                            <li key={item._id}>{item.name}</li>
+                                        ))}
+                                    </ul>
                                 </div>
                             </div>
-                            </div>
+                        </div>
                         <button onClick={sortByTwo}>
                             <svg width="10" height="10">
                                 <rect x="0" y="0" width="4" height="4"></rect>

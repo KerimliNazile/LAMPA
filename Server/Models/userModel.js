@@ -11,6 +11,9 @@ const UserSchema = new Schema(
       //   product: { type: mongoose.Schema.Types.ObjectId, ref: "" },
       // },
     ],
+    basket:[
+
+    ],
   },
 
   { timestamps: true }

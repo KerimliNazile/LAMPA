@@ -89,6 +89,7 @@
 
                     h3 {
                         font-size: 22px;
+
                         &:hover {
                             color: orange;
                             transition: 0.3s;
@@ -110,7 +111,116 @@
     transition: 0.5s;
 }
 
-@media only screen and (max-width: 420px) {
+// @media only screen and (max-width: 420px) {
+//     #TopCategories {
+//         .TopCategories {
+//             .titleTop {
+//                 text-align: center;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 margin-top: 40px;
+//                 color: #944E63;
+
+//                 h1 {
+//                     font-size: 40px;
+//                 }
+//             }
+
+//             .loremTop {
+//                 text-align: center;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 margin-top: 40px;
+
+//                 p {
+//                     font-size: 22px;
+//                 }
+//             }
+
+//             .TopCategoriesBoxArea {
+//                 margin-top: 100px;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 flex-wrap: wrap;
+//                 gap: 40px;
+
+//                 .TopCategoriesBox {
+
+//                     .ImageTop {
+
+//                         width: 100%;
+
+//                         img {
+//                             object-fit: cover;
+//                             max-width: 350px;
+//                         }
+
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+
+// @media only screen and (max-width: 365px) {
+//     #TopCategories {
+//         .TopCategories {
+//             .titleTop {
+//                 text-align: center;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 margin-top: 40px;
+//                 color: #944E63;
+
+//                 h1 {
+//                     font-size: 40px;
+//                 }
+//             }
+
+//             .loremTop {
+//                 text-align: center;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 margin-top: 40px;
+
+//                 p {
+//                     font-size: 22px;
+//                 }
+//             }
+
+//             .TopCategoriesBoxArea {
+//                 margin-top: 100px;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 flex-wrap: wrap;
+//                 gap: 40px;
+
+//                 .TopCategoriesBox {
+
+//                     .ImageTop {
+
+//                         width: 100%;
+
+//                         img {
+//                             object-fit: cover;
+//                             max-width: 280px;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+// }
+@media only screen and (max-width: 860px) {
     #TopCategories {
         .TopCategories {
             .titleTop {
@@ -149,24 +259,86 @@
                 .TopCategoriesBox {
 
                     .ImageTop {
-
+                      
+                        overflow: hidden;
+                        position: relative;
                         width: 100%;
 
                         img {
-                            object-fit: cover;
-                            max-width: 350px;
+                           margin-left: 50px;
+                            text-align: center;
+                            // border-radius: 20%;
+                            max-width: 300px;
                         }
 
+                        .Icons {
+                            color: white;
+                            position: absolute;
+                            left: 20px;
+                            flex-direction: column;
+                            display: flex;
+                            align-items: center;
+                            // justify-content: center;
+                            gap: 10px;
+                            font-size: 20px;
+
+                            span {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 2px;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                background-color: orange;
+                            }
+                        }
+                    }
+
+                    .titleby {
+                       
+                        width: 400px;
+                        text-align: center;
+
+                        h1 {
+                            &:hover {
+                                color: orange;
+                                transition: 0.3s;
+                            }
+                        }
+
+                        h2 {
+                            &:hover {
+                                color: orange;
+                                transition: 0.3s;
+                            }
+                        }
+
+                        h3 {
+                            font-size: 22px;
+
+                            &:hover {
+                                color: orange;
+                                transition: 0.3s;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
+    .TopCategoriesBox:hover .Icons {
+
+        flex-direction: column;
+        display: block;
+        gap: 20px;
+        left: 80px;
+        transform: translateY(-162px);
+        transition: 0.5s;
+    }
 }
-
-
-@media only screen and (max-width: 365px) {
+@media only screen and (max-width: 418px) {
     #TopCategories {
         .TopCategories {
             .titleTop {
@@ -205,17 +377,82 @@
                 .TopCategoriesBox {
 
                     .ImageTop {
-
+                    
+                        overflow: hidden;
+                        position: relative;
                         width: 100%;
 
                         img {
-                            object-fit: cover;
+                           margin-left: 10px;
+                            text-align: center;
+                            // border-radius: 20%;
                             max-width: 280px;
                         }
+
+                        .Icons {
+                            color: white;
+                            position: absolute;
+                            left: 20px;
+                            flex-direction: column;
+                            display: flex;
+                            align-items: center;
+                            // justify-content: center;
+                            gap: 10px;
+                            font-size: 20px;
+
+                            span {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 2px;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                background-color: orange;
+                            }
+                        }
+                    }
+
+                    .titleby {
+                      
+                        width: 300px;
+                        text-align: center;
+
+                        h1 {
+                            &:hover {
+                                color: orange;
+                                transition: 0.3s;
+                            }
+                        }
+
+                        h2 {
+                            &:hover {
+                                color: orange;
+                                transition: 0.3s;
+                            }
+                        }
+
+                        h3 {
+                            font-size: 22px;
+
+                            &:hover {
+                                color: orange;
+                                transition: 0.3s;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
+    .TopCategoriesBox:hover .Icons {
+
+        flex-direction: column;
+        display: block;
+        gap: 20px;
+        left: 80px;
+        transform: translateY(-162px);
+        transition: 0.5s;
+    }
 }

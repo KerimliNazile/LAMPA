@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BsLamp } from "react-icons/bs";
 import { IoBulbOutline } from "react-icons/io5";
 import { LuLampWallUp } from "react-icons/lu";
 import './index.scss'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const PathWill = () => {
+    useEffect(()=>{
+        Aos.init({duration:1000})
+       },[])
     return (
         <>
             <section id='PathWill'>
                 <div className="PathWillArea">
-                    <div className="LoremPath">
+                    <div  data-aos="zoom-in-up" className="LoremPath">
                         <p>Save Power</p>
                     </div>
-                    <div className="TitlePath">
+                    <div  data-aos="zoom-in-up" className="TitlePath">
                         <h1>YOUR PATH WILL BE LIT</h1>
                     </div>
                     <div className="PathWillBoxArea">

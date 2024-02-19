@@ -13,11 +13,41 @@ import { useEffect, useState } from 'react';
 import axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { useUser } from '../../../context/UserContext';
 export default function Latest() {
-    useEffect(()=>{
-        Aos.init({duration:1000})
-       },[])
+    const {
+        user,
+        setUser,
+        Logout,
+        AddToWishlist,
+        isInWishlist,
+    } = useUser()
+    const breakpoints ={
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          
+          918: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          1236: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+          },
+    }
+    useEffect(() => {
+        Aos.init({ duration: 1000 })
+    }, [])
     const [product, setProduct] = useState([])
+    function HandleAddtoWish(item) {
+        AddToWishlist(item)
+            }
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
         setProduct(res.data)
@@ -35,10 +65,14 @@ export default function Latest() {
                     <li>Featured Products</li>
 
                 </div>
-                <Swiper 
+                <Swiper
                     slidesPerView={4}
-                    spaceBetween={30}
-                    modules={[Navigation]} className="mySwiper">
+                    spaceBetween={100}
+                    modules={[Navigation]} className="mySwiper"
+                    breakpoints={breakpoints}
+                    
+                    >
+                   
 
                     {
                         product && product.map((item) => (
@@ -51,14 +85,14 @@ export default function Latest() {
                                                     <img src={item.image} alt="" />
                                                 </div>
                                                 <div className='titleby'>
-                                                     <h3>{item.title}</h3>
-                                                <h3>{item.by}</h3>
-                                                <h3>${item.price}</h3>
+                                                    <h3>{item.title}</h3>
+                                                    <h3>{item.by}</h3>
+                                                    <h3>${item.price}</h3>
                                                 </div>
-                                               
+
                                                 <div className="Icons">
-                                                    <span>    <FaHeart className='faheart' /></span>
-                                                    <Link to={`/${item._id}`}><span><FaEye className='faheart' /></span></Link>
+                                                    <span onClick={()=>HandleAddtoWish(item)}>    <FaHeart className='faheart' /></span>
+                                                    <Link to={`/product/${item._id}`}><span><FaEye className='faheart' /></span></Link>
                                                     <span>  <PiShoppingCartFill className='faheart' /></span>
                                                 </div>
                                             </div>

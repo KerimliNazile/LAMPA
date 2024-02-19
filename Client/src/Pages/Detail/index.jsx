@@ -6,7 +6,7 @@ import './index.scss';
 
 const Detail = () => {
   const [selectedPhoto, setSelectedPhoto] = useState("");
-  const [detail, setDetail] = useState([]);
+  const [detail, setDetail] = useState(null);
   const { id } = useParams();
 
   const handlePhotoClick = (photo) => {
@@ -16,7 +16,11 @@ const Detail = () => {
   const fetchDetail = async () => {
     try {
       const res = await axios.get(`http://localhost:3000/product/${id}`);
+      console.log(res.data);
       setDetail(res.data);
+      if (res.data.detailsImage && res.data.detailsImage.length > 0) {
+        setSelectedPhoto(res.data.detailsImage[0]);
+      }
     } catch (error) {
       console.error('Error fetching product detail:', error);
     }
@@ -24,11 +28,10 @@ const Detail = () => {
 
   useEffect(() => {
     fetchDetail();
-  }, [id]);
-console.log(detail.detailsImage);
+  }, []);
+
   return (
     <>
-    
       <Helmet>
         <title>Detail</title>
       </Helmet>
@@ -43,6 +46,17 @@ console.log(detail.detailsImage);
             <li>{detail.title}</li>
             <li>{detail.by}</li>
             <li>{detail.price}</li>
+            <li>
+              {detail.detailsImage.map((item, index) => (
+                <div className="" key={index}>
+                  <img
+                    src={item}
+                    alt=""
+                    onClick={() => handlePhotoClick(item)}
+                  />
+                </div>
+              ))}
+            </li>
           </ul>
         ) : (
           <p>Loading...</p>
@@ -56,38 +70,6 @@ console.log(detail.detailsImage);
           ) : (
             <p>Lütfen bir fotoğraf seçin</p>
           )}
-        </div>
-
-        <div style={{ display: 'flex' }}>
-
-          {/* { detail ? detail.detailsImage.map(x=>(
-
-         
-            <div style={{ marginRight: '10px' }} onClick={() => handlePhotoClick(x)}>
-            <img
-              src={x}
-              alt="Foto 1"
-              style={{ width: '100px', cursor: 'pointer' }}
-            />
-          </div>
-
-          )):null } */}
-
-          {/* <div style={{ marginRight: '10px' }} onClick={() => handlePhotoClick("https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0009_Layer_25_defeb66e-9857-43a2-8156-d1546c71cd75_medium.jpg?v=1535355702")}>
-            <img
-              src={x}
-              alt="Foto 2"
-              style={{ width: '100px', cursor: 'pointer' }}
-            />
-          </div>
-
-          <div onClick={() => handlePhotoClick("https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0011_Layer_23_d62b2ddf-017c-4b57-a240-135bb9ee607a_2000x.jpg?v=1535355702")}>
-            <img
-              src="https://dt-lights.myshopify.com/cdn/shop/products/interior-products_0011_Layer_23_d62b2ddf-017c-4b57-a240-135bb9ee607a_2000x.jpg?v=1535355702"
-              alt="Foto 3"
-              style={{ width: '100px', cursor: 'pointer' }}
-            />
-          </div> */}
         </div>
       </div>
     </>

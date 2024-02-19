@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './index.scss'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const Friendly = () => {
+    useEffect(()=>{
+        Aos.init({duration:1000})
+       },[])
     return (
         <>
             <section id='Friendly'>
                 <div className="FriendlyArea">
-                    <div className="FriendlyTitle">
+                    <div  data-aos="zoom-in-up"  className="FriendlyTitle">
                         <h1>BEST ECO-FRIENDLY LIGHTING</h1>
                     </div>
-                    <div className="FriendlyContainer">
+                    <div  data-aos="zoom-in-up"  className="FriendlyContainer">
                         <div className="LeftBox">
                             <img src="https://lights-demo.myshopify.com/cdn/shop/files/abo01.jpg?v=1640694146" alt="" />
                         

@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './index.scss'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 const Offer = () => {
+    useEffect(()=>{
+        Aos.init({duration:1000})
+       },[])
   return (
     <>
     <section id='Offer'>
 <div className="OfferArea">
-    <div className="TitleOffer">
+    <div data-aos="zoom-in-up" className="TitleOffer">
         <h1>WHAT WE OFFER AT LIGHTS</h1>
     </div>
-    <div className="OfferLightContainer">
+    <div data-aos="zoom-in-up" className="OfferLightContainer">
         <div className="LightContainerBox">
             <div className="LightText">
                 <h4>BEDROOM LIGHT</h4>

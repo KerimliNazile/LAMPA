@@ -21,10 +21,12 @@
 
         .PathWillBoxArea {
             margin-top: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
+            // display: flex;
+            // flex-wrap: wrap;
+            // align-items: center;
+            // justify-content: center;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
             .PathBox {
                 .ImagePath {
                     text-align: center;
@@ -32,7 +34,7 @@
                     font-size: 60px;
                     height: 300px;
                     // width:400px;
-                    width: 100%;
+                    // width: 100%;
 
                     img {
                         width: 25%;

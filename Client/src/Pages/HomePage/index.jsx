@@ -19,11 +19,12 @@ const Home = () => {
 
       <Alamp />
       <Categories />
-      {/* <Seller /> */}
-<Latest/>
-<Product/>
+
+      <Latest />
+      <Product/>
       <SaleUp />
-      <Vintage />
+      <Vintage /> 
+      {/* <Seller /> */}
     </div>
   )
 }

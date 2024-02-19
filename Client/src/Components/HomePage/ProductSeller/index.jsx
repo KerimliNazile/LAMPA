@@ -7,11 +7,22 @@ import './index.scss'
 import { Link } from 'react-router-dom';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { useUser } from '../../../context/UserContext';
 const Product = () => {
+    const {
+        user,
+        setUser,
+        Logout,
+        AddToWishlist,
+        isInWishlist,
+    } = useUser()
     useEffect(()=>{
         Aos.init({duration:1000})
        },[])
     const [product, setProduct] = useState([])
+    function HandleAddtoWish(item) {
+        AddToWishlist(item)
+            }
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
         setProduct(res.data)
@@ -39,7 +50,7 @@ const Product = () => {
                                                
                                                 
                                                 <div className="Icons">
-                                                    <span> <FaHeart /> </span>
+                                                    <span onClick={()=>HandleAddtoWish(item)}> <FaHeart /> </span>
                                                  <Link to={`/${item._id}`}> <span> <FaEye /></span></Link>  
                                                    <span> <PiShoppingCartFill /></span>
                                                 </div>

@@ -5,7 +5,7 @@
     .OfferArea {
       
         .TitleOffer {
-            
+            text-align: center;
           padding: 100px;
             display: flex;
             align-items: center;
@@ -16,6 +16,7 @@
         .OfferLightContainer {
            display: flex;
            align-items: center;
+           flex-wrap: wrap;
            justify-content: center;
            gap: 30px;
             .LightContainerBox {
@@ -61,6 +62,79 @@
                             background-color: #ff5050;
                             color: white;
                             transition: 0.4s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 421px){
+    #Offer {
+        background-color: #f7f7f7;
+        min-height: 120vh;
+      
+        .OfferArea {
+          
+            .TitleOffer {
+                text-align: center;
+              padding: 100px;
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                justify-content: center;
+            }
+    
+            .OfferLightContainer {
+               display: flex;
+               align-items: center;
+               flex-wrap: wrap;
+               justify-content: center;
+               gap: 30px;
+                .LightContainerBox {
+                    background-color: white;
+                    width: 300px;
+                    height: 590px;
+                   
+                     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+                    .LightText {
+                        color: #ff5050;
+                        margin-top: 30px;
+                        text-align: center;
+                        font-size: 20px;
+                    }
+    
+                    .LightImage {
+                        margin-top: 30px;
+                        text-align: center;
+                      img{
+                        width: 300px;
+                        border-radius: 50%;
+                        background: #f7f7f7;
+                      }
+                    }
+    
+                    .LoremLight {
+                        margin-top: 30px;
+                        text-align: center;
+                        width: 300px;
+                        font-size: 18px;
+                    }
+    
+                    .ButtonLight {
+                    margin-top: 30px;
+                        text-align: center;
+                        button{ 
+                              font-size: 17px;
+                            height: 40px;
+                            width: 120px;
+                            background-color: white;
+                            border: 1px solid #ff5050;
+                            &:hover{
+                                background-color: #ff5050;
+                                color: white;
+                                transition: 0.4s;
+                            }
                         }
                     }
                 }

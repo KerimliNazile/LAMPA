@@ -1,6 +1,9 @@
 import React from 'react'
 import './index.scss'
-const Error = () => {
+
+
+
+const ErrorPage = () => {
   return (
     <>
       <section id='Error'>
@@ -22,4 +25,4 @@ const Error = () => {
   )
 }
 
-export default Error
+export default ErrorPage

@@ -14,11 +14,17 @@ const About = () => {
             <title>About</title>
         </Helmet>
       
-        <HeaderAbout/>
-        <Uniquie/>
-        <Offer/>
-        <Friendly/> 
-         <PathWill/>
+        <HeaderAbout/> 
+        <Friendly/>
+
+  <Offer/>
+
+           <Uniquie/>
+               {/* <PathWill/> */}
+       
+       
+      
+         
     </div>
   )
 }

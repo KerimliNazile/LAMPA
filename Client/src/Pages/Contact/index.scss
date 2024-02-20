@@ -1,5 +1,13 @@
+.atak{
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px 50px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    display: flex;}
 .ContactPage {
-
+// display: flex;
 
     .forms {
        
@@ -12,11 +20,11 @@
         box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
 
         .ContactText {
-            margin-top: 100px;
+            // margin-top: 100px;
             border: 4px solid #FFFFFF;
             width: 400px;
             background-color: #FFF;
-            box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 
             .ContactTextOne {
                 margin-top: 20px;
@@ -58,7 +66,7 @@
             }
 
             .ContactTextTwo {
-                border-top: 1px solid #000;
+               border-top: 1px solid #000;
                 width: 300px;
                 margin-top: 60px;
                 margin-left: 30px;
@@ -200,72 +208,51 @@
     gap: 40px;
     width: 700px;
 }
-@media only screen and (max-width: 828px){
-    .ContactPage {
-   
 
+.EmailForm{
+    align-items: center;
+    text-align: center;
+    // width: 500px;
+    // height: 350px;
+// padding: 80px;
+    // border: 1px solid red;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media only screen and (max-width: 690px){
+    .atak{
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 30px 50px;
+        margin-top: 100px;
+        flex-wrap: wrap;
+        display: flex;}
+    .ContactPage {
+ 
+    
         .forms {
-           flex-wrap: wrap;
+           
+          
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 150px;
-            padding: 40px 32px 40px 31px;
-            box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+            // padding: 40px 32px 40px 31px;
+            // box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
     
             .ContactText {
+                // margin-top: 100px;
                 border: 4px solid #FFFFFF;
-                width: 400px;
+                width: 200px;
                 background-color: #FFF;
-                box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+                // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     
                 .ContactTextOne {
                     margin-top: 20px;
                     margin-left: 30px;
     
                     .callContact {
-                        display: flex;
-                        align-items: center;
-    
-                        gap: 30px;
-    
-                        .ContactIcon {
-                            font-size: 25px;
-                            background-color:  #9DBC98;
-                            width: 50px;
-                            height: 50px;
-                            text-align: center;
-                            align-items: center;
-                            display: flex;
-                            justify-content: center;
-                            border-radius: 50%;
-                            color: white;
-    
-                            &:hover {
-                                color: #000;
-                                background-color: #c4c1c1;
-                                transition: 0.5s;
-                            }
-                        }
-                    }
-    
-                    .TextOne {
-                        margin-top: 20px;
-    
-                        p {
-                            font-size: 20px;
-                        }
-                    }
-                }
-    
-                .ContactTextTwo {
-                    border-top: 1px solid #000;
-                    width: 300px;
-                    margin-top: 60px;
-                    margin-left: 30px;
-    
-                    .callContact {
-                        margin-top: 20px;
                         display: flex;
                         align-items: center;
     
@@ -292,166 +279,6 @@
                     }
     
                     .TextOne {
-                        margin-top: 60px;
-    
-    
-                        p {
-                            font-size: 20px;
-                        }
-                    }
-                }
-    
-            }
-    
-            .from-group {
-                input {
-                    outline: none;
-                    width: 100%;
-                    border: none;
-                    background: #F5F5F5;
-                    padding: 19px 20px;
-                    color: #9e9e9e;
-                    border-radius: 4px;
-                    font-size: 15px;
-                    margin-top: 30px;
-                }
-            }
-    
-            .from-message {
-                margin-bottom: 32px;
-    
-                input {
-                    height: 207px;
-                    outline: none;
-                    width: 100%;
-                    border: none;
-                    background: #F5F5F5;
-                    padding: 19px 20px;
-                    color: #9e9e9e;
-                    border-radius: 4px;
-                    font-size: 15px;
-                    margin-top: 30px;
-    
-                    &::placeholder {
-                        position: absolute;
-                        top: 30px;
-                    }
-                }
-            }
-    
-            .butt {
-                display: flex;
-                align-items: end;
-                justify-content: end;
-    
-                .btn {
-                    width: 30%;
-                    display: flex;
-                    padding: 16px 48px;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px;
-                    background-color:  #9DBC98;
-                    border-radius: 8px;
-    
-                    &:hover {
-                        background-color: #c4c1c1;
-                        transition: 0.5s;
-                    }
-    
-                    button {
-    
-                        background-color: var(--main--color);
-                        border: none;
-    
-    
-                        color: #ffffff;
-                        letter-spacing: 2px;
-                        border-radius: 5px;
-                        font-weight: 500;
-    
-    
-                    }
-    
-                    .submitt {
-                        font-size: 12px;
-                        color: #ffffff;
-    
-                    }
-    
-                }
-    
-                .btn:hover .submitt {
-                    color: black;
-                    transition: 0.5s;
-                    font-size: 13px;
-                    letter-spacing: 2px;
-    
-                }
-    
-            }
-    
-        }
-    }
-    
-    .row1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        width: 400px;
-    }
-}
-@media only screen and (max-width: 500px){
-    .ContactPage {
-   
-
-        .forms {
-           flex-wrap: wrap;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 150px;
-            padding: 40px 32px 40px 31px;
-            box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-    
-            .ContactText {
-                border: 4px solid #FFFFFF;
-                width: 300px;
-                background-color: #FFF;
-                box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
-    
-                .ContactTextOne {
-                    margin-top: 20px;
-                    margin-left: 30px;
-    
-                    .callContact {
-                        display: flex;
-                        align-items: center;
-    
-                        gap: 30px;
-    
-                        .ContactIcon {
-                            font-size: 25px;
-                            background-color:  #9DBC98;
-                            width: 50px;
-                            height: 50px;
-                            text-align: center;
-                            align-items: center;
-                            display: flex;
-                            justify-content: center;
-                            border-radius: 50%;
-                            color: white;
-    
-                            &:hover {
-                                color: #000;
-                                background-color: #c4c1c1;
-                                transition: 0.5s;
-                            }
-                        }
-                    }
-    
-                    .TextOne {
                         margin-top: 20px;
     
                         p {
@@ -461,10 +288,10 @@
                 }
     
                 .ContactTextTwo {
-                    border-top: 1px solid #000;
-                    width: 200px;
-                    margin-top: 60px;
-                    margin-left: 30px;
+                    // border-top: 1px solid #000;
+                    // width: 200px;
+                    // margin-top: 60px;
+                    // margin-left: 30px;
     
                     .callContact {
                         margin-top: 20px;
@@ -475,7 +302,7 @@
     
                         .ContactIcon {
                             font-size: 25px;
-                            background-color:  #9DBC98;
+                            background-color:#9DBC98;
                             width: 50px;
                             height: 50px;
                             text-align: center;
@@ -553,7 +380,7 @@
                     justify-content: center;
                     align-items: center;
                     gap: 10px;
-                    background-color:  #9DBC98;
+                    background-color: #9DBC98;
                     border-radius: 8px;
     
                     &:hover {
@@ -597,18 +424,22 @@
     }
     
     .row1 {
-        flex-direction: column;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 40px;
-        width: 150px; 
-       
+        width: 700px;
     }
-    .row2{
-      
-        width: 150px;
+    
+    .EmailForm{
+        align-items: center;
+        text-align: center;
+    //     width: 300px;
+    //     height: 350px;
+    // padding: 40px;
+        // border: 1px solid red;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     }
 }
 
-
+   

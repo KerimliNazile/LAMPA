@@ -3,12 +3,14 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 100px;
-    width: 100%;
+    // width: 100%;
     padding: 30px 60px;
     background-color: #b3dedf;
-    position: fixed;
+    position: sticky;
     z-index: 9999;
     background: var(--mode-color-1);
+    top: 0;
+    left: 0;
 
     .LogoNav {
         img {

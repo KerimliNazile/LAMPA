@@ -1,8 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-// import './index.scss'
-import FormAdd from '../../Components/ShopComponents/FormAdd'
+import './index.scss'
+import FormAdd from '../../components/FormAdd' 
 const AdminPage= () => {
 
   const [data, setData] = useState([])
@@ -14,6 +14,10 @@ const AdminPage= () => {
   }
   async function deleteData(id) {
     const res = await axios.delete(`http://localhost:3000/product/${id}`)
+    getData()
+  }
+  async function editData(id) {
+    const res = await axios.update(`http://localhost:3000/product/${id}`)
     getData()
   }
   useEffect(() => {
@@ -35,10 +39,12 @@ const AdminPage= () => {
         <thead>
           <tr>
             <td>Image</td>
-            <td>Text</td>
             <td>Title</td>
+            <td>Category</td>
             <td>Price</td>
             <td>Delete</td>
+            <td>Edit</td>
+
 
           </tr>
         </thead>
@@ -64,10 +70,11 @@ const AdminPage= () => {
             .map(x =>
               <tr>
                 <th><img src={x.image} alt="" /></th>
-                <th>{x.text}</th>
                 <th>{x.title}</th>
+                <th>{x.category}</th>
                 <th>{x.price}</th>
                 <th><button onClick={() => deleteData(x._id)}>Delete</button></th>
+                <th><button onClick={() => editData(x._id)}>Edit</button></th>
               </tr>
             )}
         </tbody>

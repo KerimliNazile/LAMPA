@@ -1,0 +1,49 @@
+button{
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    background-color: #9dbc98;
+    border: none;
+    color:black;
+    
+    &:hover{
+        background-color: black;
+        color: white;
+        transition: 0.3s;
+    }
+    // form{
+    //     input{
+    //     width: 10%;
+    // }
+    // }
+    
+}
+
+@media only screen and (max-width: 690px){
+    button{
+        width: 100px;
+        height: 50px;
+        font-size: 16px;
+        background-color: #9dbc98;
+        border: none;
+        color:black;
+        
+        &:hover{
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+        }
+    }
+    form{
+        width: 378px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+       input{
+        width: 24% !important;
+    } 
+    }
+    
+}

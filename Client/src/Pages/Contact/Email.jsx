@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
-
+import './indexx.scss'
 function EmailForm() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -40,7 +40,8 @@ function EmailForm() {
         <form action="" onSubmit={handleSubmit}>
             <input type="text" placeholder='Your Name' value={name} onChange={(e) => setName(e.target.value)} />
             <input type="email" placeholder='Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />
-            <textarea cols="30" rows="10" type="message" placeholder=' Your Message' value={message} onChange={(e) => setMessage(e.target.value)} />
+            <input type="message" cols="70" rows="50"  placeholder=' Your Message' value={message} onChange={(e) => setMessage(e.target.value)} style={{height:"140px"}} />
+            {/* <textarea cols="70" rows="10" type="message" placeholder=' Your Message' value={message} onChange={(e) => setMessage(e.target.value)} /> */}
             <button type='submit'>Send</button>
         </form>
     )

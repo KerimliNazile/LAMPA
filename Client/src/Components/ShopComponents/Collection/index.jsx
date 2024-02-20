@@ -40,9 +40,35 @@ function Products() {
         }
     };
 
+   
+    
     const handleSortChange = (e) => {
         setSortOption(e.target.value);
-        // Add logic to update and re-render the sorted data based on the selected option
+        switch (e.target.value) {
+            case 'a-z':
+                handleAtoZ();
+                break;
+            case 'z-a':
+                handleZtoA();
+                break;
+            case 'pricelow':
+                handlePriceLow();
+                break;
+            case 'pricehigh':
+                handlePriceHigh();
+                break;
+                case 'createdAtnew':
+                    handlecreatedAtLow(); // Change to handlecreatedAtLow
+                    break;
+                case 'createdAtold':
+                    handlecreatedAtHigh(); // Change to handlecreatedAtHigh
+                    break;
+
+                
+            // Diğer sıralama seçenekleri için case'leri ekleyin
+            default:
+                break;
+        }
     };
     useEffect(() => {
         fetchData();
@@ -52,18 +78,46 @@ function Products() {
         setCurrentPage(1);
     }, [selectedCategories, selectedColor, selectedSize]);
 
-    const handleAtoZ = (e) => {
-        e.preventDefault();
-        const sortByCategory = [...data].sort((a, b) => a.name.localeCompare(b.name));
+    // const handleAtoZ = (e) => {
+    //     e.preventDefault();
+    //     const sortByCategory = [...data].sort((a, b) => a.name.localeCompare(b.name));
+    //     setData([...sortByCategory]);
+    // };
+
+    // const handleZtoA = (e) => {
+    //     e.preventDefault();
+    //     const sortByCategory = [...data].sort((a, b) => b.name.localeCompare(a.name));
+    //     setData([...sortByCategory]);
+    // };
+    const handlePriceLow = () => {
+        const sortByPriceLow = [...data].sort((a, b) => a.price - b.price);
+        setData([...sortByPriceLow]);
+    };
+
+    const handlePriceHigh = () => {
+        const sortByPriceHigh = [...data].sort((a, b) => b.price - a.price);
+        setData([...sortByPriceHigh]);
+    };
+
+    const handlecreatedAtLow = () => {
+        const sortBycreatedAtLow = [...data].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+        setData([...sortBycreatedAtLow]);
+    };
+    
+    const handlecreatedAtHigh = () => {
+        const sortBycreatedAtHigh = [...data].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setData([...sortBycreatedAtHigh]);
+    };
+
+    const handleAtoZ = () => {
+        const sortByCategory = [...data].sort((a, b) => a.title.localeCompare(b.title));
         setData([...sortByCategory]);
     };
 
-    const handleZtoA = (e) => {
-        e.preventDefault();
-        const sortByCategory = [...data].sort((a, b) => b.name.localeCompare(a.name));
+    const handleZtoA = () => {
+        const sortByCategory = [...data].sort((a, b) => b.title.localeCompare(a.title));
         setData([...sortByCategory]);
     };
-
     const sortByTwo = () => {
         setColumns(2);
     };
@@ -124,7 +178,12 @@ function Products() {
                 selectedCategories.includes(item.category)) &&
             (selectedColor.length === 0 || selectedColor.includes(item.color)) &&
             (selectedSize.length === 0 || selectedSize.includes(item.size)) &&
-            (selectedBrand.length === 0 || selectedBrand.includes(item.brand))
+            (selectedBrand.length === 0 || selectedBrand.includes(item.by))
+
+
+
+
+
     );
 
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -137,6 +196,10 @@ function Products() {
         setCurrentPage(pageNumber);
     };
 
+
+
+
+    
     const paginationButtons = Array.from({ length: pageNumbers }, (_, index) => (
         <button
             key={index + 1}
@@ -413,20 +476,19 @@ function Products() {
                         <p>Showing <span>{filteredData.length} of 12</span> Products</p>
                     </div>
                     <div className="sortright">
-                        <p>Sort by:</p>
+                        {/* <p>Sort by:</p> */}
                         <div className="toolbox_right">
                             <div className="toolbox_sort">
 
                                 <div className="select-custom">
                                     <select name="sortby" id="sortby" value={sortOption} onChange={handleSortChange} className='sort_control'>
-                                        <option value="featured">Featured</option>
-                                        <option value="bestseller">Best selling</option>
+                                       
                                         <option value="a-z">Alphabetically,A-Z</option>
                                         <option value="z-a">Alphabetically,Z-A</option>
                                         <option value="pricelow">Price,low to high</option>
                                         <option value="pricehigh">Price,high to low</option>
-                                        <option value="datenew">Date, old to new</option>
-                                        <option value="dateold">Date , new to old</option>
+                                        <option value="createdAtnew">Date, old to new</option>
+                                        <option value="createdAtold">Date, new to old</option>
                                     </select>
                                     <ul>
                                         {data.map((item) => (
@@ -485,9 +547,12 @@ function Products() {
                                     <p>Add To Cart</p>
                                 </div>
                             </div>
-                            <li>{item.category}</li>
-                            <li>{item.name}</li>
-                            <li>${item.price}</li>
+                            <li>{item.title}</li>
+                            <li>Category:{item.category}</li>
+                            
+                            <li>Brand:{item.by}</li>
+                            <li>Types:{item.formtyp}</li>
+                            <li>Price:${item.price}</li>
                         </ul>
                     ))}
                 </div>

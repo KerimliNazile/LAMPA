@@ -9,7 +9,7 @@ const ProductsSchema = new Schema(
       price: { type: Number, required: true },
       category: { type: String, required: true },
       formtyp: { type: String, required: true },
-      size: { type: String, required: true }
+      size: { type: String, required: true },
     },
     { timestamps: true }
   );

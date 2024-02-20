@@ -7,7 +7,7 @@
     border-bottom: 0.1rem solid #ebebeb;
 
     .sortright {
-        width: 35%;
+        width: 30%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -418,4 +418,8 @@
 }
 h3{
     color: #555555;
+}
+#sortby{
+    width: 150px;
+    height: 30px;
 }

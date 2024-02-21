@@ -44,7 +44,7 @@ const Navbar = () => {
                                 </div>
                             </div>
                         </li>
-                        <li><NavLink to='/search'><CiSearch /></NavLink></li>
+                        {/* <li><NavLink to='/search'><CiSearch /></NavLink></li> */}
                         <li><NavLink to='/login'><IoPerson /></NavLink></li>
                         <li><NavLink to='/basket'><FaShoppingCart /></NavLink></li>
                         <li><NavLink to='/wishlist'><IoMdHeart /></NavLink></li>

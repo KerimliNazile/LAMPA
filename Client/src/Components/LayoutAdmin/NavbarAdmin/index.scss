@@ -1,0 +1,19 @@
+nav{
+    background-color: #9dbc98;
+    height: 100vh;
+    width: 30px;
+    // position: sticky;
+    position: fixed;
+    z-index: 2;
+    // padding-left: 10%;
+    ul li{
+        a{
+            color: black;
+            font-size: 22px;
+            &:hover{
+                color: white;
+                transition: 0.3s;
+            }
+        }
+    }
+}

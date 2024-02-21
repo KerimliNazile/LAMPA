@@ -11,6 +11,7 @@ import bodyParser from 'body-parser';
 import ProductRouter from "./Router/ProductsRouter.js";
 import UserRouter from "./Router/userRouter.js";
 import LogoRouter from "./Router/LogoRouter.js";
+import SwiperRouter from "./Router/SwiperRouter.js";
 
 const stripe = new Stripe(process.env.SECRET_KEY);
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use("/", ProductRouter)
 app.use("/",LogoRouter)
 app.use("/", UserRouter)
+app.use("/",SwiperRouter)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/payment", async (req, res) => {

@@ -1,0 +1,181 @@
+#reviewTop {
+    background-image: url("https://alamp-store-demo.myshopify.com/cdn/shop/files/bg_testimonial.jpg?v=1613763110");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    padding: 115px 0 40px;
+    opacity: 0.95;
+    background-color: #4f4f4f;
+    background-blend-mode: multiply;
+    position: relative;
+
+    .title {
+        color: #9dbc98;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+
+        .subtitle {
+            color: #ffffff;
+            background: #C7A17A;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 10px 14px;
+            letter-spacing: 2px;
+            border-radius: 3px;
+        }
+
+        h2 {
+            color:#9dbc98;
+            font-size: 40px;
+            letter-spacing: -2px;
+            margin-top: 24px;
+        }
+    }
+
+    .mySwiper {
+        width: 100%;
+        text-align: center;
+        overflow-y: hidden;
+        height: 360px;
+        .swiper-wrapper {
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                text-align: center;
+                font-size: 18px;
+
+                .slide {
+                    // width:100px;
+                    position: relative;
+img{
+    border-radius: 50%;
+    width: 80px;
+}
+                    p {
+                        width: 1000px;
+                        font-size: 22px;
+                        color: aliceblue;
+                        margin: 24px 0 32px;
+                        line-height: 1.4;
+                        padding: 0 64px;
+                    }
+
+                    h4 {
+                        color:aliceblue;
+                        font-size: 18px;
+                        text-transform: uppercase;
+                    }
+
+                    .content {
+                        text-align: center;
+                        margin-top: 20px;
+
+                        h4 {
+                            margin-bottom: 8px;
+                        }
+
+                        .designation {
+                            text-transform: uppercase;
+                            color:#9dbc98;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-button-prev {
+            margin: -80px 0 80px 160px;
+
+            &::after {
+                font-family: FontAwesome;
+                content: "\f177";
+                color: #7d7d7d;
+                font-size: 16px;
+                border: 1px solid #7d7d7d;
+                padding: 16px;
+                border-radius: 50%;
+                transition: 0.2s;
+            }
+
+            &:hover {
+                &::after {
+                    color: aliceblue;
+                    background-color: #9dbc98;
+                }
+            }
+        }
+
+        .swiper-button-next {
+            margin: -72px 160px 80px 0px;
+
+
+            &::after {
+                font-family: FontAwesome;
+                content: "\f178";
+                color: #7d7d7d;
+                font-size: 16px;
+                border: 1px solid #7d7d7d;
+                padding: 16px;
+                border-radius: 50%;
+                transition: 0.2s;
+            }
+            &:hover {
+                &::after {
+                    color: #ffffff;
+                    background-color: #9dbc98;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width:1300px){
+    #reviewTop{
+        .mySwiper{
+            .swiper-wrapper {
+                .swiper-slide {
+                    .slide{
+                        p{
+                            padding: 0;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .swiper-button-prev {
+                margin: 0;
+                position: absolute;
+                top: 90%;
+                left: 25%;
+                transform: translate(-50%,-50%);
+            }
+            .swiper-button-next {
+                margin: 0;
+                position: absolute;
+                top: 90%;
+                right: 25%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){
+    #reviewTop{
+        .mySwiper{
+            height: 400px;
+        }
+    }
+}
+@media screen and (max-width: 576px){
+    #reviewTop{
+        .mySwiper{
+            height: 480px;
+            width: 100%;
+        }
+    }
+}

@@ -9,6 +9,7 @@ import Vintage from '../../Components/HomePage/Vintage'
 import Latest from '../../Components/HomePage/LatestCollection'
 import Product from '../../Components/HomePage/ProductSeller'
 import Stripe from '../../stripe'
+import Customer from '../../Components/HomePage/Customer'
 
 const Home = () => {
   return (
@@ -24,10 +25,11 @@ const Home = () => {
       <Latest />
       <Product/>
       <SaleUp />
-      <Vintage />
+     
 
 
-
+<Customer/>
+ <Vintage />
       <Stripe/> 
       {/* <Seller /> */}
     </div>

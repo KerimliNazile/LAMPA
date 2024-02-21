@@ -10,12 +10,14 @@ import bodyParser from 'body-parser';
 
 import ProductRouter from "./Router/ProductsRouter.js";
 import UserRouter from "./Router/userRouter.js";
+import LogoRouter from "./Router/LogoRouter.js";
 
 const stripe = new Stripe(process.env.SECRET_KEY);
 dotenv.config();
 app.use(cors());
 app.use(express.json());
 app.use("/", ProductRouter)
+app.use("/",LogoRouter)
 app.use("/", UserRouter)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -1,9 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-// import './index.scss'
+import './index.scss'
 import FormAdd from '../../Components/ShopComponents/FormAdd'
-const AdminPage= () => {
+const AdminPage = () => {
 
   const [data, setData] = useState([])
   const [search, setSearch] = useState('')
@@ -16,30 +16,36 @@ const AdminPage= () => {
     const res = await axios.delete(`http://localhost:3000/product/${id}`)
     getData()
   }
+
+  async function EditData(id) {
+    const res = await axios.put(`http://localhost:3000/product/${id}`)
+    getData()
+  }
   useEffect(() => {
     getData()
   }, [])
   return (
     <>
       <FormAdd getData={getData} />
-      <div className="filter">
+      <div className="filterr">
         <input type="search" value={search} placeholder='search' onChange={(e) => setSearch(e.target.value)} />
         <button onClick={() => setProperty({ name: "title", asc: null })}>Default</button>
-        <button onClick={() => setProperty({ name: "title", asc: true })}>A-Z</button>
-        <button onClick={() => setProperty({ name: "title", asc: false })}>Z-A</button>
-        <button onClick={() => setProperty({ name: "price", asc: true })}>Inc</button>
-        <button onClick={() => setProperty({ name: "price", asc: false })}>Dec</button>
-        <button onClick={() => setProperty({ name: "title", asc: null })}>def</button>
+        <button onClick={() => setProperty({ name: "title", asc: true })}>A - Z</button>
+        <button onClick={() => setProperty({ name: "title", asc: false })}>Z - A</button>
+        <button onClick={() => setProperty({ name: "price", asc: true })}>Increase</button>
+        <button onClick={() => setProperty({ name: "price", asc: false })}>Decrease</button>
+        {/* <button onClick={() => setProperty({ name: "title", asc: null })}>def</button> */}
       </div>
       <table>
         <thead>
           <tr>
             <td>Image</td>
-            <td>Text</td>
+
             <td>Title</td>
+            <td>Category</td>
             <td>Price</td>
             <td>Delete</td>
-
+            <td>Edit</td>
           </tr>
         </thead>
         <tbody>
@@ -64,10 +70,12 @@ const AdminPage= () => {
             .map(x =>
               <tr>
                 <th><img src={x.image} alt="" /></th>
-                <th>{x.text}</th>
+
                 <th>{x.title}</th>
+                <th>{x.category}</th>
                 <th>{x.price}</th>
                 <th><button onClick={() => deleteData(x._id)}>Delete</button></th>
+                <th><button onClick={() => EditData(x._id)}>Edit</button></th>
               </tr>
             )}
         </tbody>

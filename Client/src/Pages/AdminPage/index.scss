@@ -1,0 +1,29 @@
+table{
+    text-align: center;
+    margin: auto;
+    width: 70%;
+   
+    border: 1px solid #9dbc98;
+    thead{
+        border: 1px solid #9dbc98;
+        tr{
+            border: 1px solid #9dbc98;
+            td{
+                border: 1px solid #9dbc98;
+            }
+        }
+    }
+    tbody{
+        border: 1px solid #9dbc98;
+        th{
+            border: 1px solid #9dbc98;
+            img{
+                width: 200px;
+            }
+        }
+    }
+}
+.filterr{
+    width: 33%;
+    margin: auto;
+}

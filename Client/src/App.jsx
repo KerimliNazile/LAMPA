@@ -19,6 +19,8 @@ import Faqs from './Pages/FAQS'
 import Login from './Pages/LoginReg'
 import ScrollToTop from './Components/HomePage/ScrollToTop'
 import LoginPage from './Pages/LoginPage'
+import AdminLogo from './Pages/AdminLogo'
+import AdminProduct from './Pages/AdminProduct'
 
 function App() {
  
@@ -42,7 +44,8 @@ Aos.init()
         <Route path='/adminn' element={<AdminPage/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/register' element={<Login/>}></Route>
-        
+        <Route path='/adminlogo' element={<AdminLogo/>}></Route>
+        <Route path='/adminproduct' element={<AdminProduct/>}></Route>
       </Route>
       <Route path='*' element={<ErrorPage/>}/>
      </Routes>

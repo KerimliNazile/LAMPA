@@ -1,19 +1,22 @@
-#Vintage{
+#Vintage {
     margin-top: 200px;
-    .VintageArea{
-        .VintageAreaBox{
-            flex-wrap: wrap;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-           gap: 30px;
-            .VintageBox{
 
-                .ImageVintage{
-width: 100%;
-img{
-    max-width: 290px;
-}
+    .VintageArea {
+        .VintageAreaBox {
+
+            .VintageBox {
+                flex-wrap: wrap;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+
+                .ImageVintage {
+                    // width: 100%;
+
+                    img {
+                        max-width: 290px;
+                    }
                 }
             }
         }

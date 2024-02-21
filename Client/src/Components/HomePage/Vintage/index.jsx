@@ -1,46 +1,45 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.scss'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import axios from 'axios'
 const Vintage = () => {
-    useEffect(()=>{
-        Aos.init({duration:1000})
-       },[])
-  return (
-    <>
-       <section id='Vintage'>
-        <div className="VintageArea">
-            <div data-aos="fade-right" className="VintageAreaBox">
-                <div className="VintageBox">
-                    <div className="ImageVintage">
-                        <img src="https://lights-demo.myshopify.com/cdn/shop/files/brlog01.png?v=1640687572" alt="" />
+    const [logo, setLogo] = useState([])
+    async function getLogoData() {
+        const res = await axios.get("http://localhost:3000/logo")
+        setLogo(res.data)
+    }
+    useEffect(() => {
+        Aos.init({ duration: 1000 })
+    }, [])
+    useEffect(() => {
+        getLogoData()
+    }, [])
+    return (
+        <>
+            <section id='Vintage'>
+                <div className="VintageArea">
+                    <div data-aos="fade-right" className="VintageAreaBox">
+                          
+                        <div className="VintageBox">
+                          {
+                                logo && logo.map((item) => (
+
+                                    <div className="ImageVintage">
+                                        <img src={item.image} alt="" />
+                                    </div>
+
+                                ))
+                            }
+
+                        </div>
+
+
                     </div>
                 </div>
-                <div className="VintageBox">
-                    <div className="ImageVintage">
-                        <img src="https://lights-demo.myshopify.com/cdn/shop/files/brlog03.png?v=1640687598" alt="" />
-                    </div>
-                </div>
-                <div className="VintageBox">
-                    <div className="ImageVintage">
-                        <img src="https://lights-demo.myshopify.com/cdn/shop/files/brlog04.png?v=1640687610" alt="" />
-                    </div>
-                </div>
-                <div className="VintageBox">
-                    <div className="ImageVintage">
-                        <img src="https://lights-demo.myshopify.com/cdn/shop/files/brlog05.png?v=1640687622" alt="" />
-                    </div>
-                </div>
-                <div className="VintageBox">
-                    <div className="ImageVintage">
-                        <img src="https://lights-demo.myshopify.com/cdn/shop/files/brlog06.png?v=1640687633" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section> 
-    </>
-  )
+            </section>
+        </>
+    )
 }
 
 export default Vintage

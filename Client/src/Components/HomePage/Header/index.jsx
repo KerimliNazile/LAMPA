@@ -19,7 +19,7 @@ useEffect(()=>{
         <>
             <div className="AllImageSwiper">
                 <div className='SwiperInAll'>
-                    <Swiper pagination={true} modules={[Pagination]}
+                    <Swiper 
                         slidesPerView={1}
                         spaceBetween={0}
                         className="mySwiper">

@@ -8,3 +8,9 @@ li a{
 li{
   list-style: none;
 }
+.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}

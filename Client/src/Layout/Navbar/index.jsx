@@ -8,22 +8,28 @@ import { IoPerson } from "react-icons/io5";
 import './index.scss';
 import { Link, NavLink } from 'react-router-dom';
 import ModeBox from '../../Components/ModeBox/ModeBox';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     function handleClick() {
         setIsOpen(!isOpen);
     }
+    const { t, i18n } = useTranslation();
+    function changeLang(lang) {
+        i18n.changeLanguage(lang)
+    }
     return (
         <>
             <nav>
+
                 <ModeBox/>
                 <div className="LogoNav">
                     <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1618913868" alt="" />
                 </div>
                 <div className="MainNav">
                     <ul id='NavIn'>
-                        <li><NavLink  to='/'>Home</NavLink></li>
+                        <li><NavLink  to='/'>{t("Home")}</NavLink></li>
                         <li><NavLink to='/about'>About</NavLink></li>
                         <li><NavLink to='/shop'>Shop</NavLink></li>
                         <li><NavLink to='/contact'>Contact</NavLink></li>
@@ -42,6 +48,11 @@ const Navbar = () => {
                         <li><NavLink to='/login'><IoPerson /></NavLink></li>
                         <li><NavLink to='/basket'><FaShoppingCart /></NavLink></li>
                         <li><NavLink to='/wishlist'><IoMdHeart /></NavLink></li>
+                        <li>
+                            <button onClick={()=>changeLang("az")}>AZ</button>
+                            <button onClick={()=>changeLang("en")}>EN</button>
+                        </li>
+                        
                     </ul>
                 </div>
                 <div className="mobile" onClick={handleClick}>

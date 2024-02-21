@@ -12,7 +12,7 @@ import Wishlist from './Pages/Wishlist'
 import ErrorPage from './Pages/ErrorPage'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import About from './Pages/About'
 import AdminPage from './Pages/AdminPage'
 import Faqs from './Pages/FAQS'
@@ -21,16 +21,31 @@ import ScrollToTop from './Components/HomePage/ScrollToTop'
 import LoginPage from './Pages/LoginPage'
 import AdminLogo from './Pages/AdminLogo'
 import AdminProduct from './Pages/AdminProduct'
+import {RingLoader} from 'react-spinners'
 
 function App() {
  
 useEffect(()=>{
 Aos.init()
 },[])
+
+const [IsLoading, setIsLoading] = useState(true)
+
+useEffect(() => {
+const timeout = setTimeout(()=>{
+  setIsLoading(false)
+},2000)
+
+return ()=> clearTimeout(timeout)
+}, [])
+
   return (
     <>
      <ScrollToTop/>
-     <Routes>
+     {
+      IsLoading ? <div className='loading'>
+        <RingLoader color='#9dbc98'/>
+      </div> : <Routes>
       <Route path='/' element={<Main/>}>
         <Route index element={<Home/>}/>
         <Route path='/basket' element={<Basket/>}></Route>
@@ -49,6 +64,7 @@ Aos.init()
       </Route>
       <Route path='*' element={<ErrorPage/>}/>
      </Routes>
+     }
    
      {/* <Seller/> */}
     </>

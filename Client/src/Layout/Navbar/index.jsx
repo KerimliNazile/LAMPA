@@ -63,10 +63,11 @@ const Navbar = () => {
                 <div className="navlist">
                     <ul>
                         <li><NavLink exact to='/'>Home</NavLink></li>
+                        <li><NavLink to='/about'>About</NavLink></li>
                         <li><NavLink to='/shop'>Shop</NavLink></li>
                         <li><NavLink to='/contact'>Contact</NavLink></li>
                         <li><NavLink to='/faqs'>FAQS</NavLink></li>
-                        <li><NavLink to='/wishlist'><IoMdHeart /></NavLink></li>
+                        {/* <li><NavLink to='/wishlist'><IoMdHeart /></NavLink></li> */}
                     </ul>
                 </div>
             }

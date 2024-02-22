@@ -4,7 +4,7 @@ import './index.scss'
 const NavbarAdmin = () => {
     return (
         <>
-            <nav>
+            <nav className='navadmin'>
                 <div className="MainAdminNavbar">
                     <ul>
                         <li><NavLink to='/adminlogo'>Logo</NavLink></li>

@@ -548,11 +548,11 @@ function Products() {
                                 </div>
                             </div>
                             <li>{item.title}</li>
-                            <li>Category:{item.category}</li>
+                            <li>{item.category}</li>
                             
-                            <li>Brand:{item.by}</li>
-                            <li>Types:{item.formtyp}</li>
-                            <li>Price:${item.price}</li>
+                            <li>{item.by}</li>
+                            <li>{item.formtyp}</li>
+                            <li>${item.price}</li>
                         </ul>
                     ))}
                 </div>

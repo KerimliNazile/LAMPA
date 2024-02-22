@@ -1,0 +1,15 @@
+.navadmin {
+  background-color: #9dbc98;
+  height: 100vh;
+  width: 30px;
+  position: fixed;
+  z-index: 2;
+}
+.navadmin ul li a {
+  color: black;
+  font-size: 22px;
+}
+.navadmin ul li a:hover {
+  color: white;
+  transition: 0.3s;
+}/*# sourceMappingURL=index.css.map */

@@ -22,24 +22,25 @@ export default function Latest() {
         AddToWishlist,
         isInWishlist,
     } = useUser()
-    const breakpoints ={
-        640: {
+
+    const breakpoints = {
+        0: {
             slidesPerView: 1,
             spaceBetween: 10,
-          },
-          768: {
+        },
+        768: {
             slidesPerView: 1,
             spaceBetween: 10,
-          },
-          
-          918: {
+        },
+
+        918: {
             slidesPerView: 2,
             spaceBetween: 0,
-          },
-          1236: {
+        },
+        1236: {
             slidesPerView: 4,
             spaceBetween: 0,
-          },
+        },
     }
     useEffect(() => {
         Aos.init({ duration: 1000 })
@@ -47,7 +48,7 @@ export default function Latest() {
     const [product, setProduct] = useState([])
     function HandleAddtoWish(item) {
         AddToWishlist(item)
-            }
+    }
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
         setProduct(res.data)
@@ -66,13 +67,12 @@ export default function Latest() {
 
                 </div>
                 <Swiper
-                    slidesPerView={4}
                     spaceBetween={100}
                     modules={[Navigation]} className="mySwiper"
                     breakpoints={breakpoints}
-                    
-                    >
-                   
+
+                >
+
 
                     {
                         product && product.map((item) => (
@@ -91,7 +91,7 @@ export default function Latest() {
                                                 </div>
 
                                                 <div className="Icons">
-                                                    <span onClick={()=>HandleAddtoWish(item)}>    <FaHeart className='faheart' /></span>
+                                                    <span onClick={() => HandleAddtoWish(item)}>    <FaHeart className='faheart' /></span>
                                                     <Link to={`/product/${item._id}`}><span><FaEye className='faheart' /></span></Link>
                                                     <span>  <PiShoppingCartFill className='faheart' /></span>
                                                 </div>

@@ -60,7 +60,7 @@ AddToWishlist(item)
                                                     </div>
                                                 </div>
                                                 <div className='titleby'>
-                                                    <h1>{item.title}</h1>
+                                                    <p>{item.title}</p>
                                                     <h2>{item.by}</h2>
                                                     <h3>${item.price}</h3>
                                                 </div>

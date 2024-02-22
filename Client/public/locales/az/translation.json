@@ -1,6 +1,9 @@
 {
-    "Home" : "Ana Sehife",
-    "About" : "Haqqimizda"
+    "Home" : "Ana Səhifə",
+    "About" : "Haqqımızda",
+    "Shop":"Satış",
+    "Contact":"Əlaqə",
+"FAQs":"Tez-tez soruşulan suallar"
     
 
 }

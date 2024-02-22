@@ -30,10 +30,10 @@ const Navbar = () => {
                 <div className="MainNav">
                     <ul id='NavIn'>
                         <li><NavLink  to='/'>{t("Home")}</NavLink></li>
-                        <li><NavLink to='/about'>About</NavLink></li>
-                        <li><NavLink to='/shop'>Shop</NavLink></li>
-                        <li><NavLink to='/contact'>Contact</NavLink></li>
-                        <li className='pages'><NavLink to='/faqs'>Faqs</NavLink>
+                        <li><NavLink to='/about'>{t("About")}</NavLink></li>
+                        <li><NavLink to='/shop'>{t("Shop")}</NavLink></li>
+                        <li><NavLink to='/contact'>{t("Contact")}</NavLink></li>
+                        <li className='pages'><NavLink to='/faqs'>{t("FAQs")}</NavLink>
                             <div className="subMenu2">
                                 <div className="subMenuArea">
                                     <div className="subMenuBox">

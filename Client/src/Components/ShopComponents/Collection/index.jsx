@@ -215,7 +215,7 @@ function Products() {
             <div className="filterspart">
                 <div className="filter">
                     <p>Filters</p>
-                    <span onClick={clearAllFilters}>Clear All</span>
+                    <span onClick={clearAllFilters}></span>
                 </div>
                 <div className="category">
                     <h2 onClick={() => setIsCategoryOpen(!isCategoryOpen)}>Category <FontAwesomeIcon icon={faChevronDown} /></h2>
@@ -548,10 +548,10 @@ function Products() {
                                 </div>
                             </div>
                             <li>{item.title}</li>
-                            <li>{item.category}</li>
+                            {/* <li>{item.category}</li> */}
                             
                             <li>{item.by}</li>
-                            <li>{item.formtyp}</li>
+                            {/* <li>{item.formtyp}</li> */}
                             <li>${item.price}</li>
                         </ul>
                     ))}

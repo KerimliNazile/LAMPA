@@ -55,7 +55,7 @@ AddToWishlist(item)
                                                     <img src={item.image} alt="" />
                                                     <div className="Icons">
                                                         <span onClick={() => HandleAddtoWish(item)}> {isInWishlist(item) ?<FaHeart /> : <FaRegHeart />} </span>
-                                                        <Link to={`/${item._id}`}>   <span> <FaEye /></span></Link>
+                                                        <Link to={`/product/${item._id}`}>   <span> <FaEye /></span></Link>
                                                         <span> <PiShoppingCartFill /></span>
                                                     </div>
                                                 </div>

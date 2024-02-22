@@ -51,7 +51,7 @@ const Product = () => {
                                                 
                                                 <div className="Icons">
                                                     <span onClick={()=>HandleAddtoWish(item)}> <FaHeart /> </span>
-                                                 <Link to={`/${item._id}`}> <span> <FaEye /></span></Link>  
+                                                 <Link to={`/product/${item._id}`}> <span> <FaEye /></span></Link>  
                                                    <span> <PiShoppingCartFill /></span>
                                                 </div>
                                             </div>

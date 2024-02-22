@@ -38,7 +38,7 @@ useEffect(()=>{
                                         <div data-aos="fade-right" className="textSwiper">
                                             <h1>{t("Modern Table Lamp")}</h1>
                                             <p>{t("An eye-catching combination of modernist ceramic arts and functional lighting")}</p>
-                                            <button>SHOP NOW</button>
+                                            <button>{t("Shop Now")}</button>
                                         </div>
                                     </div>
 
@@ -56,8 +56,8 @@ useEffect(()=>{
                                         </figure>
                                         <div data-aos="fade-right" className="textSwiper">
                                             <h1>Outline Table Lamp</h1>
-                                            <p>An eye-catching combination of modernist ceramic arts and functional lighting</p>
-                                            <button>SHOP NOW</button>
+                                            <p>{t("An eye-catching combination of modernist ceramic arts and functional lighting")}</p>
+                                            <button>{t("Shop Now")}</button>
                                         </div>
                                     </div>
                                 </div>

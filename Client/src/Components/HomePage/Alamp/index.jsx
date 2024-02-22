@@ -2,7 +2,13 @@ import React, { useEffect } from 'react'
 import './index.scss'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { useTranslation } from 'react-i18next'
 const Alamp = () => {
+    
+        const { t, i18n } = useTranslation();
+        function changeLang(lang) {
+            i18n.changeLanguage(lang)
+        }
     useEffect(()=>{
         Aos.init({duration:1000})
        },[])
@@ -11,7 +17,7 @@ const Alamp = () => {
 <section id='Alamp'>
     <div className="AlampArea">
         <div data-aos="zoom-in-up" className="TextAlamp">
-            <h1>MODERN LAMP</h1>
+            <h1>{t("MODERN LAMP")}</h1>
         </div>
         <div className="AlampBox">
             <div data-aos="zoom-in-up"   className="LeftImg">
@@ -19,9 +25,9 @@ const Alamp = () => {
             </div>
             <div className="RightText">
                 <div data-aos="zoom-in-up" className="Textin">
-                     <h1>Bedroom Lamp</h1>
-                     <p>Add contemporary lighting to your living space or bedroom with this matching pair of table lamps. They look great on living room side tables, book shelves or bedside tables, and each of them has a geometric metal base.</p>
-               <button>Shop Now</button>
+                     <h1>{t("Bedroom Lamp")}</h1>
+                     <p>{t("Add contemporary lighting to your living space or bedroom with this matching pair of table lamps. They look great on living room side tables, book shelves or bedside tables, and each of them has a geometric metal base.")}</p>
+               <button>{t("Shop Now")}</button>
                 </div>
                
             </div>

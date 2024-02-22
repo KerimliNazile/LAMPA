@@ -7,6 +7,7 @@ const AdminPage = () => {
 
   const [data, setData] = useState([])
   const [search, setSearch] = useState('')
+  const [showModal, setShowModal] = useState(false);
   const [property, setProperty] = useState(null)
   // const [updatedData, setUpdatedData] = useState(null)
   async function getData() {

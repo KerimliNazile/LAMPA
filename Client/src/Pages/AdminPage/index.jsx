@@ -18,7 +18,7 @@ const AdminPage = () => {
   }
 
   async function EditData(id) {
-    const res = await axios.put(`http://localhost:3000/product/${id}`)
+    const res = await axios.put(`http://localhost:3000/product/${id}`,updatedData)
     getData()
   }
   useEffect(() => {

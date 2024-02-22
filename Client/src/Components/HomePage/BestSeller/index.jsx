@@ -12,9 +12,9 @@ const Seller = () => {
 
   return (
     <div className="ContainerLampa">
-      <Lamp light={lights[0]} onLightClick={() => lightClick(0)} imageUrl="https://parspng.com/wp-content/uploads/2022/11/lamppng.parspng.com_.png" />
+      {/* <Lamp light={lights[0]} onLightClick={() => lightClick(0)} imageUrl="https://parspng.com/wp-content/uploads/2022/11/lamppng.parspng.com_.png" /> */}
       <Lamp light={lights[1]} onLightClick={() => lightClick(1)} imageUrl="https://freepngimg.com/thumb/lamp/153016-lamp-contemporary-hanging-free-transparent-image-hq.png" />
-      <Lamp light={lights[2]} onLightClick={() => lightClick(2)} imageUrl="https://warmlydecor.com/cdn/shop/products/product-image-558360424_grande.jpg?v=1554760542" />
+      {/* <Lamp light={lights[2]} onLightClick={() => lightClick(2)} imageUrl="https://warmlydecor.com/cdn/shop/products/product-image-558360424_grande.jpg?v=1554760542" /> */}
     </div>
   );
 };

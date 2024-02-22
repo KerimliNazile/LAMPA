@@ -10,8 +10,13 @@ import './index.scss'
 
 import { Pagination } from 'swiper/modules';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
+    const { t, i18n } = useTranslation();
+    function changeLang(lang) {
+        i18n.changeLanguage(lang)
+    }
 useEffect(()=>{
  Aos.init({duration:1500})
 },[])
@@ -31,8 +36,8 @@ useEffect(()=>{
                                             <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/slide1.2.jpg?v=1619145875" alt="" />
                                         </figure>
                                         <div data-aos="fade-right" className="textSwiper">
-                                            <h1>Modern Table Lamp</h1>
-                                            <p>An eye-catching combination of modernist ceramic arts and functional lighting</p>
+                                            <h1>{t("Modern Table Lamp")}</h1>
+                                            <p>{t("An eye-catching combination of modernist ceramic arts and functional lighting")}</p>
                                             <button>SHOP NOW</button>
                                         </div>
                                     </div>

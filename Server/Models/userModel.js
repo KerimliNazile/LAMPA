@@ -7,9 +7,9 @@ const UserSchema = new Schema(
     role: { type: String, default: "user" },
     email: { type: String },
     wishlist: [
-      // {
-      //   product: { type: mongoose.Schema.Types.ObjectId, ref: "" },
-      // },
+      {
+        // product: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
+      },
     ],
     basket:[
 

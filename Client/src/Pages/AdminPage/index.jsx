@@ -8,6 +8,7 @@ const AdminPage = () => {
   const [data, setData] = useState([])
   const [search, setSearch] = useState('')
   const [property, setProperty] = useState(null)
+  // const [updatedData, setUpdatedData] = useState(null)
   async function getData() {
     const res = await axios("http://localhost:3000/product")
     setData(res.data)
@@ -18,15 +19,18 @@ const AdminPage = () => {
   }
 
   async function EditData(id) {
-    const res = await axios.put(`http://localhost:3000/product/${id}`,updatedData)
+    if (updatedData){  
+      const res = await axios.put(`http://localhost:3000/product/${id}`, updatedData)
     getData()
+    }
+  
   }
   useEffect(() => {
     getData()
   }, [])
   return (
     <>
-      <FormAdd getData={getData} />
+      <FormAdd getData={getData}  />
       <div className="filterr">
         <input type="search" value={search} placeholder='search' onChange={(e) => setSearch(e.target.value)} />
         <button onClick={() => setProperty({ name: "title", asc: null })}>Default</button>
@@ -82,6 +86,6 @@ const AdminPage = () => {
       </table>
     </>
   )
-}
+            }
 
 export default AdminPage

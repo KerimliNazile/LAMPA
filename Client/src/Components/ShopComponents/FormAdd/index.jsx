@@ -24,6 +24,7 @@ const FormAdd = ({ getData }) => {
             })}
             onSubmit={(values, { resetForm }) => {
                 AddMenu(values)
+                // setUpdatedData(values)
                 resetForm()
             }}
         >

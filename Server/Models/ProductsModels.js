@@ -2,14 +2,14 @@ import {Schema, model} from 'mongoose'
 
 const ProductsSchema = new Schema(
     {
-      image: { type: String, required: true },
-      detailsImage: [{ type: String, required: true }],
-      title: { type: String, required: true },
-      by: { type: String, required: true },
-      price: { type: Number, required: true },
-      category: { type: String, required: true },
-      formtyp: { type: String, required: true },
-      size: { type: String, required: true },
+      image: { type: String,},
+      detailsImage: [{ type: String,  }],
+      title: { type: String,  },
+      by: { type: String,  },
+      price: { type: Number, },
+      category: { type: String, },
+      formtyp: { type: String,},
+      size: { type: String,  },
     },
     { timestamps: true }
   );

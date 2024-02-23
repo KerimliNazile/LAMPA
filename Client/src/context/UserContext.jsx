@@ -1,11 +1,13 @@
 import { createContext, useContext } from "react";
 import useLocalStorage from '../hooks/useLocalStorage'
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const userContext = createContext()
 
 export const UserProvider = ({ children }) => {
 
+    const navigate = useNavigate()
     const [user, setUser, ManualUpdate] = useLocalStorage("user", { username: "", role: "", basket: [], wishlist: [], token: "" })
 
     async function UpdateWishlist(wishlist) {
@@ -62,6 +64,8 @@ export const UserProvider = ({ children }) => {
             wishlist: [],
             token: "",
         })
+
+        navigate("/login")
     }
 
     const data = {

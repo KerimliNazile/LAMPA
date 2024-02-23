@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMdHeart } from "react-icons/io";
-import { CiSearch } from "react-icons/ci";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { IoPerson } from "react-icons/io5";
@@ -9,8 +8,10 @@ import './index.scss';
 import { Link, NavLink } from 'react-router-dom';
 import ModeBox from '../../Components/ModeBox/ModeBox';
 import { useTranslation } from 'react-i18next';
+import { useUser } from '../../context/UserContext';
 
 const Navbar = () => {
+    const { Logout, user } = useUser()
     const [isOpen, setIsOpen] = useState(false);
     function handleClick() {
         setIsOpen(!isOpen);
@@ -19,6 +20,9 @@ const Navbar = () => {
     function changeLang(lang) {
         i18n.changeLanguage(lang)
     }
+
+    console.log("user: ", user)
+
     return (
         <>
             <nav>
@@ -34,8 +38,8 @@ const Navbar = () => {
                         <li><NavLink to='/shop'>{t("Shop")}</NavLink></li>
                         <li><NavLink to='/contact'>{t("Contact")}</NavLink></li>
                         <li className='pages'><NavLink to='/faqs'>{t("FAQs")}</NavLink></li>
-                         <li><NavLink to='*'></NavLink></li>
-                            {/* <div className="subMenu2">
+                        <li><NavLink to='*'></NavLink></li>
+                        {/* <div className="subMenu2">
                                 <div className="subMenuArea">
                                     <div className="subMenuBox">
                                         <ul className='errorpage'>
@@ -44,9 +48,9 @@ const Navbar = () => {
                                     </div>
                                 </div>
                             </div> */}
-                           
 
-                        
+
+
                         {/* <li><NavLink to='/search'><CiSearch /></NavLink></li> */}
                         <li><NavLink to='/login'><IoPerson /></NavLink></li>
                         <li><NavLink to='/basket'><FaShoppingCart /></NavLink></li>
@@ -55,6 +59,9 @@ const Navbar = () => {
                             <button onClick={() => changeLang("az")}>AZ</button>
                             <button onClick={() => changeLang("en")}>EN</button>
                         </li>
+                        {user._id && <button onClick={() => Logout()}>
+                            Log out
+                        </button>}
 
                     </ul>
                 </div>
@@ -70,6 +77,9 @@ const Navbar = () => {
                         <li><NavLink to='/shop'>Shop</NavLink></li>
                         <li><NavLink to='/contact'>Contact</NavLink></li>
                         <li><NavLink to='/faqs'>FAQS</NavLink></li>
+                        {user._id && <button onClick={() => Logout()}>
+                            Log out
+                        </button>}
                         {/* <li><NavLink to='/wishlist'><IoMdHeart /></NavLink></li> */}
                     </ul>
                 </div>

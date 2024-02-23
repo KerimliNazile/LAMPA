@@ -70,8 +70,8 @@ const  {
             
 
         });
-        
-        alert('Successfully Registered!');
+        navigate("/")
+        alert('Successfully Loginned!');
       } else {
         // Handle other response statuses if needed
         alert('Registration failed. Please try again.');

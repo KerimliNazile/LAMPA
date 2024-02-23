@@ -4,8 +4,10 @@ import axios from 'axios'
 import { setCookie } from '../../../helper/cookie'
 import { jwtDecode } from "jwt-decode"
 import { useUser } from '../../context/UserContext'
+import { useNavigate } from 'react-router-dom'
 const LoginPage = () => {
  
+  const navigate = useNavigate()
   const [userName, setUserName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -71,7 +73,8 @@ const  {
 
         });
         
-        alert('Successfully Registered!');
+        navigate("/")
+        alert('Successfully Loginned!');
       } else {
         // Handle other response statuses if needed
         alert('Registration failed. Please try again.');

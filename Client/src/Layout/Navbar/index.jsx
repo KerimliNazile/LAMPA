@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMdHeart } from "react-icons/io";
+
+import { GrShop } from "react-icons/gr";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { IoPerson } from "react-icons/io5";
@@ -28,6 +30,7 @@ const Navbar = () => {
             <nav>
 
                 <ModeBox />
+                
                 <div className="LogoNav">
                   <NavLink to={'/'}>  <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1618913868" alt="" /></NavLink>
                 </div>
@@ -52,16 +55,20 @@ const Navbar = () => {
 
 
                         {/* <li><NavLink to='/search'><CiSearch /></NavLink></li> */}
-                        <li><NavLink to='/login'><IoPerson /></NavLink></li>
-                        <li><NavLink to='/basket'><FaShoppingCart /></NavLink></li>
-                        <li><NavLink to='/wishlist'><IoMdHeart /></NavLink></li>
+
+                        <li><NavLink to='/login'><IoPerson className='person' /></NavLink></li>
+                        <li><NavLink to='/basket'><GrShop className='person'/></NavLink></li>
+                        <li><NavLink to='/wishlist'><IoMdHeart className='person' /></NavLink></li>
                         <li>
-                            <button onClick={() => changeLang("az")}>AZ</button>
-                            <button onClick={() => changeLang("en")}>EN</button>
+                            <button className='enbutton' onClick={() => changeLang("az")}>AZ</button>
+                            <button className='enbutton' onClick={() => changeLang("en")}>EN</button>
                         </li>
-                        {user._id && <button onClick={() => Logout()}>
+                        <li>
+                              {user._id && <button className='logoutbutton' onClick={() => Logout()}>
                             Log out
                         </button>}
+                        </li>
+                      
 
                     </ul>
                 </div>

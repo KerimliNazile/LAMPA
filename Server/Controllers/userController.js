@@ -8,8 +8,8 @@ const PrivateKey = "wexvlj@!@#$!__++=";
 // ----------------------REGISTER-----------------------------
 export async function Register(req, res) {
   try {
-    const { name, email,password } = req.body;
-    console.log(name,email)
+    const { name, email, password } = req.body;
+    console.log(name, email)
     const hashedPassword = await hash(password, 10);
     const newUser = new Users({
       name: name,
@@ -20,7 +20,7 @@ export async function Register(req, res) {
     await newUser.save();
     console.log(newUser)
     const token = jwt.sign(
-      { _id: newUser._id, name: newUser.name, role: newUser.role, email: newUser.email },
+      { _id: newUser._id, name: newUser.name, role: newUser.role, email: newUser.email, wishlist: newUser.wishlist, basket: newUser.basket },
       "PrivateKey"
     );
     res.status(200).send(token);
@@ -32,28 +32,38 @@ export async function Register(req, res) {
 // import { Users } from "./../Models/userModel.js";
 
 export async function UpdateUserWishlistByID(req, res) {
-    try {
-        const { id } = req.params
-        const { wishlist } = req.body
+  try {
+    const { id } = req.params
+    const { wishlist } = req.body
 
-        const findUser = await Users.findById(id)
+    const findUser = await Users.findById(id)
 
-        if (!findUser.username) {
-            res.status(404).json({ message: "User not found!" })
-            return
-        }
-
-        const updatedUser = await Users.findByIdAndUpdate(id, { wishlist: wishlist })
-
-        res.status(200).send(`${updatedUser.username}'s wishlist updated!`)
-    } catch (error) {
-        res.status(500).json({ message: "Server error" })
+    if (!findUser.username) {
+      res.status(404).json({ message: "User not found!" })
+      return
     }
+
+    const updatedUser = await Users.findByIdAndUpdate(id, { wishlist: wishlist })
+
+    res.status(200).send(`${updatedUser.username}'s wishlist updated!`)
+  } catch (error) {
+    res.status(500).json({ message: "Server error" })
+  }
 }
 
 //---------------------------Basket--------------------------------------------//
 
-
+export const UpdateBasket = async (req, res) => {
+  try {
+    const { id } = req.params
+    const { basket } = req.body
+    console.log(req.body)
+    const data = await Users.findByIdAndUpdate(id, { basket: basket })
+    res.status(200).send({ message: "sucsess DELETE", data })
+  } catch (error) {
+    res.status(500).send({ message: "NOT sucsess Update" })
+  }
+}
 
 
 // --------------------------LOGIN--------------------------------------------//
@@ -62,24 +72,24 @@ export async function Login(req, res) {
   try {
     const { name, password } = req.body;
     const user = await Users.findOne({ name: name });
-  
+
     const passwordMatch = await compare(password, user.password);
-      console.log(user)
+    console.log(user)
     // if  (!user) {
 
     //   res.status(404).send("Yanlış kullanici");
 
     //   return
     // }
-    
-   if (!passwordMatch) {
+
+    if (!passwordMatch) {
       res.status(404).send("Yanlış Parola");
       return
     }
     console.log("Test");
     const token = jwt.sign(
-      { _id: user._id, name: user.name, role: user.role,wishlist:user.wishlist },
-     "PrivateKey" // Burada PrivateKey yerine gerçek özel anahtarınızı kullanmalısınız
+      { _id: user._id, name: user.name, role: user.role, wishlist: user.wishlist, basket: user.basket },
+      "PrivateKey" // Burada PrivateKey yerine gerçek özel anahtarınızı kullanmalısınız
     );
     res.status(200).send(token);
   } catch (error) {

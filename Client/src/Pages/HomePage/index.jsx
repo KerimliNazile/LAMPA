@@ -30,7 +30,6 @@ const Home = () => {
 
 <Customer/>
  <Vintage />
-      <Stripe/> 
       {/* <Seller /> */}
     </div>
   )

@@ -19,7 +19,7 @@ function ModeBox() {
         <div className='modeBox'>
             <label className="ui-switch">
                 <div className="slider">
-                    <button onClick={changeMode}>
+                    <button className='modebutton' onClick={changeMode}>
                         {
                             mode ? <IoSunnySharp />:<IoMoon />
                         }

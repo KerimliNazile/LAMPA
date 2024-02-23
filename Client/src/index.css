@@ -6,10 +6,12 @@
 
 :root {
   --mode-color-1: white;
+  --mode-color-2: black;
 }
 
 .dark {
   --mode-color-1: black;
+  --mode-color-2: white;
 }
 
 body {

@@ -6,41 +6,41 @@ import { jwtDecode } from "jwt-decode"
 import { useUser } from '../../context/UserContext'
 import { useNavigate } from 'react-router-dom'
 const LoginPage = () => {
- 
+
   const navigate = useNavigate()
   const [userName, setUserName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-const  {
+  const {
     user,
     setUser,
     Logout,
     AddToWishlist,
     isInWishlist,
-}=useUser()
+  } = useUser()
 
 
 
-  
+
   // LOGIN
 
 
- 
-//     try {
-//       const res = await axios.post('http://localhost:3000/login', values)
-//       alert('Successfully Logined!')
-//       // res.status === 200 && setToken(res.data)
-//       res.status === 200 && setCookie("token", res.data, "600h")
-//       const decoded = res.status === 200 && jwtDecode(res.data);
-//       setUser(decoded)
-//       setIsLoginOpen(!isLoginOpen)
-//       await fetchBasketData()
-//       await fetchWishlistData()
-//     } catch (error) {
-//       toast.error("Wrong Details")
-//     }
-//   }
+
+  //     try {
+  //       const res = await axios.post('http://localhost:3000/login', values)
+  //       alert('Successfully Logined!')
+  //       // res.status === 200 && setToken(res.data)
+  //       res.status === 200 && setCookie("token", res.data, "600h")
+  //       const decoded = res.status === 200 && jwtDecode(res.data);
+  //       setUser(decoded)
+  //       setIsLoginOpen(!isLoginOpen)
+  //       await fetchBasketData()
+  //       await fetchWishlistData()
+  //     } catch (error) {
+  //       toast.error("Wrong Details")
+  //     }
+  //   }
 
 
 
@@ -52,7 +52,7 @@ const  {
     try {
       const res = await axios.post('http://localhost:3000/login', {
         name: userName,
-      
+
         password: password
       });
 
@@ -65,14 +65,14 @@ const  {
         const decoded = jwtDecode(res.data);
         console.log(decoded);
         setUser({
-            _id:decoded._id,
-            wishlist:decoded.wishlist,
-            username:decoded.name,
-            role:decoded.role,
-            
+          _id: decoded._id,
+          wishlist: decoded.wishlist,
+          username: decoded.name,
+          role: decoded.role,
+          basket: decoded.basket
 
         });
-        
+
         navigate("/")
         alert('Successfully Loginned!');
       } else {
@@ -107,7 +107,7 @@ const  {
 
             <form onSubmit={(e) => handleLogin(e)}>
               <input onChange={(e) => { setUserName(e.target.value) }} type="text" placeholder="Your Name" />
-             
+
               <input onChange={(e) => { setPassword(e.target.value) }} type="password" placeholder="Password" />
               <button type="submit">Login</button>
             </form>
@@ -125,6 +125,6 @@ const  {
 
     </>
   )
-  }
+}
 
 export default LoginPage

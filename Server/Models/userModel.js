@@ -11,7 +11,9 @@ const UserSchema = new Schema(
         // product: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
       },
     ],
-    basket:[
+    basket:[{
+      
+    },
 
     ],
   },

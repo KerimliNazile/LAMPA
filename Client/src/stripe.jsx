@@ -3,17 +3,18 @@
 import StripeCheckout from 'react-stripe-checkout';
 import React, { useState } from 'react';
 import axios from 'axios';
+import './stripe.scss'
 // import Swal from 'sweetalert2';
 // import withReactContent from 'sweetalert2-react-content';
 
 // const MySwal = withReactContent(Swal);
 
- function Stripe() {
+ function Stripe({Price}) {
   const publishableKey =
     'pk_test_51OldkFF0btFoo7YjXhMzK6iUx8gKQB0wsF7F4PPK6eEPOtSzvGcSAzHDlslCeEYw54WYxDO2jeNmfZZsWeWS4y9800X3WIdEUL';
   const [product, setProduct] = useState({
     name: 'Headphone',
-    price: 5,
+    price: Price,
   });
   const priceForStripe = product.price * 100;
 
@@ -54,14 +55,6 @@ import axios from 'axios';
 
   return (
     <div className="container">
-      <h2>Complete React & Stripe payment integration</h2>
-      <p>
-        <span>Product: </span>
-        {product.name}
-      </p>
-      <p>
-        <span>Price: </span>${product.price}
-      </p>
       <StripeCheckout
         stripeKey={publishableKey}
         label="Pay Now"

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaHeart } from "react-icons/fa";
 import { FaRegHeart } from "react-icons/fa";
+import { GrShop } from "react-icons/gr";
 import { FaEye } from "react-icons/fa";
 import { PiShoppingCartFill } from "react-icons/pi";
 import './index.scss'
@@ -12,6 +13,10 @@ import { useUser } from '../../../context/UserContext';
 const Categories = () => {
     const {
         user,
+        AddBasket,
+        DecBasket,
+        IncBasket,
+        BasketDelete,
         setUser,
         Logout,
         AddToWishlist,
@@ -24,7 +29,9 @@ const Categories = () => {
     function HandleAddtoWish(item) {
 AddToWishlist(item)
     }
-
+    function HandleAddtoBasket(item) {
+        AddBasket(item)
+    }
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
         setProduct(res.data)
@@ -56,7 +63,7 @@ AddToWishlist(item)
                                                     <div className="Icons">
                                                         <span onClick={() => HandleAddtoWish(item)}> {isInWishlist(item) ?<FaHeart /> : <FaRegHeart />} </span>
                                                         <Link to={`/product/${item._id}`}>   <span> <FaEye /></span></Link>
-                                                        <span> <PiShoppingCartFill /></span>
+                                                        <span onClick={()=>HandleAddtoBasket(item)}><GrShop /> </span>
                                                     </div>
                                                 </div>
                                                 <div className='titleby'>

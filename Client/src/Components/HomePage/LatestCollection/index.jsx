@@ -10,6 +10,7 @@ import { Navigation } from 'swiper/modules';
 import { PiShoppingCartFill } from "react-icons/pi";
 import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { GrShop } from "react-icons/gr";
 import axios from 'axios'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -18,6 +19,10 @@ export default function Latest() {
     const {
         user,
         setUser,
+        AddBasket,
+        DecBasket,
+        IncBasket,
+        BasketDelete,
         Logout,
         AddToWishlist,
         isInWishlist,
@@ -48,6 +53,9 @@ export default function Latest() {
     const [product, setProduct] = useState([])
     function HandleAddtoWish(item) {
         AddToWishlist(item)
+    }
+    function HandleAddtoBasket(item) {
+        AddBasket(item)
     }
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
@@ -93,7 +101,8 @@ export default function Latest() {
                                                 <div className="Icons">
                                                     <span onClick={() => HandleAddtoWish(item)}>    <FaHeart className='faheart' /></span>
                                                     <Link to={`/product/${item._id}`}><span><FaEye className='faheart' /></span></Link>
-                                                    <span>  <PiShoppingCartFill className='faheart' /></span>
+                                                    <span onClick={()=>HandleAddtoBasket(item)}>  <GrShop className='faheart'
+                                                     /></span>
                                                 </div>
                                             </div>
                                         </SwiperSlide>

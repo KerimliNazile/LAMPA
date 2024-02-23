@@ -16,10 +16,10 @@ const Accordion = ({ items }) => {
             <div className="Area">
                 <div className="ImgDisplay">
                     <div className="RightAcardionImg">
-                        <img src="https://lights-demo.myshopify.com/cdn/shop/articles/blog03_82ae410c-6c4d-4797-a41f-67fba626dd94.jpg?v=1640685045" alt="" />
+                       <img src="https://alamp-store-demo.myshopify.com/cdn/shop/files/banner_productv6.jpg?v=1613770359" alt="" />
                     </div>
                     <div className="ImgAcardion">
-                        <img src="https://dt-lights.myshopify.com/cdn/shop/files/responsive-slider-2_768x940.jpg?v=1614290586" alt="" />
+                       
                     </div>
                 </div>
 

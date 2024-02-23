@@ -3,29 +3,36 @@ import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './index.scss';
+import { useUser } from '../../context/UserContext';
+import Stripe from '../../stripe';
 
 const Detail = () => {
-  const [selectedPhoto, setSelectedPhoto] = useState("");
+  const {
+    user,
+    setUser,
+    AddBasket,
+    Logout,
+    AddToWishlist,
+    isInWishlist,
+} = useUser()
   const [detail, setDetail] = useState(null);
   const { id } = useParams();
 
-  const handlePhotoClick = (photo) => {
-    setSelectedPhoto(photo);
-  };
+
 
   const fetchDetail = async () => {
-    try {
-      const res = await axios.get(`http://localhost:3000/product/${id}`);
-      console.log(res.data);
-      setDetail(res.data);
-      if (res.data.detailsImage && res.data.detailsImage.length > 0) {
-        setSelectedPhoto(res.data.detailsImage[0]);
-      }
-    } catch (error) {
-      console.error('Error fetching product detail:', error);
-    }
-  };
 
+    const res = await axios.get(`http://localhost:3000/product/${id}`);
+
+    setDetail(res.data);
+
+  };
+  function HandleAddtoWish(item) {
+    AddToWishlist(item)
+        }
+        function HandleAddtoBasket(item) {
+            AddBasket(item)
+        }
   useEffect(() => {
     fetchDetail();
   }, []);
@@ -37,40 +44,41 @@ const Detail = () => {
       </Helmet>
 
       <div className="Detail">
-        <h1>Detail</h1>
+
         {detail ? (
-          <ul>
-            <li>
+<>
+<ul className='Uldetail'>
+            <li className='LiImg'>
               <img src={detail.image} alt="" />
             </li>
-            <li>{detail.title}</li>
-            <li>{detail.by}</li>
-            <li>{detail.price}</li>
-            <li>
-              {detail.detailsImage.map((item, index) => (
-                <div className="" key={index}>
-                  <img
-                    src={item}
-                    alt=""
-                    onClick={() => handlePhotoClick(item)}
-                  />
-                </div>
-              ))}
-            </li>
+            <div className='Infos'>
+              <li><span>Name : </span>{detail.title}</li>
+              <li><span>Category :</span> {detail.category}</li>
+              <li><span>Type : </span>{detail.by}</li>
+              <li><span>Size : </span>{detail.size}</li>
+
+              <li><span>Price : </span>${detail.price}</li>
+            </div>
+
           </ul>
+              <div className="Icons">
+              <button className='butoni' onClick={()=>HandleAddtoBasket(detail)}>Add to Cart</button>
+            
+              <Stripe Price={detail.price}/>
+              <button className='butoni' onClick={()=>HandleAddtoWish(detail)}>Add to wishlist</button>
+    
+            </div>
+</>
+
         ) : (
           <p>Loading...</p>
         )}
+
+    
       </div>
 
       <div>
-        <div style={{ border: '2px solid black', padding: '10px', marginBottom: '10px' }}>
-          {selectedPhoto ? (
-            <img src={selectedPhoto} alt="Selected" style={{ maxWidth: '100%' }} />
-          ) : (
-            <p>Lütfen bir fotoğraf seçin</p>
-          )}
-        </div>
+
       </div>
     </>
   );

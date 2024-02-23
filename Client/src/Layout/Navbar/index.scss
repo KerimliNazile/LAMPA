@@ -23,11 +23,11 @@ nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 40px;
+            gap: 18px;
             font-size: 22px;
 
             li a {
-                color: #18272F;
+                color: var(--mode-color-2);
                 position: relative;
                 text-decoration: none;
             }
@@ -38,7 +38,7 @@ nav {
                 width: 100%;
                 height: 2px;
                 border-radius: 2px;
-                background-color: #37B5B6;
+                background-color: #9dbc98;
                 bottom: 0;
                 left: 0;
                 transform-origin: right;
@@ -62,16 +62,25 @@ nav {
             }
 
             color:rgb(85, 84, 84);
+            .person{
+                color: #7fb678;
+            }
         }
 
        
     }
 }
 
-
+.logoutbutton{
+    width: 80px;
+    height: 40px;
+}
    
 
-
+.enbutton{
+    width: 40px;
+    height: 40px;
+}
 
 .mobile {
     display: none;
@@ -378,7 +387,17 @@ nav {
         }
     }
     
-
+    .logoutbutton{
+        width: 80px;
+        height: 40px;
+    }
+       
+    
+    .enbutton{
+        width: 40px;
+        height: 40px;
+    }
+    
 @media only screen and (max-width: 837px){
     nav {
         display: flex;
@@ -522,14 +541,24 @@ nav {
         }
     }
     
-
+    .logoutbutton{
+        width: 80px;
+        height: 40px;
+    }
+       
+    
+    .enbutton{
+        width: 40px;
+        height: 40px;
+    }
+    
 
 @media only screen and (max-width: 837px){
     nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 40px;
+        gap: 20px;
         width: 100%;
         padding: 30px 20px;
         background-color: #b3dedf;
@@ -680,12 +709,23 @@ nav {
             overflow: hidden;
         
         }
+        .logoutbutton{
+    width: 80px;
+    height: 40px;
+}
+   
+
+.enbutton{
+    width: 40px;
+    height: 40px;
+}
+
 @media only screen and (max-width: 427px){
     nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
         width: 100%;
         padding: 30px 20px;
         background-color: #b3dedf;
@@ -836,3 +876,133 @@ nav {
     overflow: hidden;
 
 }
+.logoutbutton{
+    width: 80px;
+    height: 40px;
+}
+   
+
+.enbutton{
+    width: 40px;
+    height: 40px;
+}
+// @media only screen and (max-width: 1064px){
+//     nav {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         gap: 0px;
+        
+//         padding: 30px 60px;
+//         background-color: #b3dedf;
+//         position: sticky;
+//         z-index: 9999;
+//         background: var(--mode-color-1);
+//         top: 0;
+//         left: 0;
+    
+//         .LogoNav {
+//             img {
+//                 width: 100px;
+//             }
+//         }
+    
+//         .MainNav {
+//             #NavIn {
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//                 gap: 18px;
+//                 font-size: 22px;
+    
+//                 li a {
+//                     color: #18272F;
+//                     position: relative;
+//                     text-decoration: none;
+//                 }
+    
+//                 a::before {
+//                     content: '';
+//                     position: absolute;
+//                     width: 100%;
+//                     height: 2px;
+//                     border-radius: 2px;
+//                     background-color: #9dbc98;
+//                     bottom: 0;
+//                     left: 0;
+//                     transform-origin: right;
+//                     transform: scaleX(0);
+//                     transition: transform .3s ease-in-out;
+//                 }
+    
+//                 a:hover::before {
+//                     transform-origin: left;
+//                     transform: scaleX(1);
+//                 }
+    
+//                 /* Presentational Styles */
+//                 body {
+//                     display: grid;
+//                     font-family: 'Poppins', sans-serif;
+//                     font-size: 27px;
+//                     font-weight: 700;
+//                     height: 100vh;
+//                     place-items: center;
+//                 }
+    
+//                 color:rgb(85, 84, 84);
+//                 .person{
+//                     color: #7fb678;
+//                 }
+//             }
+    
+           
+//         }
+//     }
+    
+//     .logoutbutton{
+//         width: 80px;
+//         height: 40px;
+//     }
+       
+    
+//     .enbutton{
+//         width: 40px;
+//         height: 40px;
+//     }
+    
+//     .mobile {
+//         display: none;
+//     }
+    
+//     .navlist {
+//         transition: 0.2s ease-in-out;
+//         display: none;
+//         height: 200px;
+       
+      
+//         text-align: center;
+//         z-index: 2;
+//         top: 109px;
+//         position: absolute;
+//         transition: 0.2s ease-in-out;
+//         // display: block;
+//         height: 200px;
+//         width: 100%;
+//         background-color: #9dbc98;
+//     }
+    
+//         ul li a {
+//             color: black;
+//             font-size: 22px;
+    
+//         }
+    
+//         ul li {
+//             margin-bottom: 10px;
+//         }
+    
+    
+    
+
+// }

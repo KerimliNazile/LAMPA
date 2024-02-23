@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaHeart } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import { GrShop } from "react-icons/gr";
 import { PiShoppingCartFill } from "react-icons/pi";
 import axios from 'axios'
 import './index.scss'
@@ -12,6 +13,10 @@ const Product = () => {
     const {
         user,
         setUser,
+        AddBasket,
+        IncBasket,
+        DecBasket,
+        BasketDelete,
         Logout,
         AddToWishlist,
         isInWishlist,
@@ -22,6 +27,9 @@ const Product = () => {
     const [product, setProduct] = useState([])
     function HandleAddtoWish(item) {
         AddToWishlist(item)
+            }
+            function HandleAddtoBasket(item) {
+                AddBasket(item)
             }
     async function getProductData() {
         const res = await axios.get("http://localhost:3000/product")
@@ -52,7 +60,7 @@ const Product = () => {
                                                 <div className="Icons">
                                                     <span onClick={()=>HandleAddtoWish(item)}> <FaHeart /> </span>
                                                  <Link to={`/product/${item._id}`}> <span> <FaEye /></span></Link>  
-                                                   <span> <PiShoppingCartFill /></span>
+                                                   <span onClick={()=>HandleAddtoBasket(item)}> <GrShop /></span>
                                                 </div>
                                             </div>
                                           <div className='titleby'>

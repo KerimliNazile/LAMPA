@@ -1,28 +1,30 @@
 
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { faGlasses } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faRandom } from "@fortawesome/free-solid-svg-icons";
-import { Slider } from "antd"
-import './index.scss'
-import { IoMdHeart } from "react-icons/io";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Slider } from "antd";
+import React, { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
-import useFetch from "../../../hooks/useFetch";
+import { IoMdHeart } from "react-icons/io";
+import { Link } from "react-router-dom";
 import { useUser } from "../../../context/UserContext";
+import useFetch from "../../../hooks/useFetch";
+import './index.scss';
 
 
 function Products() {
     const {
         user,
         setUser,
+        AddBasket,
         Logout,
         AddToWishlist,
         isInWishlist,
     } = useUser()
     function HandleAddtoWish(item) {
         AddToWishlist(item)
+            }
+            function HandleAddtoBasket(item) {
+                AddBasket(item)
             }
     const [data, setData, fetchData] = useFetch([]);
     const [sortOption, setSortOption] = useState('featured'); // Default sorting option
@@ -224,6 +226,9 @@ function Products() {
     ));
 
     return (
+       
+
+            
         <div className="bigcontainer">
             <div className="filterspart">
                 <div className="filter">
@@ -553,19 +558,19 @@ function Products() {
                                 <img src={item.image} alt="" />
                                 <div className="righticons">
                                     <div className="circle" onClick={()=>HandleAddtoWish(item)}><IoMdHeart /></div>
-                                    <div className="circle"><FaEye /></div>
+                                   <Link to={`/product/${item._id}`}> <div className="circle"><FaEye /></div></Link>
                                     
                                 </div>
                                 <div className="addtocart">
-                                    <p>Add To Cart</p>
+                                    <p onClick={()=>HandleAddtoBasket(item)}>Add To Cart</p>
                                 </div>
                             </div>
-                            <li>{item.title}</li>
+                            <li className='title'>{item.title}</li>
                             {/* <li>{item.category}</li> */}
                             
-                            <li>{item.by}</li>
+                            <li className='bytitle'>{item.by}</li>
                             {/* <li>{item.formtyp}</li> */}
-                            <li>${item.price}</li>
+                            <li className='byprice'>${item.price}</li>
                         </ul>
                     ))}
                 </div>

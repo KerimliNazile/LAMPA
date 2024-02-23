@@ -1,0 +1,41 @@
+.Wishlist{
+    background-image: url("https://minery-store-demo.myshopify.com/cdn/shop/files/bg_page.jpg?v=1619077071");
+    min-height: 60vh;
+    background-repeat: no-repeat;
+   
+    .WishlistText{
+   font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       top: 40%;
+    }
+    .WishlistTextHome{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .WishlistArea{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        display: flex;
+        margin-top: 500px;
+        img{
+            width: 300px;
+        }
+    }
+       
+    .wishbutton{
+        font-size: 18px;
+        width: 150px;
+    }
+    span{
+        font-weight: 700;
+    }
+    li{
+        font-size: 20px;
+    }
+}

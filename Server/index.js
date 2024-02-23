@@ -18,9 +18,10 @@ dotenv.config();
 app.use(cors());
 app.use(express.json());
 app.use("/", ProductRouter)
-app.use("/",LogoRouter)
+app.use("/", LogoRouter)
 app.use("/", UserRouter)
-app.use("/",SwiperRouter)
+app.use("/", SwiperRouter)
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/payment", async (req, res) => {

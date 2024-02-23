@@ -13,6 +13,7 @@ import { useTranslation } from 'react-i18next';
 import { useUser } from '../../context/UserContext';
 
 const Navbar = () => {
+    
     const { Logout, user } = useUser()
     const [isOpen, setIsOpen] = useState(false);
     function handleClick() {

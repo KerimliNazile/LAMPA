@@ -25,6 +25,7 @@ import AdminProduct from './Pages/AdminProduct'
 import { RingLoader } from 'react-spinners'
 import MainLayoutAdmin from './Components/LayoutAdmin/MainLayoutAdmin'
 import AdminSwiper from './Pages/AdminSwiper'
+import AdminMarketing from './Pages/AdminSwiper'
 
 function App() {
 
@@ -72,9 +73,9 @@ function App() {
           
           <Route path='/adminn' element={<MainLayoutAdmin/>}>
               <Route index element={<AdminPage />}></Route>
-              <Route path='/adminn/adminlogo' element={<AdminLogo />}></Route>
+              <Route path='/adminn/adminlogo' element={<AdminLogo/>}></Route>
               <Route path='/adminn/adminproduct' element={<AdminProduct />}></Route>
-              <Route path='/adminn/adminswiper' element={<AdminSwiper />}></Route>
+              <Route path='/adminn/adminswiper' element={<AdminMarketing />}></Route>
             </Route>
         </Routes>
       }

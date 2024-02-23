@@ -2,28 +2,26 @@ import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios'
-const FormAdd = ({ getData }) => {
-    async function AddMenu(values) {
-        const res = await axios.post("http://localhost:3000/product", values)
+const FormikLogo = ({ getData }) => {
+    async function AddMenuu(values) {
+        const res = await axios.post("http://localhost:3000/swiper", values)
         getData()
 
     }
     return (
         <Formik
-            initialValues={{ image: '', title: '', category: '', price: "" }}
+            initialValues={{ image: '', title: '', text: ''}}
             validationSchema={Yup.object({
                 image: Yup.string()
                     .required('Required'),
                 title: Yup.string().matches(/^[a-zA-Z ]+?$/, "Must be only digits")
                     .required('Required'),
-                category: Yup.string()
+                text: Yup.string()
                     .required('Required'),
-                    price: Yup.number().positive("price must be higher than 0")
-                    .required('Required')
-
+                   
             })}
             onSubmit={(values, { resetForm }) => {
-                AddMenu(values)
+                AddMenuu(values)
                 // setUpdatedData(values)
                 resetForm()
             }}
@@ -38,17 +36,14 @@ const FormAdd = ({ getData }) => {
                 <ErrorMessage name="title" />
 
 
-                <label htmlFor="category">Category</label>
-                <Field name="category" type="text" />
-                <ErrorMessage name="category" />
+                <label htmlFor="text">Text</label>
+                <Field name="text" type="text" />
+                <ErrorMessage name="text" />
 
-                <label htmlFor="price">Price</label>
-                <Field name="price" type="number" />
-                <ErrorMessage name="price" />
-
+              
                 <button type="submit">Add</button>
             </Form>
         </Formik>
     );
 };
-export default FormAdd
+export default FormikLogo

@@ -35,7 +35,7 @@ const Basket = () => {
           <div className="baskettext">
             <h3>Home/Basket</h3>
           </div>
-
+       
           <div className="container">
             {user.basket && user.basket.map((item) => (
               <div className='bigbox' key={item._id}>
@@ -46,15 +46,15 @@ const Basket = () => {
                   <div className='name'>{item.title}</div>
                   <div className='price'>Price: ${item.price}</div>
                   <div className="countbox">
-                  <div onClick={() => refresh(item, IncBasket)} className="countbtn custom-btn btn-9">+</div>
+                    <div onClick={() => refresh(item, IncBasket)} className="countbtn custom-btn btn-9">+</div>
 
                     <div className='count'>{item.count}</div>
-                    <div onClick={() => refresh(item,DecBasket)} className="countbtn custom-btn btn-9">-</div>
+                    <div onClick={() => refresh(item, DecBasket)} className="countbtn custom-btn btn-9">-</div>
                   </div>
                   <div className="total_price">
                     Total:$ {item.price * item.count}
                   </div>
-                  <div onClick={() => refresh(item,BasketDelete)} className="countbtn custom-btn btn-9">Delete</div>
+                  <div onClick={() => refresh(item, BasketDelete)} className="countbtn custom-btn btn-9">Delete</div>
                 </div>
               </div>
             ))}

@@ -8,7 +8,7 @@ const userContext = createContext()
 export const UserProvider = ({ children }) => {
 
     const navigate = useNavigate()
-    const [user, setUser, ManualUpdate, ] = useLocalStorage("user", { username: "", role: "", basket: [], wishlist: [], token: "" })
+    const [user, setUser, ManualUpdate,] = useLocalStorage("user", { username: "", role: "", basket: [], wishlist: [], token: "" })
 
     async function UpdateWishlist(wishlist) {
         try {
@@ -58,6 +58,7 @@ export const UserProvider = ({ children }) => {
     }
     //////////////////////////////////////////////////
     function AddBasket(item) {
+
         const index = user.basket.findIndex((x) => x._id === item._id);
         if (index === -1) {
             item.count = 1
@@ -74,7 +75,7 @@ export const UserProvider = ({ children }) => {
     }
     function IncBasket(item) {
         const index = user.basket.findIndex((x) => x._id === item._id);
-        user.basket[index].count+=1
+        user.basket[index].count += 1
         ManualUpdate()
         putBasket(user.basket, user._id)
     }
@@ -83,7 +84,7 @@ export const UserProvider = ({ children }) => {
         if (user.basket[index].count === 1) {
             return
         }
-        user.basket[index].count-=1
+        user.basket[index].count -= 1
         ManualUpdate()
         putBasket(user.basket, user._id)
     }
@@ -95,22 +96,22 @@ export const UserProvider = ({ children }) => {
 
     async function putBasket(basket, _id) {
         try {
-          const res = await axios.put(
-            `http://localhost:3000/basket/${_id}`,
-            {
-              basket: basket,
-            },
-            {
-              headers: {
-                Authorization: `Bearer ${user.token}`,
-              },
-            }
-          );
-          console.log(res.data); // Gerekirse yanıtı işleyin
+            const res = await axios.put(
+                `http://localhost:3000/basket/${_id}`,
+                {
+                    basket: basket,
+                },
+                {
+                    headers: {
+                        Authorization: `Bearer ${user.token}`,
+                    },
+                }
+            );
+            console.log(res.data); // Gerekirse yanıtı işleyin
         } catch (error) {
-          console.error(error.response.data); // Hata durumunu işleyin
+            console.error(error.response.data); // Hata durumunu işleyin
         }
-      }
+    }
     function Logout() {
         setUser({
             username: "",
@@ -126,14 +127,16 @@ export const UserProvider = ({ children }) => {
     function refresh(item, actionFunction) {
         console.log("Item refreshed:", item);
         if (item) {
-          console.log("Item _id:", item._id);
-          console.log("Item image:", item.image);
-          // Add similar lines for other properties
+            console.log("Item _id:", item._id);
+            console.log("Item image:", item.image);
+            // Add similar lines for other properties
         } else {
-          console.log("Item is null or undefined");
+            console.log("Item is null or undefined");
         };
         actionFunction(item)
-  }
+    }
+    const BasketLength = user.basket.length
+    
 
     const data = {
         user,
@@ -146,6 +149,7 @@ export const UserProvider = ({ children }) => {
         AddToWishlist,
         isInWishlist,
         refresh,
+        BasketLength
     }
 
 

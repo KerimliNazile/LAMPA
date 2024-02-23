@@ -10,9 +10,20 @@ import './index.scss'
 import { IoMdHeart } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
 import useFetch from "../../../hooks/useFetch";
+import { useUser } from "../../../context/UserContext";
 
 
 function Products() {
+    const {
+        user,
+        setUser,
+        Logout,
+        AddToWishlist,
+        isInWishlist,
+    } = useUser()
+    function HandleAddtoWish(item) {
+        AddToWishlist(item)
+            }
     const [data, setData, fetchData] = useFetch([]);
     const [sortOption, setSortOption] = useState('featured'); // Default sorting option
     const [columns, setColumns] = useState(3);
@@ -541,7 +552,7 @@ function Products() {
                             <div className="cardimgs">
                                 <img src={item.image} alt="" />
                                 <div className="righticons">
-                                    <div className="circle"><IoMdHeart /></div>
+                                    <div className="circle" onClick={()=>HandleAddtoWish(item)}><IoMdHeart /></div>
                                     <div className="circle"><FaEye /></div>
                                     
                                 </div>

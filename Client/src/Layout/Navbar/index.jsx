@@ -29,7 +29,7 @@ const Navbar = () => {
 
                 <ModeBox />
                 <div className="LogoNav">
-                    <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1618913868" alt="" />
+                  <NavLink to={'/'}>  <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1618913868" alt="" /></NavLink>
                 </div>
                 <div className="MainNav">
                     <ul id='NavIn'>

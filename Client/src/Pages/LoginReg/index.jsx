@@ -76,7 +76,7 @@ const Login = () => {
       <section id='LoginRegister'>
         <div className="LoginRegisterArea">
           <div className="LeftArea">
-            <img src="https://dt-lights.myshopify.com/cdn/shop/files/responsive-slider-3_768x940.jpg?v=1614290586" alt="" />
+           
           </div>
           <div className="RightArea">
             <div className="textH2">

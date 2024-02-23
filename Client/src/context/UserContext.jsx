@@ -123,6 +123,17 @@ export const UserProvider = ({ children }) => {
 
         navigate("/login")
     }
+    function refresh(item, actionFunction) {
+        console.log("Item refreshed:", item);
+        if (item) {
+          console.log("Item _id:", item._id);
+          console.log("Item image:", item.image);
+          // Add similar lines for other properties
+        } else {
+          console.log("Item is null or undefined");
+        };
+        actionFunction(item)
+  }
 
     const data = {
         user,
@@ -134,7 +145,9 @@ export const UserProvider = ({ children }) => {
         Logout,
         AddToWishlist,
         isInWishlist,
+        refresh,
     }
+
 
     return (
         <userContext.Provider value={data}>

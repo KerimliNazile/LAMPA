@@ -13,6 +13,7 @@ const Basket = () => {
     IncBasket,
     DecBasket,
     BasketDelete,
+    refresh,
   } = useUser();
 
   useEffect(() => {
@@ -48,12 +49,12 @@ const Basket = () => {
                   <div onClick={() => refresh(item, IncBasket)} className="countbtn custom-btn btn-9">+</div>
 
                     <div className='count'>{item.count}</div>
-                    <div onClick={() => DecBasket(item)} className="countbtn custom-btn btn-9">-</div>
+                    <div onClick={() => refresh(item,DecBasket)} className="countbtn custom-btn btn-9">-</div>
                   </div>
                   <div className="total_price">
                     Total:$ {item.price * item.count}
                   </div>
-                  <div onClick={() => BasketDelete(item)} className="countbtn custom-btn btn-9">Delete</div>
+                  <div onClick={() => refresh(item,BasketDelete)} className="countbtn custom-btn btn-9">Delete</div>
                 </div>
               </div>
             ))}

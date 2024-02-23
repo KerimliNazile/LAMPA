@@ -11,6 +11,7 @@ import './index.scss'
 import { Pagination } from 'swiper/modules';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
     const { t, i18n } = useTranslation();
@@ -38,7 +39,7 @@ useEffect(()=>{
                                         <div data-aos="fade-right" className="textSwiper">
                                             <h1>{t("Modern Table Lamp")}</h1>
                                             <p>{t("An eye-catching combination of modernist ceramic arts and functional lighting")}</p>
-                                            <button>{t("Shop Now")}</button>
+                                            <NavLink to={"/shop"}><button>{t("Shop Now")}</button></NavLink>
                                         </div>
                                     </div>
 

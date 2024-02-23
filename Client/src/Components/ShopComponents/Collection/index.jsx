@@ -7,6 +7,8 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faRandom } from "@fortawesome/free-solid-svg-icons";
 import { Slider } from "antd"
 import './index.scss'
+import { IoMdHeart } from "react-icons/io";
+import { FaEye } from "react-icons/fa";
 import useFetch from "../../../hooks/useFetch";
 
 
@@ -539,9 +541,9 @@ function Products() {
                             <div className="cardimgs">
                                 <img src={item.image} alt="" />
                                 <div className="righticons">
-                                    <div className="circle"><FontAwesomeIcon icon={faHeart} /></div>
-                                    <div className="circle"><FontAwesomeIcon icon={faGlasses} /></div>
-                                    <div className="circle"><FontAwesomeIcon icon={faRandom} /></div>
+                                    <div className="circle"><IoMdHeart /></div>
+                                    <div className="circle"><FaEye /></div>
+                                    
                                 </div>
                                 <div className="addtocart">
                                     <p>Add To Cart</p>

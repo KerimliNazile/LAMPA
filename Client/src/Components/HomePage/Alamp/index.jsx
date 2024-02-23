@@ -3,6 +3,7 @@ import './index.scss'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
 const Alamp = () => {
     
         const { t, i18n } = useTranslation();
@@ -27,7 +28,7 @@ const Alamp = () => {
                 <div data-aos="zoom-in-up" className="Textin">
                      <h1>{t("Bedroom Lamp")}</h1>
                      <p>{t("Add contemporary lighting to your living space or bedroom with this matching pair of table lamps. They look great on living room side tables, book shelves or bedside tables, and each of them has a geometric metal base.")}</p>
-               <button>{t("Shop Now")}</button>
+              <NavLink to={"/shop"}> <button>{t("Shop Now")}</button></NavLink>
                 </div>
                
             </div>

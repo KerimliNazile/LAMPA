@@ -64,51 +64,14 @@ nav {
             color:rgb(85, 84, 84);
         }
 
-        .pages {
-            .subMenu2 {}
-
-        }
-
-        // .pages:hover {
-        //     .errorpage {
-        //         display: block;
-        //     }
-        // }
-
        
-
-        .subMenu2:hover {
-
-            display: block;
-            transition: .5s;
-        }
-
-        .subMenuArea {
-            position: absolute;
-            z-index: 2;
-
-            .subMenuBox {
-
-                // background-color: rgb(63, 140, 175);
-                opacity: 0;
-
-            }
-        }
     }
 }
 
-.pages:hover{
-    .subMenu2{
-        .subMenuArea{
-            .subMenuBox {
-                opacity: 1;
-            }
-        }
-    }
-  
+
    
 
-}
+
 
 .mobile {
     display: none;

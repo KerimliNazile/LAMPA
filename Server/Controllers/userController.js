@@ -21,7 +21,7 @@ export async function Register(req, res) {
     console.log(newUser)
     const token = jwt.sign(
       { _id: newUser._id, name: newUser.name, role: newUser.role, email: newUser.email, wishlist: newUser.wishlist, basket: newUser.basket },
-      "PrivateKey"
+      PrivateKey
     );
     res.status(200).send(token);
 
@@ -29,7 +29,7 @@ export async function Register(req, res) {
     res.status(500).send(`Internal Server Error: ${error.message}`);
   }
 }
-// import { Users } from "./../Models/userModel.js";
+
 
 export async function UpdateUserWishlistByID(req, res) {
   try {
@@ -38,7 +38,7 @@ export async function UpdateUserWishlistByID(req, res) {
 
     const findUser = await Users.findById(id)
 
-    if (!findUser.username) {
+    if (!findUser) {
       res.status(404).json({ message: "User not found!" })
       return
     }
@@ -75,12 +75,7 @@ export async function Login(req, res) {
 
     const passwordMatch = await compare(password, user.password);
     console.log(user)
-    // if  (!user) {
-
-    //   res.status(404).send("Yanlış kullanici");
-
-    //   return
-    // }
+   
 
     if (!passwordMatch) {
       res.status(404).send("Yanlış Parola");
@@ -89,7 +84,7 @@ export async function Login(req, res) {
     console.log("Test");
     const token = jwt.sign(
       { _id: user._id, name: user.name, role: user.role, wishlist: user.wishlist, basket: user.basket },
-      "PrivateKey" // Burada PrivateKey yerine gerçek özel anahtarınızı kullanmalısınız
+      PrivateKey // Burada PrivateKey yerine gerçek özel anahtarınızı kullanmalısınız
     );
     res.status(200).send(token);
   } catch (error) {
@@ -132,7 +127,7 @@ export async function updateUser(req, res) {
     const decoded = jwt.verify(token, PrivateKey);
     if (decoded.role === "admin" || decoded._id === id) {
       const hashedPassword = await hash(req.body.password, 10);
-      await User.findByIdAndUpdate(id, {
+      await Users.findByIdAndUpdate(id, {
         email: req.body.email,
         password: hashedPassword,
       });

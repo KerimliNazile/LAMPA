@@ -61,9 +61,9 @@ AddToWishlist(item)
                                                 <div className="ImageTop" key={item._id}>
                                                     <img src={item.image} alt="" />
                                                     <div className="Icons">
-                                                        <span onClick={() => HandleAddtoWish(item)}> {isInWishlist(item) ?<FaHeart /> : <FaRegHeart />} </span>
-                                                        <Link to={`/product/${item._id}`}>   <span> <FaEye /></span></Link>
-                                                        <span onClick={()=>HandleAddtoBasket(item)}><GrShop /> </span>
+                                                        <span onClick={() => HandleAddtoWish(item)}> {isInWishlist(item) ?<FaHeart  className='faheart'/> : <FaRegHeart  className='faheart'/>} </span>
+                                                        <Link to={`/product/${item._id}`}>   <span> <FaEye  className='faheart' /></span></Link>
+                                                        <span onClick={()=>HandleAddtoBasket(item)}><GrShop  className='faheart' /> </span>
                                                     </div>
                                                 </div>
                                                 <div className='titleby'>

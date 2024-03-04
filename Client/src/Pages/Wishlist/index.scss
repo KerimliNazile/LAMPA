@@ -4,14 +4,16 @@
     background-repeat: no-repeat;
    
     .WishlistText{
+        position: relative;
    font-size: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
-       top: 40%;
+       top: 200px;
     }
     .WishlistTextHome{
-       
+       position: relative;
+       top: 200px;
         display: flex;
         align-items: center;
         justify-content: center;

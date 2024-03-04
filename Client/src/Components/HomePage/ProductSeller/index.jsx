@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FaHeart } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 import { GrShop } from "react-icons/gr";
+import { FaRegHeart } from "react-icons/fa";
 import { PiShoppingCartFill } from "react-icons/pi";
 import axios from 'axios'
 import './index.scss'
@@ -58,9 +59,9 @@ const Product = () => {
                                                
                                                 
                                                 <div className="Icons">
-                                                    <span onClick={()=>HandleAddtoWish(item)}> <FaHeart /> </span>
-                                                 <Link to={`/product/${item._id}`}> <span> <FaEye /></span></Link>  
-                                                   <span onClick={()=>HandleAddtoBasket(item)}> <GrShop /></span>
+                                                    <span onClick={()=>HandleAddtoWish(item)} >{isInWishlist(item) ? <FaHeart className='faheart' />:<FaRegHeart  className='faheart'/>}  </span>
+                                                 <Link to={`/product/${item._id}`}> <span> <FaEye className='faheart' /></span></Link>  
+                                                   <span onClick={()=>HandleAddtoBasket(item)}> <GrShop className='faheart' /></span>
                                                 </div>
                                             </div>
                                           <div className='titleby'>

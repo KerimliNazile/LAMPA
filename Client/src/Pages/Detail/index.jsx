@@ -52,12 +52,12 @@ const Detail = () => {
               <img src={detail.image} alt="" />
             </li>
             <div className='Infos'>
-              <li><span>Name : </span>{detail.title}</li>
-              <li><span>Category :</span> {detail.category}</li>
-              <li><span>Type : </span>{detail.by}</li>
-              <li><span>Size : </span>{detail.size}</li>
+              <li>Name : {detail.title}</li>
+              <li>Category : {detail.category}</li>
+              <li>Type : {detail.by}</li>
+              <li>Size : {detail.size}</li>
 
-              <li><span>Price : </span>${detail.price}</li>
+              <li>Price : ${detail.price}</li>
             </div>
 
           </ul>

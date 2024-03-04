@@ -1,0 +1,543 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 30px 60px;
+  background-color: #b3dedf;
+  position: sticky;
+  z-index: 9999;
+  background: var(--mode-color-1);
+  top: 0;
+  left: 0;
+}
+nav .LogoNav img {
+  width: 200px;
+}
+nav .MainNav #NavIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: 22px;
+  /* Presentational Styles */
+  color: rgb(85, 84, 84);
+}
+nav .MainNav #NavIn li a {
+  color: var(--mode-color-2);
+  position: relative;
+  text-decoration: none;
+}
+nav .MainNav #NavIn a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #9dbc98;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+nav .MainNav #NavIn a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+nav .MainNav #NavIn body {
+  display: grid;
+  font-family: "Poppins", sans-serif;
+  font-size: 27px;
+  font-weight: 700;
+  height: 100vh;
+  place-items: center;
+}
+nav .MainNav #NavIn .person {
+  position: relative;
+  color: #7fb678;
+}
+
+.logoutbutton {
+  width: 80px;
+  height: 40px;
+}
+
+.enbutton {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile {
+  display: none;
+}
+
+.navlist {
+  transition: 0.2s ease-in-out;
+  display: none;
+  height: 400px;
+  text-align: center;
+  z-index: 2;
+  top: 107px;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  width: 100%;
+  background-color: #9dbc98;
+}
+
+ul li a {
+  color: black;
+  font-size: 22px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.PBasket {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.LiBasket {
+  position: relative;
+}
+
+@media only screen and (max-width: 1243px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #b3dedf;
+    position: fixed;
+    z-index: 9999;
+    background: var(--mode-color-1);
+  }
+  nav .LogoNav img {
+    width: 200px;
+  }
+  nav .MainNav #NavIn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 22px;
+    /* Presentational Styles */
+    color: rgb(85, 84, 84);
+  }
+  nav .MainNav #NavIn li a {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+  }
+  nav .MainNav #NavIn a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #37B5B6;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav .MainNav #NavIn a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  nav .MainNav #NavIn body {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    height: 100vh;
+    place-items: center;
+  }
+  nav .MainNav .subMenu2:hover {
+    display: block;
+    transition: 0.5s;
+  }
+  nav .MainNav .subMenuArea {
+    position: absolute;
+    z-index: 2;
+  }
+  nav .MainNav .subMenuArea .subMenuBox {
+    opacity: 0;
+  }
+  .pages:hover .subMenu2 .subMenuArea .subMenuBox {
+    opacity: 1;
+  }
+  .mobile {
+    display: none;
+  }
+  .navlist {
+    transition: 0.2s ease-in-out;
+    display: none;
+    height: 400px;
+    text-align: center;
+    z-index: 2;
+    top: 107px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    background-color: #9dbc98;
+  }
+  ul li a {
+    color: black;
+    font-size: 22px;
+  }
+  ul li {
+    margin-bottom: 10px;
+  }
+}
+.logoutbutton {
+  width: 80px;
+  height: 40px;
+}
+
+.enbutton {
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen and (max-width: 837px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #b3dedf;
+    position: fixed;
+    z-index: 9999;
+    background: var(--mode-color-1);
+  }
+  nav .LogoNav img {
+    width: 200px;
+  }
+  nav .MainNav #NavIn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 22px;
+    /* Presentational Styles */
+    color: rgb(85, 84, 84);
+  }
+  nav .MainNav #NavIn li a {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+  }
+  nav .MainNav #NavIn a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #37B5B6;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav .MainNav #NavIn a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  nav .MainNav #NavIn body {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    height: 100vh;
+    place-items: center;
+  }
+  nav .MainNav .subMenu2:hover {
+    display: block;
+    transition: 0.5s;
+  }
+  nav .MainNav .subMenuArea {
+    position: absolute;
+    z-index: 2;
+  }
+  nav .MainNav .subMenuArea .subMenuBox {
+    opacity: 0;
+  }
+  .pages:hover .subMenu2 .subMenuArea .subMenuBox {
+    opacity: 1;
+  }
+  .mobile {
+    display: block;
+    font-size: 28px;
+  }
+  .navlist {
+    transition: 0.2s ease-in-out;
+    display: block;
+    height: 400px;
+    text-align: center;
+    z-index: 2;
+    top: 107px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    background-color: #9dbc98;
+  }
+  ul li a {
+    color: black;
+    font-size: 22px;
+  }
+  ul li {
+    margin-bottom: 10px;
+  }
+}
+.logoutbutton {
+  width: 80px;
+  height: 40px;
+}
+
+.enbutton {
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen and (max-width: 837px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #b3dedf;
+    position: fixed;
+    z-index: 9999;
+    background: var(--mode-color-1);
+  }
+  nav .LogoNav img {
+    width: 200px;
+  }
+  nav .MainNav #NavIn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 22px;
+    /* Presentational Styles */
+    color: rgb(85, 84, 84);
+  }
+  nav .MainNav #NavIn li a {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+  }
+  nav .MainNav #NavIn a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #9dbc98;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav .MainNav #NavIn a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  nav .MainNav #NavIn body {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    height: 100vh;
+    place-items: center;
+  }
+  nav .MainNav .subMenu2:hover {
+    display: block;
+    transition: 0.5s;
+  }
+  nav .MainNav .subMenuArea {
+    position: absolute;
+    z-index: 2;
+  }
+  nav .MainNav .subMenuArea .subMenuBox {
+    opacity: 0;
+  }
+  .pages:hover .subMenu2 .subMenuArea .subMenuBox {
+    opacity: 1;
+  }
+  .mobile {
+    display: block;
+    font-size: 28px;
+  }
+  .navlist {
+    transition: 0.2s ease-in-out;
+    display: block;
+    height: 400px;
+    text-align: center;
+    z-index: 2;
+    top: 107px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    background-color: #9dbc98;
+  }
+  ul li a {
+    color: black;
+    font-size: 22px;
+  }
+  ul li {
+    margin-bottom: 10px;
+  }
+}
+.navlist_active {
+  right: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.navlist_close {
+  right: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.logoutbutton {
+  width: 80px;
+  height: 40px;
+}
+
+.enbutton {
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen and (max-width: 427px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #b3dedf;
+    position: fixed;
+    z-index: 9999;
+    background: var(--mode-color-1);
+  }
+  nav .LogoNav img {
+    width: 150px;
+  }
+  nav .MainNav #NavIn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 22px;
+    /* Presentational Styles */
+    color: rgb(85, 84, 84);
+  }
+  nav .MainNav #NavIn li a {
+    color: #18272F;
+    position: relative;
+    text-decoration: none;
+  }
+  nav .MainNav #NavIn a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #37B5B6;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  nav .MainNav #NavIn a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  nav .MainNav #NavIn body {
+    display: grid;
+    font-family: "Poppins", sans-serif;
+    font-size: 27px;
+    font-weight: 700;
+    height: 100vh;
+    place-items: center;
+  }
+  nav .MainNav .subMenu2:hover {
+    display: block;
+    transition: 0.5s;
+  }
+  nav .MainNav .subMenuArea {
+    position: absolute;
+    z-index: 2;
+  }
+  nav .MainNav .subMenuArea .subMenuBox {
+    opacity: 0;
+  }
+  .pages:hover .subMenu2 .subMenuArea .subMenuBox {
+    opacity: 1;
+  }
+  .mobile {
+    display: block;
+    font-size: 24px;
+  }
+  .navlist {
+    transition: 0.2s ease-in-out;
+    display: block;
+    text-align: center;
+    z-index: 2;
+    top: 96px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    display: block;
+    height: 400px;
+    width: 100%;
+    background-color: #9dbc98;
+  }
+  ul li a {
+    color: black;
+    font-size: 22px;
+  }
+  ul li {
+    margin-bottom: 10px;
+  }
+}
+.navlist_active {
+  right: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.navlist_close {
+  right: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.logoutbutton {
+  width: 80px;
+  height: 40px;
+}
+
+.enbutton {
+  width: 40px;
+  height: 40px;
+}/*# sourceMappingURL=index.css.map */

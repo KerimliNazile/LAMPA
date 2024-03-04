@@ -20,7 +20,7 @@ const SaleUp = () => {
     <div className="Boxinoo">
          <h1>SALE UP TO 50%</h1>
             <h4>Lighting Accessories</h4>
-            <p>Here to bring your life style to the next level.</p>
+            <p>Here to bring your life style to the </p>
     </div>
            
         </div>

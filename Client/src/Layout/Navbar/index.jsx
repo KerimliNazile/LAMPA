@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 import { IoMdHeart } from "react-icons/io";
 
@@ -6,14 +6,21 @@ import { GrShop } from "react-icons/gr";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { IoPerson } from "react-icons/io5";
+import { jwtDecode } from 'jwt-decode';
 import './index.scss';
 import { Link, NavLink } from 'react-router-dom';
 import ModeBox from '../../Components/ModeBox/ModeBox';
 import { useTranslation } from 'react-i18next';
 import { useUser } from '../../context/UserContext';
+import axios from 'axios';
 
 const Navbar = () => {
-    
+    const [token, setToken] = useState(localStorage.getItem("token"))
+    const userData = token ? jwtDecode(token) :null
+    const {
+        datas
+    } = useUser()
+    // console.log(userData.basket);
     const { Logout, user } = useUser()
     const [isOpen, setIsOpen] = useState(false);
     function handleClick() {
@@ -31,9 +38,9 @@ const Navbar = () => {
             <nav>
 
                 <ModeBox />
-                
+
                 <div className="LogoNav">
-                  <NavLink to={'/'}>  <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1618913868" alt="" /></NavLink>
+                    <NavLink to={'/'}>  <img src="https://minery-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1618913868" alt="" /></NavLink>
                 </div>
                 <div className="MainNav">
                     <ul id='NavIn'>
@@ -43,33 +50,42 @@ const Navbar = () => {
                         <li><NavLink to='/contact'>{t("Contact")}</NavLink></li>
                         <li className='pages'><NavLink to='/faqs'>{t("FAQs")}</NavLink></li>
                         <li><NavLink to='*'></NavLink></li>
-                        {/* <div className="subMenu2">
-                                <div className="subMenuArea">
-                                    <div className="subMenuBox">
-                                        <ul className='errorpage'>
-                                          
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> */}
+                      
 
 
 
                         {/* <li><NavLink to='/search'><CiSearch /></NavLink></li> */}
 
                         <li><NavLink to='/login'><IoPerson className='person' /></NavLink></li>
-                        <li><NavLink to='/basket'><GrShop className='person'/></NavLink></li>
-                        <li><NavLink to='/wishlist'><IoMdHeart className='person' /></NavLink></li>
+                        <li className='LiBasket'>
+                           
+                            {datas && datas.map((item) => (
+
+                                <p className='PBasket'>{ token && userData.name === item.name ? item.basket.length : ""}</p>
+
+                            ))
+
+                            }
+                            <NavLink to='/basket'><GrShop className='person' /></NavLink></li>
+                        <li className='LiBasket'>
+                            {/* {datas && datas.map((item) => (
+
+                                <p className='PBasket'>{ token &&userData.name === item.name ? item.wishlist.length : ""}</p>
+
+                            ))
+
+                            } */}
+                            <NavLink to='/wishlist'><IoMdHeart className='person' /></NavLink></li>
                         <li>
                             <button className='enbutton' onClick={() => changeLang("az")}>AZ</button>
                             <button className='enbutton' onClick={() => changeLang("en")}>EN</button>
                         </li>
                         <li>
-                              {user._id && <button className='logoutbutton' onClick={() => Logout()}>
-                            Log out
-                        </button>}
+                            {user._id && <button className='logoutbutton' onClick={() => Logout()}>
+                                Log out
+                            </button>}
                         </li>
-                      
+
 
                     </ul>
                 </div>

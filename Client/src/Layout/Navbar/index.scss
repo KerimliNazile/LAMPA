@@ -63,6 +63,7 @@ nav {
 
             color:rgb(85, 84, 84);
             .person{
+                position: relative;
                 color: #7fb678;
             }
         }
@@ -89,16 +90,16 @@ nav {
 .navlist {
     transition: 0.2s ease-in-out;
     display: none;
-    height: 200px;
+    height: 400px;
    
   
     text-align: center;
     z-index: 2;
-    top: 109px;
+    top: 107px;
     position: absolute;
     transition: 0.2s ease-in-out;
     // display: block;
-    height: 200px;
+  
     width: 100%;
     background-color: #9dbc98;
 }
@@ -115,6 +116,16 @@ nav {
 
 
 
+.PBasket{
+    position: absolute;
+    top: 0;
+    left:100%; 
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+.LiBasket{
+    position: relative;
+}
 
 // @media only screen and (max-width: 854px) {
 //     nav {
@@ -363,14 +374,14 @@ nav {
     .navlist {
         transition: 0.2s ease-in-out;
         display: none;
-        height: 200px;
+        height: 400px;
         text-align: center;
         z-index: 2;
-        top: 109px;
+        top: 107px;
         position: absolute;
         transition: 0.2s ease-in-out;
         // display: block;
-        height: 200px;
+      
         width: 100%;
         background-color: #9dbc98;
     }
@@ -517,14 +528,14 @@ nav {
     .navlist {
         transition: 0.2s ease-in-out;
         display: block;
-        height: 200px;
+        height: 400px;
         text-align: center;
         z-index: 2;
-        top: 109px;
+        top: 107px;
         position: absolute;
         transition: 0.2s ease-in-out;
         // display: block;
-        height: 200px;
+       
         width: 100%;
         background-color: #9dbc98;
     }
@@ -672,14 +683,14 @@ nav {
     .navlist {
         transition: 0.2s ease-in-out;
         display: block;
-        height: 200px;
+        height: 400px;
         text-align: center;
         z-index: 2;
-        top: 109px;
+        top: 107px;
         position: absolute;
         transition: 0.2s ease-in-out;
         // display: block;
-        height: 200px;
+       
         width: 100%;
         background-color: #9dbc98;
     }
@@ -839,14 +850,14 @@ nav {
     .navlist {
         transition: 0.2s ease-in-out;
         display: block;
-        height: 200px;
+       
         text-align: center;
     z-index: 2;
-    top: 109px;
+    top: 96px;
     position: absolute;
     transition: 0.2s ease-in-out;
     display: block;
-    height: 200px;
+    height: 400px;
     width: 100%;
     background-color: #9dbc98;
 }

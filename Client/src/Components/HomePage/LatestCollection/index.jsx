@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import './index.scss'
 import { FaHeart } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 import { Navigation } from 'swiper/modules';
 import { PiShoppingCartFill } from "react-icons/pi";
 import { Link, NavLink } from 'react-router-dom';
@@ -99,7 +100,7 @@ export default function Latest() {
                                                 </div>
 
                                                 <div className="Icons">
-                                                    <span onClick={() => HandleAddtoWish(item)}>    <FaHeart className='faheart' /></span>
+                                                    <span onClick={() => HandleAddtoWish(item)}> {isInWishlist(item) ? <FaHeart className='faheart' />:<FaRegHeart  className='faheart' />}  </span>
                                                     <Link to={`/product/${item._id}`}><span><FaEye className='faheart' /></span></Link>
                                                     <span onClick={()=>HandleAddtoBasket(item)}>  <GrShop className='faheart'
                                                      /></span>

@@ -5,6 +5,7 @@ import { setCookie } from '../../../helper/cookie'
 import { jwtDecode } from "jwt-decode"
 import { useUser } from '../../context/UserContext'
 import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
 const LoginPage = () => {
 
   const navigate = useNavigate()
@@ -23,24 +24,7 @@ const LoginPage = () => {
 
 
 
-  // LOGIN
-
-
-
-  //     try {
-  //       const res = await axios.post('http://localhost:3000/login', values)
-  //       alert('Successfully Logined!')
-  //       // res.status === 200 && setToken(res.data)
-  //       res.status === 200 && setCookie("token", res.data, "600h")
-  //       const decoded = res.status === 200 && jwtDecode(res.data);
-  //       setUser(decoded)
-  //       setIsLoginOpen(!isLoginOpen)
-  //       await fetchBasketData()
-  //       await fetchWishlistData()
-  //     } catch (error) {
-  //       toast.error("Wrong Details")
-  //     }
-  //   }
+  
 
 
 
@@ -57,10 +41,9 @@ const LoginPage = () => {
       });
 
       console.log(res.data);
-      // Handle the response status and data accordingly
+    
       if (res.status === 200) {
-        // You can uncomment the following lines if needed
-        // setToken(res.data);
+        localStorage.setItem("token",res.data)
         setCookie("token", res.data, { expires: "600h" });
         const decoded = jwtDecode(res.data);
         console.log(decoded);
@@ -69,24 +52,28 @@ const LoginPage = () => {
           wishlist: decoded.wishlist,
           username: decoded.name,
           role: decoded.role,
-          basket: decoded.basket
-
+          basket: decoded.basket,
+          token:decoded.token
         });
 
         navigate("/")
-        alert('Successfully Loginned!');
+        toast.success('Successfully created!');
+        // alert('Successfully Loginned!');
       } else {
-        // Handle other response statuses if needed
-        alert('Registration failed. Please try again.');
+      
+        // alert('Registration failed. Please try again.');
+        toast.error('Registration failed. Please try again.')
       }
     } catch (error) {
-      // Handle specific error cases, such as duplicate email
+      
       if (error.response && error.response.status === 409) {
         alert('Email already exists. Please use a different email.');
+
       } else {
-        // Handle generic error cases
+       
         console.error('Registration error:', error);
-        alert('Registration failed. Please try again.');
+        toast.error('Registration failed. Please try again.')
+        // alert('Registration failed. Please try again.');
       }
     }
   };
@@ -114,7 +101,7 @@ const LoginPage = () => {
 
             <div className="BtnReg"></div>
             <div class="login-link">
-              <a href="/register">I already have an account.</a>
+              <a href="/register">Register</a>
             </div>
 
           </div>

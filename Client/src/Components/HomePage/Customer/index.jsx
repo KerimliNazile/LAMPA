@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import "./index.scss"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import Aos from 'aos'
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 
@@ -19,8 +19,11 @@ function Customer() {
 useEffect(() => {
     getSwiperData()
 }, [])
+useEffect(() => {
+  Aos.init({ duration: 1000 })
+}, [])
   return (
-    <section id='reviewTop'>
+    <section data-aos="fade-right" id='reviewTop'>
       <div className="title">
        
         <h2> TESTIMONIALS</h2>

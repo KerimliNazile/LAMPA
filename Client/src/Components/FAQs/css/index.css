@@ -1,0 +1,39 @@
+#Accordion {
+  width: 800px;
+  min-height: 90vh;
+  margin-top: 100px;
+  border: 1px solid #789461;
+}
+#Accordion .TextAccordion {
+  margin-top: 200px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #161A30;
+  font-size: 22px;
+}
+
+.Area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.RightAcardionImg {
+  width: 30%;
+}
+.RightAcardionImg img {
+  border-radius: 20px;
+  width: 500px;
+}
+
+.ImgAcardion img {
+  width: 400px;
+}
+
+.ImgDisplay {
+  margin-top: 110px;
+}/*# sourceMappingURL=index.css.map */

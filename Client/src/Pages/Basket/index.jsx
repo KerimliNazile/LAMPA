@@ -21,7 +21,12 @@ const Basket = () => {
       navigate("/login");
     }
   }, []);
-
+  function Refresh(item, CB) {
+   CB(item)
+   navigate("/basket")
+    
+   
+}
   return (
     <div>
       <Helmet>
@@ -46,15 +51,15 @@ const Basket = () => {
                   <div className='name'>{item.title}</div>
                   <div className='price'>Price: ${item.price}</div>
                   <div className="countbox">
-                    <div onClick={() => refresh(item, IncBasket)} className="countbtn custom-btn btn-9">+</div>
+                    <p onClick={() => Refresh(item, IncBasket)} className="countbtn custom-btn btn-9">+</p>
 
                     <div className='count'>{item.count}</div>
-                    <div onClick={() => refresh(item, DecBasket)} className="countbtn custom-btn btn-9">-</div>
+                    <p onClick={() => Refresh(item, DecBasket)} className="countbtn custom-btn btn-9">-</p>
                   </div>
                   <div className="total_price">
-                    Total:$ {item.price * item.count}
+                    Total : ${item.price * item.count}
                   </div>
-                  <div onClick={() => refresh(item, BasketDelete)} className="countbtn custom-btn btn-9">Delete</div>
+                  <button onClick={() => Refresh(item, BasketDelete)} className="countbtn custom-btn btn-9">Delete</button>
                 </div>
               </div>
             ))}

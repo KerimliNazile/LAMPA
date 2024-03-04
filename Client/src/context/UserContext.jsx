@@ -1,4 +1,4 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import useLocalStorage from '../hooks/useLocalStorage'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -6,11 +6,20 @@ import { useNavigate } from "react-router-dom";
 const userContext = createContext()
 
 export const UserProvider = ({ children }) => {
+    const [datas, setData] = useState([])
+    async function AxiosDataFunction() {
+        const res = await axios.get("http://localhost:3000/users")
+        setData(res.data)
+    }
+    useEffect(() => {
+        AxiosDataFunction()
 
+    }, [])
     const navigate = useNavigate()
     const [user, setUser, ManualUpdate,] = useLocalStorage("user", { username: "", role: "", basket: [], wishlist: [], token: "" })
 
     async function UpdateWishlist(wishlist) {
+        AxiosDataFunction()
         try {
             const response = await axios({
                 method: "put",
@@ -33,6 +42,8 @@ export const UserProvider = ({ children }) => {
     }
 
     function AddToWishlist(item) {
+        AxiosDataFunction()
+
         let WishlistCopy = [...user.wishlist]
         const itemIndex = WishlistCopy.findIndex(x => x._id === item._id)
         if (itemIndex === -1) {
@@ -57,27 +68,29 @@ export const UserProvider = ({ children }) => {
         return found ? true : false
     }
     //////////////////////////////////////////////////
-    function AddBasket(item) {
+    // function AddBasket(item) {
 
-        const index = user.basket.findIndex((x) => x._id === item._id);
-        if (index === -1) {
-            item.count = 1
-            user.basket.push(item)
-            ManualUpdate()
-            putBasket(user.basket, user._id)
-            return
-        }
-        user.basket[index].count += 1;
-        ManualUpdate()
-        putBasket(user.basket, user._id)
+    //     const index = user.basket.findIndex((x) => x._id === item._id);
+    //     if (index === -1) {
+    //         item.count = 1
+    //         user.basket.push(item)
+    //         ManualUpdate()
 
+    //         putBasket(user.basket, user._id)
+    //         return
+    //     }
+    //     user.basket[index].count += 1;
+    //     AxiosDataFunction()
+    //     ManualUpdate()
+    //     putBasket(user.basket, user._id)
 
-    }
+    // }
     function IncBasket(item) {
         const index = user.basket.findIndex((x) => x._id === item._id);
         user.basket[index].count += 1
         ManualUpdate()
         putBasket(user.basket, user._id)
+       
     }
     function DecBasket(item) {
         const index = user.basket.findIndex((x) => x._id === item._id);
@@ -87,13 +100,37 @@ export const UserProvider = ({ children }) => {
         user.basket[index].count -= 1
         ManualUpdate()
         putBasket(user.basket, user._id)
+      
     }
-    function BasketDelete(item) {
+    // function BasketDelete(item) {
+    //     user.basket = user.basket.filter((x) => x._id !== item._id);
+    //     ManualUpdate()
+    //     putBasket(user.basket, user._id)
+    //     AxiosDataFunction()
+    // }
+    function AddBasket(item) {
+          AxiosDataFunction();
+        const index = user.basket.findIndex((x) => x._id === item._id);
+        if (index === -1) {
+          item.count = 1;
+          user.basket.push(item);
+          ManualUpdate();
+          putBasket(user.basket, user._id);
+          return;
+        }
+        user.basket[index].count += 1;
+        ManualUpdate();
+        putBasket(user.basket, user._id);
+       // Burada AxiosDataFunction'u çağırın.
+      }
+      
+      function BasketDelete(item) {
+          AxiosDataFunction();
         user.basket = user.basket.filter((x) => x._id !== item._id);
-        ManualUpdate()
-        putBasket(user.basket, user._id)
-    }
-
+        ManualUpdate();
+        putBasket(user.basket, user._id);
+       // Burada AxiosDataFunction'u çağırın.
+      }
     async function putBasket(basket, _id) {
         try {
             const res = await axios.put(
@@ -107,7 +144,7 @@ export const UserProvider = ({ children }) => {
                     },
                 }
             );
-            console.log(res.data); // Gerekirse yanıtı işleyin
+            console.log(res.data); 
         } catch (error) {
             console.error(error.response.data); // Hata durumunu işleyin
         }
@@ -149,12 +186,14 @@ export const UserProvider = ({ children }) => {
         AddToWishlist,
         isInWishlist,
         refresh,
-        BasketLength
+        BasketLength,
+        datas
     }
 
 
     return (
         <userContext.Provider value={data}>
+
             {children}
         </userContext.Provider>
     )

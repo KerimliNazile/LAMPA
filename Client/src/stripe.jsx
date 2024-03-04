@@ -3,6 +3,7 @@
 import StripeCheckout from 'react-stripe-checkout';
 import React, { useState } from 'react';
 import axios from 'axios';
+import toast from 'react-hot-toast'
 import './stripe.scss'
 // import Swal from 'sweetalert2';
 // import withReactContent from 'sweetalert2-react-content';
@@ -44,11 +45,11 @@ import './stripe.scss'
       });
       if (response.status === 200) {
         // handleSuccess();
-        alert("isledi")
+        toast.success('The payment  successfully');
       }
     } catch (error) {
     //   handleFailure();
-    alert("xeta")
+    toast.error('Registration failed. Please try again.')
       console.log(error);
     }
   };

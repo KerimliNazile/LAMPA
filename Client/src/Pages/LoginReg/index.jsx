@@ -3,7 +3,12 @@ import './index.scss'
 import axios from 'axios'
 import { setCookie } from '../../../helper/cookie'
 import { jwtDecode } from "jwt-decode"
+import toast from 'react-hot-toast'
+import { Helmet } from 'react-helmet-async'
 const Login = () => {
+  <Helmet>
+  <title>Register</title>
+</Helmet>
   const [user, setUser] = useState(null)
   const [userName, setUserName] = useState('')
   const [email, setEmail] = useState('')
@@ -14,25 +19,7 @@ const Login = () => {
 
 
   
-  // LOGIN
-  // const handleLogin = async (values) => {
-  //   try {
-  //     const res = await axios.post('http://localhost:3000/login', values)
-  //     alert('Successfully Logined!')
-  //     // res.status === 200 && setToken(res.data)
-  //     res.status === 200 && setCookie("token", res.data, "600h")
-  //     const decoded = res.status === 200 && jwtDecode(res.data);
-  //     setUser(decoded)
-  //     setIsLoginOpen(!isLoginOpen)
-  //     await fetchBasketData()
-  //     await fetchWishlistData()
-  //   } catch (error) {
-  //     toast.error("Wrong Details")
-  //   }
-  // }
-
-
-
+  
 
 
   const handleRegister = async (e) => {
@@ -46,26 +33,22 @@ const Login = () => {
       });
 
       console.log(res.data);
-      // Handle the response status and data accordingly
+     
       if (res.status === 200) {
-        // You can uncomment the following lines if needed
-        // setToken(res.data);
-        // setCookie("token", res.data, { expires: "600h" });
-        // const decoded = jwtDecode(res.data);
-        // setUser(decoded);
-        alert('Successfully Registered!');
+        toast.success('Successfully created!');
+     
       } else {
-        // Handle other response statuses if needed
-        alert('Registration failed. Please try again.');
+       
+        toast.error('Registration failed. Please try again.')
       }
     } catch (error) {
-      // Handle specific error cases, such as duplicate email
+     
       if (error.response && error.response.status === 409) {
         alert('Email already exists. Please use a different email.');
       } else {
-        // Handle generic error cases
+      
         console.error('Registration error:', error);
-        alert('Registration failed. Please try again.');
+        toast.error('Registration failed. Please try again.')
       }
     }
   };

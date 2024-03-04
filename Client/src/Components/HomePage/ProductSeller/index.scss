@@ -1,6 +1,6 @@
 #ProductSeller {
     min-height: 80vh;
-margin-top: 100px;
+    margin-top: 100px;
 
     .SellerArea {
         .SellerTitle {
@@ -18,68 +18,76 @@ margin-top: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
-gap: 10px;
-            .SellerBox {  
+            gap: 10px;
+
+            .SellerBox {
                 border: 4px solid #944E63;
 
                 .ImageSeller {
-             
+
                     width: 100%;
                     overflow: hidden;
-position: relative;
+                    position: relative;
+
                     img {
+                       margin-left: 10px;
                         text-align: center;
-                       border-radius: 20%;
-                        width: 260px;
-                    } 
-                   
-                   
-                      .Icons {
+                        
+                        width: 280px;
+                    }
+
+
+                    .Icons {
                         color: white;
-                    position: absolute;
-                    left: 20px;
-                    flex-direction: column;
-                    display: flex;
-                    align-items: center;
-                    // justify-content: center;
-                    gap: 10px;
-                    font-size: 20px;
-span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
- background-color:orange ;
-}
-                }
+                        position: absolute;
+                        left: 20px;
+                        flex-direction: column;
+                        display: flex;
+                        align-items: center;
+                        // justify-content: center;
+                        gap: 10px;
+                        font-size: 20px;
+
+                        span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 2px;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: orange;
+                        }
+                    }
                 }
 
-                .titleby{
+                .titleby {
                     text-align: center;
                     width: 300px;
-                    h1{
-                         &:hover{
-                        color: orange;
-                        transition: 0.3s;
-                    }
-                }
-                    h2{
-                        &:hover{
+
+                    h1 {
+                        &:hover {
                             color: orange;
                             transition: 0.3s;
+                        }
                     }
-                }
-                    h3{
+
+                    h2 {
+                        &:hover {
+                            color: orange;
+                            transition: 0.3s;
+                        }
+                    }
+
+                    h3 {
                         font-size: 22px;
-                        &:hover{
+
+                        &:hover {
                             color: orange;
                             transition: 0.3s;
+                        }
                     }
-                    }
-                    }
+                }
             }
         }
     }

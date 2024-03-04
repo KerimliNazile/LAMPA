@@ -23,6 +23,7 @@ function EmailForm() {
 
         emailjs.send(serviceId, templateId, templateParams, publicKey).then((response) => {
             console.log("Email Send Success", response);
+            // setName('')
             setEmail('')
             setMessage('')
             setMessage('')
@@ -37,7 +38,12 @@ function EmailForm() {
 
 
     return (
-        <form action="" onSubmit={handleSubmit}>
+        <form action="" onSubmit={handleSubmit}
+     
+         
+
+        >
+          
             <input type="text" placeholder='Your Name' value={name} onChange={(e) => setName(e.target.value)} />
             <input type="email" placeholder='Your Email' value={email} onChange={(e) => setEmail(e.target.value)} />
             <input type="message" cols="70" rows="50"  placeholder=' Your Message' value={message} onChange={(e) => setMessage(e.target.value)} style={{height:"140px"}} />

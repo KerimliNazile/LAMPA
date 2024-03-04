@@ -6,9 +6,8 @@
     margin-top: 100px;
     border: 1px solid #789461;
 
-    .AreaAcardion {
         .TextAccordion {
-            margin-top: 100px;
+          margin-top: 200px;
             display: flex;
             text-align: center;
             align-items: center;
@@ -21,11 +20,12 @@
     }
 
     .LeftAcardion {}
-}
+
 
 .Area {
    
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 30px;

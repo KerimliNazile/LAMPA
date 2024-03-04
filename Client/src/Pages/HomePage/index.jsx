@@ -23,13 +23,15 @@ const Home = () => {
       <Categories />
 
       <Latest />
-      <Product/>
+      <Product />
+
+
+
       <SaleUp />
-     
 
 
-<Customer/>
- <Vintage />
+      <Customer />
+      <Vintage />
       {/* <Seller /> */}
     </div>
   )

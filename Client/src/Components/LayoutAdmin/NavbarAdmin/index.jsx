@@ -9,6 +9,7 @@ const NavbarAdmin = () => {
                     <ul>
                         <li><NavLink to='/adminn/adminlogo'>Marketing Personals</NavLink></li>
                         <li><NavLink to='/adminn'>Product</NavLink></li>
+                        <li><NavLink to='/adminn/adminuser'>Users</NavLink></li>
                         <li><NavLink to='/adminn/adminswiper'>Logo</NavLink></li>
                     </ul>
                 </div>

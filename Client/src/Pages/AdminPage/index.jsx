@@ -3,14 +3,23 @@ import React, { useEffect, useState } from 'react'
 
 import './index.scss'
 import FormAdd from '../../Components/ShopComponents/FormAdd'
+import { useNavigate } from 'react-router-dom'
+import { useUser } from '../../context/UserContext'
 const AdminPage = () => {
-
+  const navigate = useNavigate()
   const [data, setData] = useState([])
   const [editedItem, setEditedItem] = useState(null);
   const [search, setSearch] = useState('')
   const [showModal, setShowModal] = useState(false);
   const [property, setProperty] = useState(null)
-  // const [updatedData, setUpdatedData] = useState(null)
+  const {
+    user,
+    setUser,
+    Logout,
+    AddToWishlist,
+    isInWishlist,
+  } = useUser();
+
   async function getData() {
     const res = await axios("http://localhost:3000/product")
     setData(res.data)
@@ -34,8 +43,12 @@ const AdminPage = () => {
     setShowModal(false);
   }
   useEffect(() => {
+    if (!user._id) {
+      navigate("/login")
+    }
     getData()
   }, [])
+  
   return (
     <>
       <FormAdd getData={getData}  />

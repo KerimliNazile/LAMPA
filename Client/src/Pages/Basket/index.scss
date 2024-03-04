@@ -1,37 +1,51 @@
-#basket{
+#basket {
     background-image: url("https://minery-store-demo.myshopify.com/cdn/shop/files/bg_page.jpg?v=1619077071");
     min-height: 60vh;
-   margin-top: 80px;
+  
     background-repeat: no-repeat;
-    .mybasket{
+
+    .mybasket {
+      position: relative;
+      top: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
-        h3{
+
+        h3 {
             font-size: 40px;
             color: black;
+            margin: 0;  // Eklediğimiz satır, h3 içindeki varsayılan margin'ı sıfırlar
         }
     }
-    .baskettext{
+
+    .baskettext {
+        position: relative;
+        top: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
-        h3{
+
+        h3 {
             font-size: 20px;
         }
     }
-    .container{
+
+    .container {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 450px;
-        .bigbox{
-            
+
+        .bigbox {
             text-align: center;
         }
-    }
 
+        p {
+            font-size: 25px;
+        }
+    }
 }
-img{
+
+img {
     width: 300px;
 }
